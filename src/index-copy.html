@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Kenny Mason</title>
+		<link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body>
+		<div class="nav">
+			<a id="name" href="index.html">Kenny Mason</a>
+		  <a href="art.html">Art</a>
+		  <a onclick="smoothScroll('portfolio')">Portfolio</a>
+			<a onclick="smoothScroll('about')">About</a>
+		  <a class="active" href="index.html">Home</a>
+		</div>
+
+		<div class="main">
+			<div id="lakepic"></div>
+			<div id="info">
+				<div class="profile" style="background-image:url('images/profile.png')"></div>
+				<h2>Kenny Mason</h2>
+				<h2>Computer Science Student</h2>
+				<br>
+				<p></p>
+
+				<div id="btns">
+					<button id="explore" class="btn" onclick="smoothScroll('about')">Explore</button>
+					<button id="resume" class="btn" type="submit" onclick="window.open('KennethMason.pdf')">Resume</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="hr"></div>
+		<div id="about" class="section">
+			<h1 class="title">A brief summary about me</h1>
+			<h3 class="subtitle">I go to Stevens Insitute of Technology in Hoboken, NJ<br>Pursuing a Bachelor's in Computer Science</h3>
+			<div id="aboutme" style="margin-bottom:70px;">
+				<p>I'm currently in my third year as an undergraduate at Stevens, and though I'm most passionate about my major,
+					in my free time I start new projects, take up new skills and draw. I've been into hyperrealistic drawing for
+					a few years, and keep at it whenever I find time to start a new drawing. My favorite hobby is squashing bugs,
+					but only the ones crawling around in my editor.
+				</p>
+			</div>
+
+			<div class="hr"></div>
+			<div id="portfolio" style="margin-bottom:100px; padding-top:45px;">
+				<h1 class="title">Some of my work</h1>
+				<div id="works">
+					<div class="work">
+						<img src="images/website.jpg">
+						<h3>You're Already Here!</h3>This is the first website I made that's made it's way online. Take a look around.
+						<p class="tinytext">(It's not optimized for mobile yet, don't tell anyone)</p>
+					</div>
+					<div class="work">
+						<a href="https://github.com/gjc921019/course_registration_rate"><img class="top" src="images/regandrate.jpeg"></a>
+						<img class="bottom" src="images/search.jpeg">
+						<h3>Register & Rate</h3>A school project I did as part of a group. Users can search for, register, drop, or rate classes
+						at a fake school. I developed the backend, which is where I tend to shine.
+					</div>
+				</div>
+			</div>
+
+			<div class="hr" style="margin-bottom:45px;"></div>
+			<div>
+				<a class="fa fa-linkedin-square" style="font-size:52px" href="https://www.linkedin.com/in/masonkenneth/"></a>
+				<a class="fa fa-github-square" style="font-size:52px" href="https://github.com/masonkm"></a>
+				<button id="git"><a href="mailto:kmason1379@gmail.com"><span>Get In Touch</span></button>
+			</div>
+
+		</div>
+
+	</body>
+</html>

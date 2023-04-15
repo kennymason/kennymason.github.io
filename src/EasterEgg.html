@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Easter Egg #2</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../icon.ico" />
+		<link rel="stylesheet" type="text/css" href="../EE.css">
+		<script type="text/javascript">
+			var imageID=0;
+			function changeimage(secs){
+	 			if(!imageID){
+			 		document.getElementById("pic").src="../eggface.png";
+			 		imageID++;
+	 			}
+	 			else{
+			 		document.getElementById("pic").src="../egg.png";
+				 	imageID=0;
+				}
+	 			setTimeout("changeimage("+secs+")",((secs)*1000));
+			}
+	 	</script>
+	 </head>
+	 <body onload="changeimage(2)">
+		<section>
+    	<img id="pic" src="../eggface.png">
+		</section>
+	</body>
+</html>
