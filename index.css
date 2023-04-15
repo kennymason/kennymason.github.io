@@ -23,8 +23,9 @@ body {
 
 /* Nav */
 
-#nav-heading a:hover, #nav-heading .text1:hover {
+.text2 a:hover, .text1:hover {
 	color: #fff !important;
+	text-shadow: -1px 0 0 #00ff2f, 1px 0 0 #ff00de;
 }
 
 #main {
