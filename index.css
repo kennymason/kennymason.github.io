@@ -5,7 +5,8 @@ body {
 	background: linear-gradient(to bottom, rgb(22, 22, 22), #103d27);
 	color: #fff;
 
-	font-family: verdana;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: larger;
 	
 	margin: 0;
 }
@@ -72,7 +73,7 @@ body {
 
 /* Projects */
 
-#portfolio h2 {
+#portfolio h2, #portfolio h1 {
 	padding: 50px;
 }
 
