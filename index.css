@@ -92,6 +92,7 @@ body {
   width: auto;
   position: relative;
 	border-radius: 4px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .proj > img {
@@ -229,6 +230,52 @@ body {
 	color: #282828;
 }
 
+/* Talent */
+.tal{
+  margin: 10px;
+  max-width: 100%;
+  height: 300px;
+  width: auto;
+  position: relative;
+	border-radius: 4px;
+}
+
+.tal > img {
+  width: auto;
+  height: 300px; /* Fixed height */
+  object-fit: cover;
+	border-radius: 4px;
+}
+
+.tal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	text-align: center;
+	border-radius: 4px;
+
+	padding-left: 40px;
+	padding-right: 40px;
+
+	gap: 30px;
+}
+.tal-overlay:hover{
+	opacity: 1;
+}
+.tal a {
+	color: inherit;
+	text-decoration: none;
+}
 
 /* Contact Me */
 .contact {
