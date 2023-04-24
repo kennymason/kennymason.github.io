@@ -132,6 +132,11 @@ body {
 	text-decoration: none;
 }
 
+.proj-heading {
+	padding: 0 !important;
+	margin-bottom: 0;
+}
+
 .proj-label {
 	position:absolute;
 	top: 30px;
@@ -354,8 +359,28 @@ body {
 /* Responsive CSS */
 
 @media only screen and (max-width: 480px) {
-  .post > img, .proj > img, .post-overlay, .proj-overlay {
+  .post > img, .proj > img, .tal > img, .post-overlay, .proj-overlay, .tal-overlay, .post, .proj, .tal {
 		width: 100%;
 		height: auto;
+		padding: 0;
+	}
+	.post-overlay, .proj-overlay, .tal-overlay  {
+		gap: 0;
+		height: 100%;
+	}
+
+	.proj-heading {
+		padding: 0 !important;
+		margin-bottom: 0;
+	}
+
+	.proj-label {
+		position: relative;
+		top:auto;
+		left: auto;
+	}
+
+	.section{
+		margin: 10px;
 	}
 }
