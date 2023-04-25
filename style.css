@@ -301,7 +301,12 @@ body {
 } */
 
 #resume{
-	padding: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#resume-embed {
+	width: 60%;
+	height: 1000px;
 }
 
 /* Talent */
@@ -431,6 +436,24 @@ body {
 
 /* Responsive CSS */
 
+@media only screen and (max-width: 1250px) {
+	#resume-embed {
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	#resume-embed {
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	#resume-embed {
+		width: 100%;
+	}
+}
+
 @media only screen and (max-width: 480px) {
   .post > img, .proj > img, .tal > img, .post-overlay, .proj-overlay, .tal-overlay, .post, .proj, .tal {
 		width: 100%;
@@ -455,5 +478,10 @@ body {
 
 	.section{
 		margin: 10px;
+	}
+
+	#resume-embed {
+		width: 80%;
+		height: 1375px;
 	}
 }
