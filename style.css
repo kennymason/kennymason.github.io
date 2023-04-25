@@ -97,14 +97,18 @@ body {
   padding: 10px;
   cursor: pointer;
   background-color: #00af6b;
-  border-left: 1px solid #282828;
-  border-right: 1px solid #282828;
+
+	margin-left: 1px;
+	margin-right: 1px;
+	/* border-left: 1px solid #282828;
+	border-right: 1px solid #282828; */
   border-bottom: none;
 }
 
 .tabs li.active {
   background-color: #8de4b8;
 	color:#282828;
+
   /* border-bottom: 1px solid #fff; */
 }
 
@@ -118,9 +122,11 @@ body {
 }
 
 .first-tab {
+	border-left: none !important;
   border-bottom-left-radius: 8px;
 }
 .last-tab {
+	border-right: none !important;
   border-bottom-right-radius: 8px;
 }
 
