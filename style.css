@@ -78,9 +78,9 @@ body {
 
 /* Projects */
 
-/* .tab-container {
-  border: 1px solid #ccc;
-} */
+.tab-container {
+  padding-bottom: 50px;
+}
 
 .tabs {
   list-style: none;
@@ -100,8 +100,6 @@ body {
   border-left: 1px solid #282828;
   border-right: 1px solid #282828;
   border-bottom: none;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
 }
 
 .tabs li.active {
@@ -119,9 +117,16 @@ body {
   display: block;
 }
 
+.first-tab {
+  border-bottom-left-radius: 8px;
+}
+.last-tab {
+  border-bottom-right-radius: 8px;
+}
+
 .portfolio-section {
 	/* text-align: left; */
-	margin: 20px;
+	margin-bottom: 30px;
 	opacity: 0.8;
 	font-size: 130%;
 }
