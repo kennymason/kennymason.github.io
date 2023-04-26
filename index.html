@@ -8,162 +8,158 @@
 		<script type="text/javascript" src="index.js"></script>
 	</head>
 	<body>
-		<div id="nav">
-		</div>
-
 		<div id="main">
-      <div class="main-row">
-        <div class="top-row">
-          <img src="files/images/paint.jpg" width="35%" style="overflow: hidden">
+      <!-- Landing Banner -->
+      <div class="main-banner">
+        <img src="files/images/paint.jpg" width="35%" style="overflow: hidden">
+
         <div class="top-container">
           <h1 class="glitch-heading">I'm Kenny.</h1>
           <h3 class="text2"><a>Software engineer</a>, <a>hardware hobbyist</a>, <a>graphite artist</a></h3>
           <p class="text3"><a>Chess player</a>, <a>card collector</a>, <a>puzzle solver</a>, <a>board gamer</a>, <a>task automator</a></p>
           <h2 class="text2">Self-proclaimed <a class="text1">Arbiter of Code Quality</a></h2>
         </div>
-        </div>
       </div>
 
       <div class="hr"></div>
-      <div class="banner">
-      </div>
+      <div class="banner"></div>
+      <div class="hr"></div>
 
-			<div class="main-row">
-        <div id="portfolio" class="section">
-          <div class="tab-container">
-            <div class="hr"></div>
+      <!-- Portfolio -->
+      <div id="portfolio" class="section">
+        <div class="tab-container">
+          <!-- Tabs -->
+          <ul class="tabs">
+            <li class="active first-tab" data-tab="tab-1">Code</li>
+            <li data-tab="tab-2">Tinkering</li>
+            <li data-tab="tab-3" class="last-tab">Drawing</li>
+          </ul>
 
-              <ul class="tabs">
-                <li class="active first-tab" data-tab="tab-1">Code</li>
-                <li data-tab="tab-2">Tinkering</li>
-                <li data-tab="tab-3" class="last-tab">Drawing</li>
-              </ul>
+          <!-- Portfolio Sections -->
 
+          <!-- Coding projects -->
+          <div id="tab-1" class="tab-content active">
+            <div id="code">
+              <p class="portfolio-section">Code</p>
 
-            <div id="tab-1" class="tab-content active">
-              <!-- Content for Tab 1 -->
-              <div id="code">
-                <!-- <h1 class="text-shadow">I write code</h1> -->
-                <p class="portfolio-section">Code</p>
-
-                <section class="proj-list">
-                  <div class="proj">
-                    <img src="files/images/projects/code/klipq.png">
-                    <div id="klipq-overlay" class="proj-overlay">
-                      <p class="proj-label">Clipboard Manager</p>
-                      <h1 class="proj-heading">KlipQ</h1>
-                      <p>
-                        Paste from your copy history
-                      </p>
-                      <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/KlipQ"></a>
-                    </div>
+              <section class="proj-list">
+                <div class="proj">
+                  <img src="files/images/projects/code/klipq.png">
+                  <div id="klipq-overlay" class="proj-overlay">
+                    <p class="proj-label">Clipboard Manager</p>
+                    <h1 class="proj-heading">KlipQ</h1>
+                    <p>
+                      Paste from your copy history
+                    </p>
+                    <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/KlipQ"></a>
                   </div>
+                </div>
 
-                  <div class="proj">
-                    <img src="files/images/projects/code/forkist.png">
-                    <div class="proj-overlay">
-                      <p class="proj-label">Mobile App</p>
-                      <h1 class="proj-heading">Forkist</h1>
-                      <p>
-                        "Social Food Network"
-                      </p>
-                      <a class="fa fa-link" style="font-size:52px" href="https://forkist.com/"></a>
-                    </div>
+                <div class="proj">
+                  <img src="files/images/projects/code/forkist.png">
+                  <div class="proj-overlay">
+                    <p class="proj-label">Mobile App</p>
+                    <h1 class="proj-heading">Forkist</h1>
+                    <p>
+                      "Social Food Network"
+                    </p>
+                    <a class="fa fa-link" style="font-size:52px" href="https://forkist.com/"></a>
                   </div>
+                </div>
 
-                  <div class="proj">
-                    <img src="files/images/projects/code/dailynotes.png">
-                    <div class="proj-overlay">
-                      <p class="proj-label">Obsidian Plugin</p>
-                      <h1 class="proj-heading">Daily Notes Manager</h1>
-                      <p>
-                        Enhance and customize your daily notes
-                      </p>
-                      <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/daily-notes-manager"></a>
-                    </div>
+                <div class="proj">
+                  <img src="files/images/projects/code/dailynotes.png">
+                  <div class="proj-overlay">
+                    <p class="proj-label">Obsidian Plugin</p>
+                    <h1 class="proj-heading">Daily Notes Manager</h1>
+                    <p>
+                      Enhance and customize your daily notes
+                    </p>
+                    <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/daily-notes-manager"></a>
                   </div>
+                </div>
 
-                  <div class="proj">
-                    <img src="files/images/projects/code/gruvfox.png">
-                    <div class="proj-overlay">
-                      <p class="proj-label">Firefox Theme</p>
-                      <h1 class="proj-heading">Gruvfox</h1>
-                      <p>
-                        Gruvbox theme with a private browsing-only option
-                      </p>
-                      <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/discrete-gruvfox"></a>
-                    </div>
+                <div class="proj">
+                  <img src="files/images/projects/code/gruvfox.png">
+                  <div class="proj-overlay">
+                    <p class="proj-label">Firefox Theme</p>
+                    <h1 class="proj-heading">Gruvfox</h1>
+                    <p>
+                      Gruvbox theme with a private browsing-only option
+                    </p>
+                    <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/discrete-gruvfox"></a>
                   </div>
-                </section>
-              </div>
-            </div>
-            <div id="tab-2" class="tab-content">
-              <!-- Content for Tab 2 -->
-              <div id="tinkering" class="section">
-                <!-- <h2 class="">. . . and I build things to run it on</h2> -->
-                <p class="portfolio-section">Tinkering</p>
-
-                <section class="proj-list">
-                  <div class="proj">
-                    <img src="files/images/projects/tinkering/privacylight.jpg">
-                    <div class="proj-overlay">
-                      <p>
-                        <h3 class="proj-heading">Privacy Light</h3><br>
-                        Custom do-not-disturb indicator display<br>
-                        <a class="fa fa-github-square" style="font-size:52px;" href="https://github.com/kennymason/privacy-light"></a>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="proj">
-                    <img src="files/images/projects/tinkering/macropad.jpg">
-                    <div class="proj-overlay">
-                      <p><h3 class="proj-heading">Macro Keypad</h3><br>A macro keypad made from a switch tester</p>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-            <div id="tab-3" class="tab-content">
-              <!-- Content for Tab 3 -->
-              <div id="art" class="section">
-                <!-- <h2 class="">I use pencils, charcoal, and powdered graphite to draw portraits</h2> -->
-                <p class="portfolio-section">Drawing</p>
-    
-                <section id="post-list">
-                  <div class="post">
-                    <img src="files/images/art/harley.jpg">
-                    <div class="post-overlay">
-                      <p>Harley<br/><span class="date">Dec 2018</span></p>
-                    </div>
-                  </div>
-                  <div class="post">
-                    <img src="files/images/art/wwhite.jpg">
-                    <div class="post-overlay">
-                      <p>Walter White<br/><span class="date">Nov 2018</span></p>
-                  </div>
-                  </div>
-                </section>
-              </div>
+                </div>
+              </section>
             </div>
           </div>
 
-          <div class="hr"></div>
-          <div class="banner">
-          </div>
-          <div class="hr"></div>
+          <!-- Hardware projects -->
+          <div id="tab-2" class="tab-content">
+            <div id="tinkering" class="section">
+              <p class="portfolio-section">Tinkering</p>
 
-          <div id="resume" class="section">
-            <p class="portfolio-section">Résumé</p>
-            <iframe height="1000px" width="800px" src="https://docs.google.com/document/d/e/2PACX-1vSwKKdeh8gYUkRHPYJCZySYHmARWbnm5wNhm6VKwZSKUGuWhmxUZ_H_OXKpu8ClSM-fu9aZhYAmLNp0/pub?embedded=true"></iframe>
+              <section class="proj-list">
+                <div class="proj">
+                  <img src="files/images/projects/tinkering/privacylight.jpg">
+                  <div class="proj-overlay">
+                    <p>
+                      <h3 class="proj-heading">Privacy Light</h3><br>
+                      Custom do-not-disturb indicator display<br>
+                      <a class="fa fa-github-square" style="font-size:52px;" href="https://github.com/kennymason/privacy-light"></a>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="proj">
+                  <img src="files/images/projects/tinkering/macropad.jpg">
+                  <div class="proj-overlay">
+                    <p><h3 class="proj-heading">HotKeypad</h3><br>A macro keypad made from a switch tester</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- Art -->
+          <div id="tab-3" class="tab-content">
+            <div id="art" class="section">
+              <p class="portfolio-section">Drawing</p>
+
+              <section id="post-list">
+                <div class="post">
+                  <img src="files/images/art/harley.jpg">
+                  <div class="post-overlay">
+                    <p>Harley<br/><span class="date">Dec 2018</span></p>
+                  </div>
+                </div>
+
+                <div class="post">
+                  <img src="files/images/art/wwhite.jpg">
+                  <div class="post-overlay">
+                    <p>Walter White<br/><span class="date">Nov 2018</span></p>
+                </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
-    
+
         <div class="hr"></div>
-        <div class="banner">
-        </div>
+        <div class="banner"></div>
         <div class="hr"></div>
 
+        <!-- Resume -->
+        <div id="resume" class="section">
+          <p class="portfolio-section">Résumé</p>
+          <iframe height="1000px" width="800px" src="https://docs.google.com/document/d/e/2PACX-1vSwKKdeh8gYUkRHPYJCZySYHmARWbnm5wNhm6VKwZSKUGuWhmxUZ_H_OXKpu8ClSM-fu9aZhYAmLNp0/pub?embedded=true"></iframe>
+        </div>
+
+        <div class="hr"></div>
+        <div class="banner"></div>
+        <div class="hr"></div>
+
+        <!-- Talented Friends -->
         <div id="talent" class="section">
           <p class="portfolio-section">Some talent you may not know</p>
           <p class="portfolio-section">I'm using this section to plug my friends. Explore cool projects and even some music!</p>
@@ -222,10 +218,11 @@
         </div>
 
         <div class="hr"></div>
-
+        
 			</div>
 		</div>
 
+    <!-- External links & contact buttons -->
     <div class="contact">
       <a class="fa fa-square-envelope" style="font-size:52px; padding-right: 30px;" href="mailto:kennymmase@gmail.com"></a>
       <a class="fa fa-github-square" style="font-size:52px; padding-right: 30px;" href="https://github.com/kennymason"></a>
@@ -234,6 +231,7 @@
 	</body>
 
   <script>
+    // Logic for tabs/portfolio sections
     const tabs = document.querySelectorAll('.tabs li');
     const tabContents = document.querySelectorAll('.tab-content');
 
