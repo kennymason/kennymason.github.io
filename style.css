@@ -41,6 +41,9 @@ body {
 .main-column {
 	width: 100%;
 }
+.top-row {
+	display: flex;
+}
 
 .top-container {
 	/* background: #282828; */
@@ -74,6 +77,39 @@ body {
 	text-align: center;
 
 	margin: 0;
+}
+
+.banner {
+  background-image: url("files/images/code.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100px; /* adjust the height to your liking */
+  background-attachment: fixed;
+}
+.banner2 {
+  background-image: url("files/images/code2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100px; /* adjust the height to your liking */
+  background-attachment: fixed;
+}
+.banner3 {
+  background-image: url("files/images/code3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100px; /* adjust the height to your liking */
+  background-attachment: fixed;
+}
+.banner4 {
+  background-image: url("files/images/streaks.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px; /* adjust the height to your liking */
+  background-attachment: fixed;
 }
 
 /* Projects */
