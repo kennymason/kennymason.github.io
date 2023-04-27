@@ -26,7 +26,8 @@ body {
 }
 
 iframe{
-	border-color: #00af6b;
+	border: 1px #00af6b solid;
+	border-radius: 2px;
 }
 
 /* Landing Banner */
@@ -116,19 +117,38 @@ iframe{
 	font-size: 80%;
 	margin: 0;
 }
-.heading2 a:hover, .heading3 a:hover, .heading4:hover {
+.heading2 a:hover, .heading4:hover {
 	color: #fff !important;
 	text-shadow: -2px 0 0 #00ff2f, 2px 0 0 #ff00de;
+}
+.heading3 a:hover {
+	color: #fff !important;
+	text-shadow: -1px 0 0 #00ff2f, 1px 0 0 #ff00de;
 }
 
 .text-shadow {
 	text-shadow: -2px 0 0 #00ff2f, 2px 0 0 #ff00de;
 }
 
+.section-title {
+	margin: 0 0 40px 0;
+	opacity: 0.9;
+	font-size: 180%;
+	color: #fff !important;
+	text-shadow: -2px 0 0 #00ff2f, 2px 0 0 #ff00de;
+}
+
+.section-text {
+	margin: 0 0 40px 0;
+	font-size: 140%;
+	color: #fff !important;
+	text-shadow: -1px 0 0 #00ff2f, 1px 0 0 #ff00de;
+}
+
 /* Projects */
 
 .tab-container {
-  padding: 50px 0 80px 0;
+  padding: 50px 0 50px 0;
 	/* background-color: #000; */
 	background: linear-gradient(to bottom, rgb(0, 0, 0), #103d27);
 	display: flex;
@@ -176,14 +196,6 @@ iframe{
 .last-tab {
 	border-right: none !important;
   border-bottom-right-radius: 8px;
-}
-
-.portfolio-section {
-	margin-bottom: 30px;
-	opacity: 0.8;
-	font-size: 180%;
-	color: #fff !important;
-	text-shadow: -2px 0 0 #00ff2f, 2px 0 0 #ff00de;
 }
 
 #portfolio h2, #portfolio h1 {
@@ -391,7 +403,7 @@ iframe{
 /* Contact Me */
 .contact {
   position: fixed;
-  bottom: 20px;
+  top: 20px;
   right: 20px;
 }
 
