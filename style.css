@@ -1,7 +1,8 @@
 /* General */
 
 body {
-	background: linear-gradient(to bottom, rgb(0, 0, 0), #103d27);
+	/* background: linear-gradient(to bottom, rgb(0, 0, 0), #103d27); */
+	background-color: #000;
 	color: #fff;
 
 	font-family: 'Courier New', Courier, monospace;
@@ -24,7 +25,14 @@ body {
 	margin: 20px;
 }
 
-/* Nav */
+iframe{
+	border-color: #00af6b;
+}
+
+/* Landing Banner */
+
+.main-image {
+}
 
 #main {
 	display: flex;
@@ -41,36 +49,15 @@ body {
 }
 
 .top-container {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left;
 	height: 100%;
-	padding: 75px 20px 75px 0;
+	width: 100%;
+	padding: 75px 20px 100px 0;
 	text-align: center;
 	font-size: 150%;
-}
-
-.text1 {
-	color: #8de4b8;
-	font-size: 120%;
-}
-.text2 {
-	color: #41e693;
-	padding: 30px 20px 0 20px;
-	font-size: 120%;
-}
-.text3 {
-	color: #41e693;
-	font-size: 80%;
-	margin: 0;
-}
-.text2 a:hover, .text3 a:hover, .text1:hover {
-	color: #fff !important;
-	text-shadow: -1px 0 0 #00ff2f, 1px 0 0 #ff00de;
-}
-
-.text-shadow {
-	text-shadow: -1px 0 0 #00ff2f, 1px 0 0 #ff00de;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('files/images/paint.jpg'); /* the gradient from transparent to black */
+  background-blend-mode: darken;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
 }
 
 .section {
@@ -88,18 +75,73 @@ body {
   background-attachment: fixed;
 }
 
+/* Headings */
+
+.glitch-heading {
+	font-size: 250%;
+	position: relative;
+	animation: glitch-animation .4s linear infinite;
+	text-shadow: -1px -1px 0 #00ff2f, 1px 1px 0 #ff00de;
+}
+.glitch-heading::before, .glitch-heading::after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.glitch-heading::before {
+	animation: glitch-animation-2 .4s linear infinite;
+	clip: rect(44px, 200px, 56px, 0);
+	text-shadow: -1px -1px 0 #ff00de;
+	z-index: -1;
+}
+.glitch-heading::after {
+	animation: glitch-animation-3 .4s linear infinite;
+	clip: rect(66px, 200px, 78px, 0);
+	text-shadow: 1px 1px 0 #00ff2f;
+	z-index: -2;
+}
+
+.heading4 {
+	color: #8de4b8;
+	font-size: 150%;
+}
+.heading2 {
+	color: #41e693;
+	padding: 30px 20px 0 20px;
+	font-size: 140%;
+}
+.heading3 {
+	color: #41e693;
+	font-size: 80%;
+	margin: 0;
+}
+.heading2 a:hover, .heading3 a:hover, .heading4:hover {
+	color: #fff !important;
+	text-shadow: -2px 0 0 #00ff2f, 2px 0 0 #ff00de;
+}
+
+.text-shadow {
+	text-shadow: -2px 0 0 #00ff2f, 2px 0 0 #ff00de;
+}
+
 /* Projects */
 
 .tab-container {
   padding: 50px 0 80px 0;
+	/* background-color: #000; */
+	background: linear-gradient(to bottom, rgb(0, 0, 0), #103d27);
+	display: flex;
 }
 
 .tabs {
-	justify-content: center;
-	vertical-align: center;
+	/* justify-content: center; */
   list-style: none;
   padding: 0;
+	margin-left: 40px;
   display: flex;
+	flex-direction: column;
+	text-align: left;
 }
 
 .tabs li {
@@ -113,13 +155,14 @@ body {
 
 .tabs li.active {
 	opacity: 1;
-	text-shadow: -1px 0 0 #00ff2f, 1px 0 0 #ff00de;
+	text-shadow: -2px 0 0 #00ff2f, 2px 0 0 #ff00de;
 	font-size: 200%;
 }
 
 .tab-content {
   display: none;
   padding: 10px 130px;
+	width: 100%;
 }
 
 .tab-content.active {
@@ -140,7 +183,7 @@ body {
 	opacity: 0.8;
 	font-size: 180%;
 	color: #fff !important;
-	text-shadow: -1px 0 0 #00ff2f, 1px 0 0 #ff00de;
+	text-shadow: -2px 0 0 #00ff2f, 2px 0 0 #ff00de;
 }
 
 #portfolio h2, #portfolio h1 {
@@ -161,7 +204,6 @@ body {
   width: auto;
   position: relative;
 	border-radius: 4px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .proj > img {
@@ -192,9 +234,11 @@ body {
 	padding-right: 40px;
 
 	gap: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .proj-overlay:hover{
 	opacity: 1;
+	box-shadow: 0px 0px 10px 10px #103d27;
 }
 .proj a {
 	color: inherit;
@@ -285,6 +329,7 @@ body {
 #resume{
 	padding-top: 50px;
 	padding-bottom: 50px;
+	background: linear-gradient(to bottom, #103d27, #000);
 }
 #resume-embed {
 	width: 60%;
@@ -357,35 +402,6 @@ body {
 }
 .fa:hover{
 	color: #8de4b8 !important;
-}
-
-/* Glitch Heading */
-
-.glitch-heading {
-	position: relative;
-	animation: glitch-animation .4s linear infinite;
-	text-shadow: -1px -1px 0 #00ff2f, 1px 1px 0 #ff00de;
-}
-
-.glitch-heading::before, .glitch-heading::after {
-	content: attr(data-text);
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.glitch-heading::before {
-	animation: glitch-animation-2 .4s linear infinite;
-	clip: rect(44px, 200px, 56px, 0);
-	text-shadow: -1px -1px 0 #ff00de;
-	z-index: -1;
-}
-
-.glitch-heading::after {
-	animation: glitch-animation-3 .4s linear infinite;
-	clip: rect(66px, 200px, 78px, 0);
-	text-shadow: 1px 1px 0 #00ff2f;
-	z-index: -2;
 }
 
 @keyframes glitch-animation {
