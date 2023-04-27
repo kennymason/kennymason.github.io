@@ -6,6 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="https://kit.fontawesome.com/ec9a4f7b99.js" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="index.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script> -->
+    <script src="lib/marked.min.js"></script>
 	</head>
 	<body>
 		<div id="main">
@@ -213,6 +216,44 @@
         </div>
 
         <div class="hr"></div>
+
+<!-- 
+
+        <div class="hr"></div>
+        <div class="banner"></div>
+        <div class="hr"></div>
+
+        <div id="markdown-container"></div>
+        <script>
+          const xhr = new XMLHttpRequest();
+
+          xhr.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+              const content = this.responseText;
+              const html = marked(content);
+              document.getElementById("markdown-container").innerHTML = html;
+            }
+          };
+
+          xhr.open("GET", "example.md");
+          xhr.send();
+
+
+
+
+          // // Create a new instance of the showdown converter
+          // var converter = new showdown.Converter();
+          
+          // // Define your Markdown content
+          // var markdownText = "# My Markdown Title\n\nThis is **bold** and this is *italic*.";
+          
+          // // Convert the Markdown to HTML
+          // var htmlText = converter.makeHtml(markdownText);
+          
+          // // Insert the HTML into the container element
+          // document.getElementById("markdown-container").innerHTML = htmlText;
+        </script>
+         -->
 
 			</div>
 		</div>
