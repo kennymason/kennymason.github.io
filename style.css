@@ -9,8 +9,6 @@ body {
 	font-size: larger;
 	
 	margin: 0;
-
-	width: 100%;
 }
 
 .hr{
@@ -396,10 +394,16 @@ iframe{
 }
 
 /* Responsive CSS */
-/* 
+
 @media only screen and (max-width: 1250px) {
 	#resume-embed {
 		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.tab-container {
+		flex-wrap: wrap;
 	}
 }
 
@@ -413,7 +417,7 @@ iframe{
 	#resume-embed {
 		width: 100%;
 	}
-} */
+}
 
 @media only screen and (max-width: 480px) {
   .post > img, .proj > img, .post-overlay, .proj-overlay, .post, .proj {
@@ -441,8 +445,12 @@ iframe{
 		margin: 10px;
 	}
 
-	/* #resume-embed {
+	#resume-embed {
 		width: 80%;
 		height: 1375px;
-	} */
+	}
+
+	.tab-container {
+		flex-wrap: wrap;
+	}
 }
