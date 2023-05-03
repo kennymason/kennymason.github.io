@@ -111,6 +111,8 @@ iframe{
 	color: #41e693;
 	padding: 30px 20px 0 20px;
 	font-size: 140%;
+
+	text-shadow: 0 0 10px black;
 }
 .heading3 {
 	color: #41e693;
@@ -406,9 +408,11 @@ iframe{
 		width: auto;
 		height: 350px;
 	}
+}
 
+@media only screen and (max-width: 1800px) {
 	.tab-content {
-		margin-right: 100px;
+		margin-right: 200px;
 	}
 }
 
@@ -421,6 +425,10 @@ iframe{
 
 	.proj-overlay{
 		gap: 10px;
+	}
+
+	.tab-content {
+		margin-right: 100px;
 	}
 }
 
@@ -457,7 +465,7 @@ iframe{
 		height: auto;
 		padding: 0;
 	}
-	.post-overlay, .proj-overlay  {
+	.post-overlay, .proj-overlay {
 		gap: 0;
 		height: 100%;
 	}
@@ -473,7 +481,7 @@ iframe{
 		left: auto;
 	}
 
-	.section{
+	.section {
 		margin: 10px;
 	}
 
