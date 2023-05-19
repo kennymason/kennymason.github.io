@@ -321,6 +321,9 @@ iframe{
   border-radius: 8px;
   animation-name: zoomIn;
   animation-duration: 0.3s;
+
+	max-width: 1750px;
+	min-width: 1200px;
 }
 
 .modal-body-content {
