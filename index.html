@@ -19,20 +19,6 @@
 
         <div class="top-container">
           <h1 class="glitch-heading">I'm Kenny.</h1>
-
-          <!-- <h1 class="glitch-heading typewriter">
-            
-            <span>I</span>
-            <span>'</span>
-            <span>m</span>
-            <span style="padding:10px"> </span>
-            <span>K</span>
-            <span>e</span>
-            <span>n</span>
-            <span>n</span>
-            <span>y</span>
-            <span>.</span>
-          </h1> -->
           <h3 class="heading2"><a>Software engineer</a>, <a>hardware hobbyist</a>, <a>graphite artist</a></h3>
           <p class="heading3"><a>Chess player</a>, <a>card collector</a>, <a>puzzle solver</a>, <a>board gamer</a>, <a>task automator</a></p>
           <h2 class="heading2">Self-proclaimed <a class="heading4 hover-4">Arbiter of Code Quality</a></h2>
@@ -60,9 +46,10 @@
           <div id="tab-1" class="tab-content active">
             <div id="code">
               <section class="proj-list">
+
                 <div class="proj">
                   <img src="files/images/projects/code/forkist.png">
-                  <div class="proj-overlay">
+                  <div id="forkist-overlay" class="proj-overlay">
                     <p class="proj-label">Mobile App</p>
                     <h1 class="proj-heading">Forkist</h1>
                     <p>
@@ -70,6 +57,26 @@
                     </p>
                     <a class="fa fa-link" style="font-size:52px" href="https://forkist.com/" target="_blank"></a>
                   </div>
+                  <div id="forkist-modal" class="modal">
+                    <div id="forkist-modal-content" class="modal-content">
+                      <h2>Forkist</h2>
+                      <div class="modal-body-content">
+                        <img src="files/images/projects/code/forkist.png">
+                        <div class="modal-text-content">
+                          <h3>A Foodie Mobile App</h3>
+                          <p>At the intersection of food reviews and social networks, you'll find Forkist - the world's first "Social Food Network". Some people post pictures of their food on Instagram. I post mine here.</p>
+                          <p>At the heart of Forkist is a love of food, and a desire to share it. Find new food, share your eats, and bon appétit.</p>
+                        </div>
+                      </div>
+                      <span id="forkist-close-btn" class="close-btn">&times;</span>
+                    </div>
+                  </div>
+
+                  <script>
+                    document.getElementById('forkist-overlay').addEventListener('click', () => {
+                      showModal('forkist');
+                    });
+                  </script>
                 </div>
 
                 <div class="proj">
@@ -82,11 +89,32 @@
                     </p>
                     <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/KlipQ" target="_blank"></a>
                   </div>
+                  <div id="klipq-modal" class="modal">
+                    <div id="klipq-modal-content" class="modal-content">
+                      <h2>KlipQ</h2>
+
+                      <div class="modal-body-content">
+                        <img src="files/images/projects/code/klipq.png">
+                        <div class="modal-text-content">
+                          <h3>A Clipboard Manager for macOS</h3>
+                          <p>Every great invention starts with a need. When I'm writing code, there are often times when I wish I could copy multiple things in a row, and paste them in a row. Times when I wish I could paste that item I copied four copies ago. Enter: KlipQ</p>
+                          <p>KlipQ is a clipboard manager I made for the very simple purpose of saving a history of your recently copied items, and allowing you to paste directly from that history. My hope is that others get as much use out of this as I do.</p>
+                        </div>
+                      </div>
+                      <span id="klipq-close-btn" class="close-btn">&times;</span>
+                    </div>
+                  </div>
+
+                  <script>
+                    document.getElementById('klipq-overlay').addEventListener('click', () => {
+                      showModal('klipq');
+                    });
+                  </script>
                 </div>
 
                 <div class="proj">
                   <img src="files/images/projects/code/dailynotes.png">
-                  <div class="proj-overlay">
+                  <div id="dailynotes-overlay" class="proj-overlay">
                     <p class="proj-label">Obsidian Plugin</p>
                     <h1 class="proj-heading">Daily Notes Manager</h1>
                     <p>
@@ -94,19 +122,64 @@
                     </p>
                     <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/daily-notes-manager" target="_blank"></a>
                   </div>
+                  <div id="dailynotes-modal" class="modal">
+                    <div id="dailynotes-modal-content" class="modal-content">
+                      <h2>Daily Notes Manager</h2>
+
+                      <div class="modal-body-content">
+                        <img src="files/images/projects/code/dailynotes.png">
+                        <div class="modal-text-content">
+                          <h3>Customize your Obsidian Daily Notes</h3>
+                          <p>Obsidian is my must-have tool for notetaking. The Daily Notes feature makes it easy to create a unique note every day. I realized a feature I needed was to have one daily note to include content from other notes, so I created a Daily Notes Manager to help.</p>
+                          <p>I use it to carry over unfinished tasks from the previous day, rollover a "yesterday's work" summary into my "Daily Standup" section, archive old notes, create custom organization based on day of the week, and more.</p>
+                        </div>
+                      </div>
+                      <span id="dailynotes-close-btn" class="close-btn">&times;</span>
+                    </div>
+                  </div>
+
+                  <script>
+                    document.getElementById('dailynotes-overlay').addEventListener('click', () => {
+                      showModal('dailynotes');
+                    });
+                  </script>
                 </div>
 
                 <div class="proj">
                   <img src="files/images/projects/code/gruvfox.png">
-                  <div class="proj-overlay">
-                    <p class="proj-label">Firefox Theme</p>
-                    <h1 class="proj-heading">Gruvfox</h1>
-                    <p>
-                      Gruvbox theme with a private-browsing-only option
-                    </p>
-                    <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/discrete-gruvfox" target="_blank"></a>
+                  <a onclick="showModal('gruvfox')">
+                    <div id="gruvfox-overlay" class="proj-overlay">
+                      <p class="proj-label">Firefox Theme</p>
+                      <h1 class="proj-heading">Gruvfox</h1>
+                      <p>
+                        Gruvbox theme with a private-browsing-only option
+                      </p>
+                      <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/discrete-gruvfox" target="_blank"></a>
+                    </div>
+                  </a>
+                  <div id="gruvfox-modal" class="modal">
+                    <div id="gruvfox-modal-content" class="modal-content">
+                      <h2>Gruvfox</h2>
+
+                      <div class="modal-body-content">
+                        <img src="files/images/projects/code/gruvfox.png">
+                        <div class="modal-text-content">
+                          <h3>A new kind of Firefox theme</h3>
+                          <p>Making a Firefox theme is easy. Making one that only applies to Private Browsing? Less so.</p>
+                          <p>Gruvfox is a gruvbox theme for Firefox that directly modifies the CSS of the browser to create a unique type of theme. This theme can be applied in regular browsing, private browsing, or both.</p>
+                        </div>
+                      </div>
+                      <span id="gruvfox-close-btn" class="close-btn">&times;</span>
+                    </div>
                   </div>
+
+                  <script>
+                    document.getElementById('gruvfox-overlay').addEventListener('click', () => {
+                      showModal('gruvfox');
+                    });
+                  </script>
                 </div>
+
               </section>
             </div>
           </div>
@@ -298,5 +371,24 @@
         tabContent.classList.add('active');
       });
     });
+
+    // modal popup
+
+    function showModal(name){
+      const modal = document.getElementById(name + "-modal");
+      const closeBtn = document.getElementById(name + "-close-btn");
+
+      modal.style.display = "flex";
+
+      closeBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+      });
+
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
   </script>
 </html>
