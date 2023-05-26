@@ -147,16 +147,14 @@
 
                 <div class="proj">
                   <img src="files/images/projects/code/gruvfox.png">
-                  <a onclick="showModal('gruvfox')">
-                    <div id="gruvfox-overlay" class="proj-overlay">
-                      <p class="proj-label">Firefox Theme</p>
-                      <h1 class="proj-heading">Gruvfox</h1>
-                      <p>
-                        Gruvbox theme with a private-browsing-only option
-                      </p>
-                      <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/discrete-gruvfox" target="_blank"></a>
-                    </div>
-                  </a>
+                  <div id="gruvfox-overlay" class="proj-overlay">
+                    <p class="proj-label">Firefox Theme</p>
+                    <h1 class="proj-heading">Gruvfox</h1>
+                    <p>
+                      Gruvbox theme with a private-browsing-only option
+                    </p>
+                    <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/discrete-gruvfox" target="_blank"></a>
+                  </div>
                   <div id="gruvfox-modal" class="modal">
                     <div id="gruvfox-modal-content" class="modal-content">
                       <h2>Gruvfox</h2>
@@ -190,20 +188,64 @@
               <section class="proj-list">
                 <div class="proj">
                   <img src="files/images/projects/tinkering/privacylight.jpg">
-                  <div class="proj-overlay">
+
+                  <div id="aura-overlay" class="proj-overlay">
+                    <h3 class="proj-heading">Door Aura</h3>
                     <p>
-                      <h3 class="proj-heading">Door Aura</h3><br>
                       Custom do-not-disturb indicator display<br>
-                      <a class="fa fa-github-square" style="font-size:52px;" href="https://github.com/kennymason/privacy-light" target="_blank"></a>
                     </p>
+                    <a class="fa fa-github-square" style="font-size:52px;" href="https://github.com/kennymason/privacy-light" target="_blank"></a>
                   </div>
+
+                  <div id="aura-modal" class="modal">
+                    <div id="aura-modal-content" class="modal-content">
+                      <h2>Door Aura</h2>
+                      <div class="modal-body-content">
+                        <img src="files/images/projects/tinkering/privacylight.jpg">
+                        <div class="modal-text-content">
+                          <h3>Do-not-disturb made easy</h3>
+                          <p>At the intersection of food reviews and social networks, you'll find Forkist - the world's first "Social Food Network". Some people post pictures of their food on Instagram. I post mine here.</p>
+                          <p>At the heart of Forkist is a love of food, and a desire to share it. Find new food, share your eats, and bon appétit.</p>
+                        </div>
+                      </div>
+                      <span id="aura-close-btn" class="close-btn">&times;</span>
+                    </div>
+                  </div>
+
+                  <script>
+                    document.getElementById('aura-overlay').addEventListener('click', () => {
+                      showModal('aura');
+                    });
+                  </script>
                 </div>
 
                 <div class="proj">
                   <img src="files/images/projects/tinkering/macropad.jpg">
-                  <div class="proj-overlay">
+
+                  <div id="macro-overlay" class="proj-overlay">
                     <p><h3 class="proj-heading">HotKeypad</h3><br>A macro keypad made from a switch tester</p>
                   </div>
+
+                  <div id="macro-modal" class="modal">
+                    <div id="macro-modal-content" class="modal-content">
+                      <h2>HotKeypad</h2>
+                      <div class="modal-body-content">
+                        <img src="files/images/projects/tinkering/macropad.jpg">
+                        <div class="modal-text-content">
+                          <h3>From Switch Tester to Macro Keypad</h3>
+                          <p>At the intersection of food reviews and social networks, you'll find Forkist - the world's first "Social Food Network". Some people post pictures of their food on Instagram. I post mine here.</p>
+                          <p>At the heart of Forkist is a love of food, and a desire to share it. Find new food, share your eats, and bon appétit.</p>
+                        </div>
+                      </div>
+                      <span id="macro-close-btn" class="close-btn">&times;</span>
+                    </div>
+                  </div>
+
+                  <script>
+                    document.getElementById('macro-overlay').addEventListener('click', () => {
+                      showModal('macro');
+                    });
+                  </script>
                 </div>
               </section>
             </div>
