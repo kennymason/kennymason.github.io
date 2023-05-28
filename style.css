@@ -1,11 +1,12 @@
 /* General */
-
-body {
-	/* background: linear-gradient(to bottom, rgb(0, 0, 0), #103d27); */
+html{
 	background-color: #000;
+}
+body {
+	background: linear-gradient(to bottom, rgb(0, 0, 0), #103d27);
 	color: #fff;
 
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Poppins', sans-serif;
 	font-size: larger;
 	
 	margin: 0;
@@ -37,7 +38,7 @@ iframe{
 
 #main {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 
 	width: 100%;
 }
@@ -45,26 +46,52 @@ iframe{
 	width: 100%;
 }
 .main-banner {
-	display: flex;
-	background-color: #000;
+  position: fixed;
+  top: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  z-index: 950;
+  pointer-events: none;
+
+	/* background: linear-gradient(to bottom, rgb(0, 0, 0), #103d27);
+	height: 100%;
+	width: 325px;
+	border-right: 2px solid #00af6b; */
+}
+#main-content{
+	width: 100%;
+	margin-left: auto;
+}
+
+.main-list{
+	list-style-type: none;
+	padding: 0 !important;
+}
+.subtext {
+	position: fixed;
+	bottom: 75px;
+	left: 20px;
+	font-size: 70%;
+}
+
+#code h2{
+	padding-top: 0 !important;
 }
 
 .top-container {
 	height: 100%;
-	width: 100%;
-	padding: 75px 20px 100px 0;
-	text-align: center;
-	font-size: 150%;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('files/images/paint.jpg'); /* the gradient from transparent to black */
-  background-blend-mode: darken;
-	background-size: auto 100%;
-	background-repeat: no-repeat;
+	text-align: left;
+	font-size: 26px;
 }
 
 .section {
 	text-align: center;
 
 	margin: 0;
+	
+	margin-left: 325px;
 }
 
 .banner {
@@ -72,14 +99,15 @@ iframe{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 100px;
   background-attachment: fixed;
 }
 
 /* Headings */
 
 .glitch-heading {
-	font-size: 250%;
+	font-size: 140%;
+	color: #fff;
 	position: relative;
 	animation: glitch-text 5s linear infinite, glitch-animation .4s linear infinite;
 	text-shadow: -1px -1px 0 #00ff2f, 1px 1px 0 #ff00de;
@@ -122,14 +150,19 @@ iframe{
 	text-shadow: -1px -1px 0 #00ff2f, 1px 1px 0 #ff00de;
 }
 
+.heading-left{
+	width: 500px;
+	text-align: left;
+	margin:0;
+	padding-top: 10px !important;
+}
+
 .heading4 {
 	color: #8de4b8;
-	font-size: 150%;
 }
 .heading2 {
 	color: #41e693;
 	padding: 30px 20px 0 20px;
-	font-size: 140%;
 	text-shadow: 0 0 10px black;
 }
 .heading3 {
@@ -221,8 +254,13 @@ iframe{
   border-bottom-right-radius: 8px;
 }
 
+#portfolio {
+	padding: 20px 0 70px 0;
+	background: linear-gradient(to bottom, rgb(0, 0, 0), #103d27);
+}
+
 #portfolio h2, #portfolio h1 {
-	padding: 50px;
+	padding: 0 50px;
 }
 
 .proj-list{
@@ -230,12 +268,15 @@ iframe{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 .proj{
   margin: 20px;
   max-width: 100%;
-  height: 400px;
+  height: 375px;
   width: auto;
   position: relative;
 	border-radius: 4px;
@@ -243,7 +284,7 @@ iframe{
 
 .proj > img {
   width: auto;
-  height: 400px; /* Fixed height */
+  height: 375px; /* Fixed height */
   object-fit: cover;
 	border-radius: 4px;
 }
@@ -295,6 +336,12 @@ iframe{
 	opacity: .7;
 }
 
+.proj-overlay p {
+  padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 0;
+}
+
 /* Modals */
 
 .modal {
@@ -307,6 +354,7 @@ iframe{
   height: 100%;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(5px);
 	align-items: center;
 	justify-content: center;
 }
@@ -338,6 +386,7 @@ iframe{
 	line-height: 170%;
 	margin: auto 50px;
 	vertical-align: middle;
+	text-align: left;
 }
 
 .modal-body-content > img {
@@ -444,9 +493,9 @@ iframe{
 }
 
 #resume{
-	padding-top: 50px;
+	text-align: center;
 	padding-bottom: 50px;
-	/* background: linear-gradient(to bottom, #103d27, #000); */
+	background: linear-gradient(to bottom, #103d27, #000);
 }
 #resume-embed {
 	width: 60%;
@@ -456,8 +505,9 @@ iframe{
 /* Contact Me */
 .contact {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  bottom: 20px;
+  left: 20px;
+	z-index: 951;
 }
 
 .fa{
@@ -540,7 +590,7 @@ scale3d(1, 1, 1);
 
 /* Responsive CSS */
 
-@media only screen and (max-width: 2040px) {
+/* @media only screen and (max-width: 2040px) {
 	.tab-content{
 		padding: 10px 50px;
 	}
@@ -573,7 +623,7 @@ scale3d(1, 1, 1);
 	.tab-content {
 		margin-right: 100px;
 	}
-}
+} */
 
 @media only screen and (max-width: 1250px) {
 	#resume-embed {
