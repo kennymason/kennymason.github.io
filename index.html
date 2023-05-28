@@ -5,6 +5,9 @@
 		<link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="https://kit.fontawesome.com/ec9a4f7b99.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 		<script type="text/javascript" src="index.js"></script>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script> -->
@@ -14,376 +17,280 @@
 		<div id="main">
       <!-- Landing Banner -->
       <div class="main-banner">
-        <!-- <img src="files/images/ace.jpg" width="35%" style="overflow: hidden"> -->
-        <div class="main-image"></div>
-
         <div class="top-container">
-          <h1 class="glitch-heading">Hi, I'm Kenny.</h1>
-          <h3 class="heading2"><a>Software engineer</a>, <a>hardware hobbyist</a>, <a>graphite artist</a></h3>
-          <p class="heading3"><a>Chess player</a>, <a>card collector</a>, <a>puzzle solver</a>, <a>board gamer</a>, <a>task automator</a></p>
-          <h2 class="heading2">Self-proclaimed <a class="heading4 hover-4">Arbiter of Code Quality</a></h2>
+          <a class="glitch-heading">Hi, I'm Kenny.</a>
+          <ul class="main-list heading2 heading-left">
+            <li><a>software engineer</a></li>
+            <li><a>hardware hobbyist</a></li>
+            <li><a>graphite artist</a></li>
+            <li><a>chess player</a></li>
+            <li><a>card collector</a></li>
+            <li><a>puzzle solver</a></li>
+            <li><a>board gamer</a></li>
+            <li><a>task automator</a></li>
+            <li><a class="heading4 hover-4">Arbiter of Code Quality*</a></li>
+          </ul>
+          <p class="subtext">*Self-proclaimed</p>
         </div>
       </div>
 
-      <div class="hr"></div>
-      <div class="banner wavy-background"></div>
-      <div class="hr"></div>
-
-      <!-- Portfolio -->
-      <div id="portfolio" class="section">
-        <div class="tab-container">
-          <!-- Tabs -->
-          <ul class="tabs">
-            <li class="active" data-tab="tab-1">Code</li>
-            <li data-tab="tab-2">Tinkering</li>
-            <li data-tab="tab-3">Art</li>
-            <li data-tab="tab-4">Résumé</li>
-          </ul>
-
+      <div id="main-content">
+        <!-- Portfolio -->
+        <div id="portfolio">
           <!-- Portfolio Sections -->
 
           <!-- Coding projects -->
-          <div id="tab-1" class="tab-content active">
-            <div id="code">
-              <section class="proj-list">
+          <div id="code" class="section">
+            <h2>Code</h2>
 
-                <div class="proj">
-                  <img src="files/images/projects/code/forkist.png">
-                  <div id="forkist-overlay" class="proj-overlay">
-                    <p class="proj-label">Mobile App</p>
-                    <h1 class="proj-heading">Forkist</h1>
-                    <p>
-                      "Social Food Network"
-                    </p>
-                    <a class="fa fa-link" style="font-size:52px" href="https://forkist.com/" target="_blank"></a>
-                  </div>
-                  <div id="forkist-modal" class="modal">
-                    <div id="forkist-modal-content" class="modal-content">
-                      <h2>Forkist</h2>
-                      <div class="modal-body-content">
-                        <img src="files/images/projects/code/forkist.png">
-                        <div class="modal-text-content">
-                          <h3>A Foodie Mobile App</h3>
-                          <p>At the intersection of food reviews and social networks, you'll find Forkist - the world's first "Social Food Network". Some people post pictures of their food on Instagram. I post mine here.</p>
-                          <p>At the heart of Forkist is a love of food, and a desire to share it. Find new food, share your eats, and bon appétit.</p>
-                        </div>
+            <section class="proj-list">
+
+              <div class="proj">
+                <img src="files/images/projects/code/forkist.png">
+                <div id="forkist-overlay" class="proj-overlay">
+                  <p class="proj-label">Mobile App</p>
+                  <h1 class="proj-heading">Forkist</h1>
+                  <p>
+                    "Social Food Network"
+                  </p>
+                  <a class="fa fa-link" style="font-size:52px" href="https://forkist.com/" target="_blank"></a>
+                </div>
+                <div id="forkist-modal" class="modal">
+                  <div id="forkist-modal-content" class="modal-content">
+                    <h2>Forkist</h2>
+                    <div class="modal-body-content">
+                      <img src="files/images/projects/code/forkist.png">
+                      <div class="modal-text-content">
+                        <h3>A Foodie Mobile App</h3>
+                        <p>At the intersection of food reviews and social networks, you'll find Forkist - the world's first "Social Food Network". Some people post pictures of their food on Instagram. I post mine here.</p>
+                        <p>At the heart of Forkist is a love of food, and a desire to share it. Find new food, share your eats, and bon appétit.</p>
                       </div>
-                      <span id="forkist-close-btn" class="close-btn">&times;</span>
                     </div>
+                    <span id="forkist-close-btn" class="close-btn">&times;</span>
                   </div>
-
-                  <script>
-                    document.getElementById('forkist-overlay').addEventListener('click', () => {
-                      showModal('forkist');
-                    });
-                  </script>
                 </div>
 
-                <div class="proj">
-                  <img src="files/images/projects/code/klipq.png">
-                  <div id="klipq-overlay" class="proj-overlay">
-                    <p class="proj-label">Clipboard Manager</p>
-                    <h1 class="proj-heading">KlipQ</h1>
-                    <p>
-                      Paste from your copy history
-                    </p>
-                    <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/KlipQ" target="_blank"></a>
-                  </div>
-                  <div id="klipq-modal" class="modal">
-                    <div id="klipq-modal-content" class="modal-content">
-                      <h2>KlipQ</h2>
+                <script>
+                  document.getElementById('forkist-overlay').addEventListener('click', () => {
+                    showModal('forkist');
+                  });
+                </script>
+              </div>
 
-                      <div class="modal-body-content">
-                        <img src="files/images/projects/code/klipq.png">
-                        <div class="modal-text-content">
-                          <h3>A Clipboard Manager for macOS</h3>
-                          <p>Every great invention starts with a need. When I'm writing code, there are often times when I wish I could copy multiple things in a row, and paste them in a row. Times when I wish I could paste that item I copied four copies ago. Enter: KlipQ</p>
-                          <p>KlipQ is a clipboard manager I made for the very simple purpose of saving a history of your recently copied items, and allowing you to paste directly from that history. My hope is that others get as much use out of this as I do.</p>
-                        </div>
+              <div class="proj">
+                <img src="files/images/projects/code/klipq.png">
+                <div id="klipq-overlay" class="proj-overlay">
+                  <p class="proj-label">Clipboard Manager</p>
+                  <h1 class="proj-heading">KlipQ</h1>
+                  <p>
+                    Paste from your copy history
+                  </p>
+                  <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/KlipQ" target="_blank"></a>
+                </div>
+                <div id="klipq-modal" class="modal">
+                  <div id="klipq-modal-content" class="modal-content">
+                    <h2>KlipQ</h2>
+
+                    <div class="modal-body-content">
+                      <img src="files/images/projects/code/klipq.png">
+                      <div class="modal-text-content">
+                        <h3>A Clipboard Manager for macOS</h3>
+                        <p>There were often times when I'd wish I could copy multiple things in a row, and paste them in a row. Times when I'd wish I could paste that item I copied four copies ago. Enter: KlipQ</p>
+                        <p>KlipQ is a clipboard manager I made for the simple purpose of saving a history of your recently copied items, and allowing you to paste directly from that history.</p>
+                        <p>My hope is that others get as much use out of this as I do.</p>
                       </div>
-                      <span id="klipq-close-btn" class="close-btn">&times;</span>
                     </div>
+                    <span id="klipq-close-btn" class="close-btn">&times;</span>
                   </div>
-
-                  <script>
-                    document.getElementById('klipq-overlay').addEventListener('click', () => {
-                      showModal('klipq');
-                    });
-                  </script>
                 </div>
 
-                <div class="proj">
-                  <img src="files/images/projects/code/dailynotes.png">
-                  <div id="dailynotes-overlay" class="proj-overlay">
-                    <p class="proj-label">Obsidian Plugin</p>
-                    <h1 class="proj-heading">Daily Notes Manager</h1>
-                    <p>
-                      Enhance and customize your daily notes
-                    </p>
-                    <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/daily-notes-manager" target="_blank"></a>
-                  </div>
-                  <div id="dailynotes-modal" class="modal">
-                    <div id="dailynotes-modal-content" class="modal-content">
-                      <h2>Daily Notes Manager</h2>
+                <script>
+                  document.getElementById('klipq-overlay').addEventListener('click', () => {
+                    showModal('klipq');
+                  });
+                </script>
+              </div>
 
-                      <div class="modal-body-content">
-                        <img src="files/images/projects/code/dailynotes.png">
-                        <div class="modal-text-content">
-                          <h3>Customize your Obsidian Daily Notes</h3>
-                          <p>Obsidian is my must-have tool for notetaking. The Daily Notes feature makes it easy to create a unique note every day. I realized a feature I needed was to have one daily note to include content from other notes, so I created a Daily Notes Manager to help.</p>
-                          <p>I use it to carry over unfinished tasks from the previous day, rollover a "yesterday's work" summary into my "Daily Standup" section, archive old notes, create custom organization based on day of the week, and more.</p>
-                        </div>
+              <div class="proj">
+                <img src="files/images/projects/code/dailynotes.png">
+                <div id="dailynotes-overlay" class="proj-overlay">
+                  <p class="proj-label">Obsidian Plugin</p>
+                  <h1 class="proj-heading">Daily Notes Manager</h1>
+                  <p>
+                    Enhance and customize your daily notes
+                  </p>
+                  <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/daily-notes-manager" target="_blank"></a>
+                </div>
+                <div id="dailynotes-modal" class="modal">
+                  <div id="dailynotes-modal-content" class="modal-content">
+                    <h2>Daily Notes Manager</h2>
+
+                    <div class="modal-body-content">
+                      <img src="files/images/projects/code/dailynotes.png">
+                      <div class="modal-text-content">
+                        <h3>Customize your Obsidian Daily Notes</h3>
+                        <p>Obsidian is my must-have tool for notetaking. The Daily Notes feature makes it easy to create a unique note every day. I realized a feature I needed was to have one daily note to include content from other notes, so I created a Daily Notes Manager to help.</p>
+                        <p>I use it to carry over unfinished tasks from the previous day, rollover a "yesterday's work" summary into my "Daily Standup" section, archive old notes, create custom organization based on day of the week, and more.</p>
                       </div>
-                      <span id="dailynotes-close-btn" class="close-btn">&times;</span>
                     </div>
+                    <span id="dailynotes-close-btn" class="close-btn">&times;</span>
                   </div>
-
-                  <script>
-                    document.getElementById('dailynotes-overlay').addEventListener('click', () => {
-                      showModal('dailynotes');
-                    });
-                  </script>
                 </div>
 
-                <div class="proj">
-                  <img src="files/images/projects/code/gruvfox.png">
-                  <div id="gruvfox-overlay" class="proj-overlay">
-                    <p class="proj-label">Firefox Theme</p>
-                    <h1 class="proj-heading">Gruvfox</h1>
-                    <p>
-                      Gruvbox theme with a private-browsing-only option
-                    </p>
-                    <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/discrete-gruvfox" target="_blank"></a>
-                  </div>
-                  <div id="gruvfox-modal" class="modal">
-                    <div id="gruvfox-modal-content" class="modal-content">
-                      <h2>Gruvfox</h2>
+                <script>
+                  document.getElementById('dailynotes-overlay').addEventListener('click', () => {
+                    showModal('dailynotes');
+                  });
+                </script>
+              </div>
 
-                      <div class="modal-body-content">
-                        <img src="files/images/projects/code/gruvfox.png">
-                        <div class="modal-text-content">
-                          <h3>A new kind of Firefox theme</h3>
-                          <p>Making a Firefox theme is easy. Making one that only applies to Private Browsing? Less so.</p>
-                          <p>Gruvfox is a gruvbox theme for Firefox that directly modifies the CSS of the browser to create a unique type of theme. This theme can be applied in regular browsing, private browsing, or both.</p>
-                        </div>
+              <div class="proj">
+                <img src="files/images/projects/code/gruvfox.png">
+                <div id="gruvfox-overlay" class="proj-overlay">
+                  <p class="proj-label">Firefox Theme</p>
+                  <h1 class="proj-heading">Gruvfox</h1>
+                  <p>
+                    Gruvbox theme with a private-browsing-only option
+                  </p>
+                  <a class="fa fa-github-square" style="font-size:52px" href="https://github.com/kennymason/discrete-gruvfox" target="_blank"></a>
+                </div>
+                <div id="gruvfox-modal" class="modal">
+                  <div id="gruvfox-modal-content" class="modal-content">
+                    <h2>Gruvfox</h2>
+
+                    <div class="modal-body-content">
+                      <img src="files/images/projects/code/gruvfox.png">
+                      <div class="modal-text-content">
+                        <h3>A new kind of Firefox theme</h3>
+                        <p>Making a Firefox theme is simple. Making one that only applies to Private Browsing? Less so.</p>
+                        <p>Gruvfox is a gruvbox theme for Firefox that directly modifies the CSS of the browser to create a unique type of theme.</p>
+                        <p>This theme can be applied in regular browsing, private browsing, or both.</p>
                       </div>
-                      <span id="gruvfox-close-btn" class="close-btn">&times;</span>
                     </div>
+                    <span id="gruvfox-close-btn" class="close-btn">&times;</span>
                   </div>
-
-                  <script>
-                    document.getElementById('gruvfox-overlay').addEventListener('click', () => {
-                      showModal('gruvfox');
-                    });
-                  </script>
                 </div>
 
-              </section>
-            </div>
+                <script>
+                  document.getElementById('gruvfox-overlay').addEventListener('click', () => {
+                    showModal('gruvfox');
+                  });
+                </script>
+              </div>
+
+            </section>
           </div>
 
           <!-- Hardware projects -->
-          <div id="tab-2" class="tab-content">
-            <div id="tinkering" class="section">
-              <section class="proj-list">
-                <div class="proj">
-                  <img src="files/images/projects/tinkering/privacylight.jpg">
+          <div id="tinkering" class="section">
+            <h2>Tinkering</h2>
 
-                  <div id="aura-overlay" class="proj-overlay">
-                    <h3 class="proj-heading">Door Aura</h3>
-                    <p>
-                      Custom do-not-disturb indicator display<br>
-                    </p>
-                    <a class="fa fa-github-square" style="font-size:52px;" href="https://github.com/kennymason/privacy-light" target="_blank"></a>
-                  </div>
+            <section class="proj-list">
+              <div class="proj">
+                <img src="files/images/projects/tinkering/privacylight.jpg">
 
-                  <div id="aura-modal" class="modal">
-                    <div id="aura-modal-content" class="modal-content">
-                      <h2>Door Aura</h2>
-                      <div class="modal-body-content">
-                        <img src="files/images/projects/tinkering/privacylight.jpg">
-                        <div class="modal-text-content">
-                          <h3>Do-not-disturb made easy</h3>
-                          <p>At the intersection of food reviews and social networks, you'll find Forkist - the world's first "Social Food Network". Some people post pictures of their food on Instagram. I post mine here.</p>
-                          <p>At the heart of Forkist is a love of food, and a desire to share it. Find new food, share your eats, and bon appétit.</p>
-                        </div>
-                      </div>
-                      <span id="aura-close-btn" class="close-btn">&times;</span>
-                    </div>
-                  </div>
-
-                  <script>
-                    document.getElementById('aura-overlay').addEventListener('click', () => {
-                      showModal('aura');
-                    });
-                  </script>
+                <div id="aura-overlay" class="proj-overlay">
+                  <h3 class="proj-heading">Door Aura</h3>
+                  <p>
+                    Custom do-not-disturb indicator display<br>
+                  </p>
+                  <a class="fa fa-github-square" style="font-size:52px;" href="https://github.com/kennymason/privacy-light" target="_blank"></a>
                 </div>
 
-                <div class="proj">
-                  <img src="files/images/projects/tinkering/macropad.jpg">
-
-                  <div id="macro-overlay" class="proj-overlay">
-                    <p><h3 class="proj-heading">HotKeypad</h3><br>A macro keypad made from a switch tester</p>
-                  </div>
-
-                  <div id="macro-modal" class="modal">
-                    <div id="macro-modal-content" class="modal-content">
-                      <h2>HotKeypad</h2>
-                      <div class="modal-body-content">
-                        <img src="files/images/projects/tinkering/macropad.jpg">
-                        <div class="modal-text-content">
-                          <h3>From Switch Tester to Macro Keypad</h3>
-                          <p>At the intersection of food reviews and social networks, you'll find Forkist - the world's first "Social Food Network". Some people post pictures of their food on Instagram. I post mine here.</p>
-                          <p>At the heart of Forkist is a love of food, and a desire to share it. Find new food, share your eats, and bon appétit.</p>
-                        </div>
+                <div id="aura-modal" class="modal">
+                  <div id="aura-modal-content" class="modal-content">
+                    <h2>Door Aura</h2>
+                    <div class="modal-body-content">
+                      <img src="files/images/projects/tinkering/privacylight.jpg">
+                      <div class="modal-text-content">
+                        <h3>Do-not-disturb made easy</h3>
+                        <p>At the intersection of food reviews and social networks, you'll find Forkist - the world's first "Social Food Network". Some people post pictures of their food on Instagram. I post mine here.</p>
+                        <p>At the heart of Forkist is a love of food, and a desire to share it. Find new food, share your eats, and bon appétit.</p>
                       </div>
-                      <span id="macro-close-btn" class="close-btn">&times;</span>
                     </div>
+                    <span id="aura-close-btn" class="close-btn">&times;</span>
                   </div>
-
-                  <script>
-                    document.getElementById('macro-overlay').addEventListener('click', () => {
-                      showModal('macro');
-                    });
-                  </script>
                 </div>
-              </section>
-            </div>
+
+                <script>
+                  document.getElementById('aura-overlay').addEventListener('click', () => {
+                    showModal('aura');
+                  });
+                </script>
+              </div>
+
+              <div class="proj">
+                <img src="files/images/projects/tinkering/macropad.jpg">
+
+                <div id="macro-overlay" class="proj-overlay">
+                  <p><h3 class="proj-heading">HotKeypad</h3><br>A macro keypad made from a switch tester</p>
+                </div>
+
+                <div id="macro-modal" class="modal">
+                  <div id="macro-modal-content" class="modal-content">
+                    <h2>HotKeypad</h2>
+                    <div class="modal-body-content">
+                      <img src="files/images/projects/tinkering/macropad.jpg">
+                      <div class="modal-text-content">
+                        <h3>From Switch Tester to Macro Keypad</h3>
+                        <p>As I sometimes do, I was scrolling Amazon, thinking, "what can I make from that?" with each item I saw. Eventually I saw a switch tester, and I had a very interesting idea.</p>
+                        <p>A fun project turned into a practical tool with HotKeypad. I wired a key matrix onto the switches to create a functional keypad, and wrote software to interface with my computeer.</p>
+                        <p>Now, with the click of a button, I can perform a variety of tasks and automations on my computer.</p>
+                      </div>
+                    </div>
+                    <span id="macro-close-btn" class="close-btn">&times;</span>
+                  </div>
+                </div>
+
+                <script>
+                  document.getElementById('macro-overlay').addEventListener('click', () => {
+                    showModal('macro');
+                  });
+                </script>
+              </div>
+            </section>
           </div>
 
           <!-- Art -->
-          <div id="tab-3" class="tab-content">
-            <div id="art" class="section">
-              <section id="post-list">
-                <div class="post">
-                  <img src="files/images/art/harley.jpg">
-                  <div class="post-overlay">
-                    <p>Harley<br/><span class="date">Dec 2018</span></p>
-                  </div>
-                </div>
+          <div id="art" class="section">
+            <h2>Art</h2>
 
-                <div class="post">
-                  <img src="files/images/art/wwhite.jpg">
-                  <div class="post-overlay">
-                    <p>Walter White<br/><span class="date">Nov 2018</span></p>
+            <section id="post-list">
+              <div class="post">
+                <img src="files/images/art/harley.jpg">
+                <div class="post-overlay">
+                  <p>Harley<br/><span class="date">Dec 2018</span></p>
                 </div>
-                </div>
-              </section>
-            </div>
-          </div>
+              </div>
 
-          <!-- Résumé -->
-          <div id="tab-4" class="tab-content">
-            <div id="resume" class="section">
-              <iframe height="1030px" width="800px" src="https://drive.google.com/file/d/1yFK8NJv8LihL67MgIqSduqO_DLGerhLu/preview"></iframe>
-            </div>
+              <div class="post">
+                <img src="files/images/art/wwhite.jpg">
+                <div class="post-overlay">
+                  <p>Walter White<br/><span class="date">Nov 2018</span></p>
+              </div>
+              </div>
+            </section>
           </div>
         </div>
 
-        <div class="hr"></div>
-        <div class="banner"></div>
-        <div class="hr"></div>
+      </div>
+    </div>
 
-        <!-- Talented Friends -->
-        <!-- <div id="talent" class="section">
-          <p class="section-title">Some talent you may not know</p>
-          <p class="section-text">I'm using this section to plug my friends. Explore cool projects and even some music!</p>
+    <div class="hr"></div>
+    <div class="banner"></div>
+    <div class="hr"></div>
 
-          <section class="proj-list">
-            <div class="tal">
-              <img src="files/images/talent/genart.png">
-              <div class="tal-overlay">
-                <p>
-                  <h4 class="proj-heading">Generative Artworks</h4>
-                  <span>Art featuring experimental generative designs</span>
-                  <span>
-                    <a class="fa fa-link" style="font-size:48px" href="https://generativeart.works/"></a>
-                    <a class="fa fa-instagram" style="font-size:48px" href="https://instagram.com/generativeartworks"></a>
-                  </span>
-                </p>
-              </div>
-            </div>
+    <!-- Résumé -->
+    <div id="resume">
+      <div class="section">
+        <h2 style="padding: 50px 0; margin-top: 0;">Résumé</h2>
+        <iframe height="1030px" width="800px" src="https://drive.google.com/file/d/1yFK8NJv8LihL67MgIqSduqO_DLGerhLu/preview"></iframe>
+      </div>
+    </div>
 
-            <div class="tal">
-              <img src="files/images/talent/phoneboy.jpg">
-              <div class="tal-overlay">
-                <p>
-                  <h4 class="proj-heading">Phoneboy</h4>
-                  <span>Indie rock band</span>
-                  <span>
-                    <a class="fa fa-link" style="font-size:48px" href="https://phoneboy.band"></a>
-                    <a class="fa fa-spotify" style="font-size:48px" href="https://open.spotify.com/artist/5vh3TBzvI4nASt2A1KfgcR"></a>
-                  </span>
-                </p>
-              </div>
-            </div>
-
-            <div class="tal">
-              <img src="files/images/talent/hhapps.png">
-              <div class="tal-overlay">
-                <p>
-                  <h4 class="proj-heading">Hudson Happs</h4>
-                  <span>All happy hours and happenings in the Hoboken/Jersey City area</span>
-                  <a class="fa fa-link" style="font-size:48px" href="https://www.hudsonhapps.com/"></a>
-                </p>
-              </div>
-            </div>
-
-            <div class="tal">
-              <img src="files/images/talent/visionary-module.png">
-              <div class="tal-overlay">
-                <p>
-                  <h4 class="proj-heading">Visionary Module</h4>
-                  <span>Words can't describe this one, but I think that's the point</span>
-                  <a class="fa fa-youtube" style="font-size:48px" href="https://youtube.com/@princeofallsaiyans99"></a>
-                </p>
-              </div>
-            </div>
-          </section>
-        </div> -->
-
-        <!-- <div class="hr"></div> -->
-
-<!-- 
-
-        <div class="hr"></div>
-        <div class="banner"></div>
-        <div class="hr"></div>
-
-        <div id="markdown-container"></div>
-        <script>
-          const xhr = new XMLHttpRequest();
-
-          xhr.onreadystatechange = function() {
-            if (this.readyState === 4 && this.status === 200) {
-              const content = this.responseText;
-              const html = marked(content);
-              document.getElementById("markdown-container").innerHTML = html;
-            }
-          };
-
-          xhr.open("GET", "example.md");
-          xhr.send();
-
-
-
-
-          // // Create a new instance of the showdown converter
-          // var converter = new showdown.Converter();
-          
-          // // Define your Markdown content
-          // var markdownText = "# My Markdown Title\n\nThis is **bold** and this is *italic*.";
-          
-          // // Convert the Markdown to HTML
-          // var htmlText = converter.makeHtml(markdownText);
-          
-          // // Insert the HTML into the container element
-          // document.getElementById("markdown-container").innerHTML = htmlText;
-        </script>
-         -->
-
-			</div>
-		</div>
+    <div class="hr"></div>
+    <div class="banner"></div>
+    <div class="hr"></div>
 
     <!-- External links & contact buttons -->
     <div class="contact">
