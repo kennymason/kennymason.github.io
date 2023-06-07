@@ -55,10 +55,14 @@ iframe{
   z-index: 950;
   pointer-events: none;
 
-	/* background: linear-gradient(to bottom, rgb(0, 0, 0), #103d27);
 	height: 100%;
 	width: 325px;
-	border-right: 2px solid #00af6b; */
+	/* border-right: 2px solid #00af6b; */
+
+	/* background: linear-gradient(to bottom, rgb(0, 0, 0), #103d27); */
+	/* background-image: url("files/images/streaks.jpg"); */
+  background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(5px);
 }
 #main-content{
 	width: 100%;
@@ -71,13 +75,14 @@ iframe{
 }
 .subtext {
 	position: fixed;
-	bottom: 75px;
+	bottom: 105px;
 	left: 20px;
 	font-size: 70%;
+	text-shadow: 0 0 10px black;
 }
 
-#code h2{
-	padding-top: 0 !important;
+#art{
+	padding-bottom: 70px !important;
 }
 
 .top-container {
@@ -91,7 +96,14 @@ iframe{
 
 	margin: 0;
 	
-	margin-left: 325px;
+	margin-left: 365px;
+	border-left: 2px solid #00af6b;
+}
+.section h2{
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 24px !important;
+	padding-bottom: 24px !important;
 }
 
 .banner {
@@ -255,7 +267,7 @@ iframe{
 }
 
 #portfolio {
-	padding: 20px 0 70px 0;
+	/* padding: 20px 0 70px 0; */
 	background: linear-gradient(to bottom, rgb(0, 0, 0), #103d27);
 }
 
@@ -432,6 +444,7 @@ iframe{
   justify-content: center;
   align-items: center;
 
+	gap:30px;
 
 }
 
@@ -439,7 +452,6 @@ iframe{
 	width: auto;
 	height: 500px;
 
-	margin: 10px;
 
 	display: flex;
 	flex-direction: column;
@@ -494,8 +506,10 @@ iframe{
 
 #resume{
 	text-align: center;
-	padding-bottom: 50px;
 	background: linear-gradient(to bottom, #103d27, #000);
+}
+#resume-section{
+	padding-bottom: 50px;
 }
 #resume-embed {
 	width: 60%;
