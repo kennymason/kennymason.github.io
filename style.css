@@ -67,6 +67,10 @@ iframe{
 	margin-left: auto;
 }
 
+.first-portfolio-section{
+	padding-top: 20px !important;
+}
+
 .last-portfolio-section{
 	padding-bottom: 70px !important;
 }
@@ -317,15 +321,12 @@ iframe{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
-	gap:30px;
-
 }
 
 .post{
 	width: auto;
 	height: 500px;
-
+	margin: 20px;
 
 	display: flex;
 	flex-direction: column;
