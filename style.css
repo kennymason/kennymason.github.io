@@ -411,7 +411,15 @@ iframe{
   animation-duration: 0.3s;
 
 	max-width: 1750px;
-	min-width: 1200px;
+	/* min-width: 1200px; */
+	max-height: 90%;
+	overflow-y: scroll;
+
+
+  /* position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
 
 .modal-body-content {
@@ -442,9 +450,11 @@ iframe{
 @keyframes zoomIn {
   from {
     transform: scale(0);
+    transform-origin: center;
   }
   to {
     transform: scale(1);
+    transform-origin: center;
   }
 }
 
@@ -533,9 +543,25 @@ scale3d(1, 1, 1);
 
 /* Responsive CSS */
 
+@media only screen and (max-width: 1500px) {
+	/* reallocate space to favor text */
+	.modal-text-content {
+		flex: 2;
+	}
+	.modal-body-content > img {
+		flex: 1;
+		margin: auto 0;
+	}
+}
+
 @media only screen and (max-width: 1250px) {
 	#resume-embed {
 		width: 80%;
+	}
+	
+	/* remove image */
+	.modal-body-content img {
+		display: none;
 	}
 }
 
@@ -545,6 +571,14 @@ scale3d(1, 1, 1);
 	}
 	.tab-content {
 		margin-right: 0;
+	}
+
+	/* removing left banner */
+	.left-banner{
+		display: none;
+	}
+	.section{
+		margin-left:auto;
 	}
 }
 
