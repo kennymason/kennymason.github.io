@@ -423,7 +423,8 @@ iframe{
 }
 
 .modal-body-content {
-  display: flex;
+	display: flex;
+	flex-direction: row;
 	margin-bottom: 50px;
 }
 
@@ -437,13 +438,16 @@ iframe{
 	text-align: left;
 }
 
-.modal-body-content > img {
+.modal-img-container{
+	width: 100%;
   flex: 1;
+	margin: auto 50px;
+}
+.modal-img {
   width: 100%;
   height: auto; /* Fixed height */
   object-fit: cover;
 	border-radius: 4px;
-	margin: auto 50px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
