@@ -67,6 +67,10 @@ iframe{
 	margin-left: auto;
 }
 
+.last-section{
+	padding-bottom: 50px;
+}
+
 .first-portfolio-section{
 	padding-top: 20px !important;
 }
@@ -108,6 +112,23 @@ iframe{
 	left: 20px;
 	font-size: 70%;
 	text-shadow: 0 0 10px black;
+}
+
+.text-button{
+	background-color: #00af6b;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	font-size: 24px;
+}
+.text-button:hover{
+	background-color: #8de4b8;
+	color: #103d27;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	font-size: 24px;
 }
 
 /* Contact Me */
@@ -374,12 +395,16 @@ iframe{
 	text-align: center;
 	background: linear-gradient(to bottom, #103d27, #000);
 }
-#resume-section{
-	padding-bottom: 50px;
-}
 #resume-embed {
 	width: 60%;
 	height: 1000px;
+}
+
+#resume-container{
+	padding: 0;
+}
+#resume-button{
+	display: none;
 }
 
 /* Modals */
@@ -451,17 +476,6 @@ iframe{
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes zoomIn {
-  from {
-    transform: scale(0);
-    transform-origin: center;
-  }
-  to {
-    transform: scale(1);
-    transform-origin: center;
-  }
-}
-
 .close-btn {
   color: #00af6b;
   font-size: 28px;
@@ -478,6 +492,18 @@ iframe{
 }
 
 /* Animations */
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    transform-origin: center;
+  }
+  to {
+    transform: scale(1);
+    transform-origin: center;
+  }
+}
+
 @keyframes glitch-text {
 	0% {
 			transform: translate3d(calc(-1 * 
@@ -570,13 +596,6 @@ scale3d(1, 1, 1);
 }
 
 @media only screen and (max-width: 1000px) {
-	.tab-container {
-		flex-wrap: wrap;
-	}
-	.tab-content {
-		margin-right: 0;
-	}
-
 	/* removing left banner */
 	.left-banner{
 		display: none;
@@ -598,7 +617,7 @@ scale3d(1, 1, 1);
 	}
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 690px) {
   .post > img, .proj > img, .post-overlay, .proj-overlay, .post, .proj {
 		width: 100%;
 		height: auto;
@@ -624,8 +643,15 @@ scale3d(1, 1, 1);
 		margin: 10px;
 	}
 
-	#resume-embed {
+	/* #resume-embed {
 		width: 80%;
 		height: 1375px;
+	} */
+
+	#resume-container{
+		display: none;
+	}
+	#resume-button{
+		display: block;
 	}
 }
