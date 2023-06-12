@@ -596,13 +596,28 @@ scale3d(1, 1, 1);
 }
 
 @media only screen and (max-width: 1000px) {
+	.section{
+		margin-left:auto;
+	}
+
 	/* removing left banner */
 	.left-banner{
 		display: none;
 	}
-	.section{
-		margin-left:auto;
+
+	/* moving external links to top */
+	.contact {
+		position: inherit;
+		text-align: center;
+		display: flex;
+		padding: 30px;
 	}
+	.fa{
+		padding: 5px !important;
+		flex: 1;
+		font-size: 200% !important;
+	}
+	
 }
 
 @media only screen and (max-width: 950px) {
@@ -618,6 +633,12 @@ scale3d(1, 1, 1);
 }
 
 @media only screen and (max-width: 690px) {
+
+	.section {
+		margin: 10px;
+	}
+
+	/* card resizing */
   .post > img, .proj > img, .post-overlay, .proj-overlay, .post, .proj {
 		width: 100%;
 		height: auto;
@@ -639,15 +660,7 @@ scale3d(1, 1, 1);
 		left: auto;
 	}
 
-	.section {
-		margin: 10px;
-	}
-
-	/* #resume-embed {
-		width: 80%;
-		height: 1375px;
-	} */
-
+	/* changing resume embed to external link */
 	#resume-container{
 		display: none;
 	}
