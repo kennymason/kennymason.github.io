@@ -6,7 +6,7 @@ import Header from './components/Header';
 import ProjectRow from './components/ProjectRow';
 import Modal from './components/Modal';
 import Footer from './components/Footer';
-import './App.css';
+import './App.scss';
 
 function App() {
   const [count, setCount] = useState(0);
