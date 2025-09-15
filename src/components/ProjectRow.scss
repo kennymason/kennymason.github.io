@@ -1,0 +1,31 @@
+
+.row-container {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: left;
+  overflow-x: hidden;
+}
+
+.row-title {
+  text-align: left;
+  color: #AFA;
+  padding-left: 100px;
+}
+
+.scroll-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  overflow-x: auto;
+  padding-left: 100px;
+  gap: 2%;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+}
+.scroll-row::-webkit-scrollbar {
+  display: none; /* hides scrollbar */
+}
+.scroll-row > * {
+  flex: 0 0 auto;
+}

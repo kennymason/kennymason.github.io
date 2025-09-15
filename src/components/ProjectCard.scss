@@ -1,0 +1,16 @@
+
+.card-container {
+  width: 20%;
+  aspect-ratio: 3 / 2;
+}
+
+.card-title {
+
+}
+
+.card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}

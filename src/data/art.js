@@ -5,7 +5,7 @@ export const art = [
     type: "Portrait",
     description: "Custom do-not-disturb indicator display",
     summary: "",
-    image: "",
+    image: "../../files/images/art/harley.jpg",
     tags: ["Graphite", "Portrait", "Realism"],
     link: ""
   },
@@ -15,7 +15,7 @@ export const art = [
     type: "Portrait",
     description: "Macro keypad made from a switch tester",
     summary: "",
-    image: "",
+    image: "../../files/images/art/wwhite.jpg",
     tags: ["Graphite", "Portrait", "Realism"],
     link: ""
   },

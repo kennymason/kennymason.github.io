@@ -5,7 +5,7 @@ export const projects = [
     type: "Mobile App",
     description: "\"Social Food Network\"",
     summary: "",
-    image: "",
+    image: "../../files/images/projects/code/forkist.png",
     tags: ["Mobile App", "Social Network", "Backend Dev", "API Development", "Database Management", "Cloud Management", "Node.js", "Express", "MongoDB", "Google Cloud Platform"],
     link: "https://forkist.com/"
   },
@@ -15,7 +15,7 @@ export const projects = [
     type: "Desktop App",
     description: "Clipboard Manager",
     summary: "",
-    image: "",
+    image: "../../files/images/projects/code/klipq.png",
     tags: ["Swift", "macOS App"],
     link: "https://github.com/kennymason/KlipQ"
   },
@@ -35,7 +35,7 @@ export const projects = [
     type: "Plugin",
     description: "Obsidian plugin - enhance and customie your daily notes",
     summary: "",
-    image: "",
+    image: "../../files/images/projects/code/dailynotes.png",
     tags: ["Obsidian", "Plugin", "TypeScript"],
     link: "https://github.com/kennymason/daily-notes-manager"
   },
@@ -45,7 +45,7 @@ export const projects = [
     type: "Theme",
     description: "Firefox Theme in the Gruvbox style with a private-browsing-only option",
     summary: "",
-    image: "",
+    image: "../../files/images/projects/code/gruvfox.png",
     tags: ["Firefox", "Browser Theme", "CSS"],
     link: "https://github.com/kennymason/discrete-gruvfox"
   },

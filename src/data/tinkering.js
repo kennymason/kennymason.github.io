@@ -5,7 +5,7 @@ export const tinkering = [
     type: "Gadget",
     description: "Custom do-not-disturb indicator display",
     summary: "",
-    image: "",
+    image: "../../files/images/projects/tinkering/privacylight.jpg",
     tags: ["Arduino", "Python", "JSON", "IR communication", "LCD", "Soldering"],
     link: "https://github.com/kennymason/project-aura"
   },
@@ -15,7 +15,7 @@ export const tinkering = [
     type: "Gadget",
     description: "Macro keypad made from a switch tester",
     summary: "",
-    image: "",
+    image: "../../files/images/projects/tinkering/macropad.jpg",
     tags: ["Arduino", "Soldering"],
     link: ""
   },
