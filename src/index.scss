@@ -1,16 +1,45 @@
+
+$bg-color-top: #202020; //1A1A1A;
+$bg-color-bottom: #103d27;
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   // font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  // background-color: #242424;
+  // background-color: #000;
+  padding: 0;
 
 //   font-synthesis: none;
 //   text-rendering: optimizeLegibility;
 //   -webkit-font-smoothing: antialiased;
 //   -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  margin: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;   /* fixed ensures it stays behind during overscroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300vh;     /* very tall to cover bottom overscroll */
+  
+  background: linear-gradient(
+    to bottom,
+    $bg-color-top -100vh,
+    $bg-color-top 55vh,
+    $bg-color-bottom 55vh,
+    $bg-color-bottom 300vh
+  );
+  z-index: -1;       /* behind all content */
+  pointer-events: none; /* so it doesn’t block clicks */
 }
 
 // a {

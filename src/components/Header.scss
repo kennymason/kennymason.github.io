@@ -1,10 +1,290 @@
 
+$hero-bg: #202020;
+
 .header-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  position: relative;
   justify-content: center;
+  align-items: center;
+  height: 55vh;
+  margin: 0;
+  background-color: $hero-bg;
+}
+
+.bg-images-container {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  bottom: 0;
+  display: flex; /* put images side by side */
+  gap: 100px;
+  padding: 75px 100px 50px 100px;
+  justify-content: center;
+  z-index: 1;
+}
+.bg-images-container.glitching {
+  animation: container-glitch 1s steps(1);
+}
+.bg-images-container .bg-img {
+  // flex: 1;
+  object-fit: cover;
+}
+.bg-images-container .joker {
+  cursor: pointer;
+}
+
+@keyframes container-glitch {
+  0% {
+    transform: none;
+    filter: none;
+  }
+
+  /* first cluster of jitter */
+  10% {
+    transform: translate(-2px, 2px) skew(2deg) translateX(-2%);
+    filter: hue-rotate(90deg) contrast(200%);
+  }
+  12% {
+    transform: translate(3px, -1px) skew(-2deg) translateX(2%);
+    filter: hue-rotate(180deg) brightness(1.5);
+  }
+  14% {
+    transform: translate(-1px, 1px);
+    filter: none;
+  }
+
+  /* second cluster of jitter */
+  60% {
+    transform: translate(2px, -2px) translateX(-1%);
+    filter: hue-rotate(45deg) saturate(150%);
+  }
+  62% {
+    transform: translate(-3px, 1px) translateX(1%);
+    filter: hue-rotate(200deg) contrast(180%);
+  }
+  64% {
+    transform: none;
+    filter: none;
+  }
+
+  100% {
+    transform: none;
+    filter: none;
+  }
+}
+
+@keyframes header-glitch {
+  0%, 79% {
+    background-color: #202020;
+    background-image: url("../../files/images/chess-cards/chess-banner.png");
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: none;
+    filter: none;
+  }
+  79.5% {
+    transform: translate(-2px, 2px) skew(2deg);
+    filter: hue-rotate(90deg) contrast(200%);
+    background-position: 48% center; /* small shift */
+  }
+  79.7% {
+    transform: translate(3px, -1px) skew(-2deg);
+    filter: hue-rotate(180deg) brightness(1.5);
+    background-position: 52% center;
+  }
+  79.9% {
+    transform: translate(-1px, 1px);
+    filter: none;
+    background-position: center;
+  }
+  80%, 99% {
+    background-color: #202020;
+    background-image: url("../../files/images/chess-cards/chess-code-banner.png");
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: none;
+    filter: none;
+  }
+  /* glitch blips between 99%–100% */
+  99.5% {
+    transform: translate(-2px, 2px) skew(2deg);
+    filter: hue-rotate(90deg) contrast(200%);
+    background-position: 48% center; /* small shift */
+  }
+  99.7% {
+    transform: translate(3px, -1px) skew(-2deg);
+    filter: hue-rotate(180deg) brightness(1.5);
+    background-position: 52% center;
+  }
+  100% {
+    transform: translate(-1px, 1px);
+    filter: none;
+    background-position: center;
+  }
 }
 
 .header-name{
-  color: #AFA
+  position: relative;
+  bottom: 25px;
+  text-align: center;
+  margin: auto;
+  color: #AFA;
+  font-size: clamp(4rem, 6vw, 6.5rem);
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 4px #000;
+  z-index: 10;
 }
+
+/* Contact Me */
+.contact {
+  position: sticky;
+  align-self: flex-end;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.fa{
+	color: #00af6b !important;
+	vertical-align: bottom;
+	text-decoration: none;
+	text-shadow: 0 0 10px black;
+
+  font-size:52px;
+  padding-right: 30px;
+}
+.fa:hover{
+	color: #8de4b8 !important;
+}
+
+// Glitch Heading
+
+.glitch-heading {
+	// font-size: clamp(3rem, 5vw, 5.5rem);
+	color: #fff;
+	position: relative;
+	animation: glitch-text 5s linear infinite, glitch-animation .4s linear infinite;
+	text-shadow: -1px -1px 0 #00ff2f, 1px 1px 0 #ff00de;
+}
+.glitch-heading::before, .glitch-heading::after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.glitch-heading::before {
+	animation: glitch-animation-2 .4s linear infinite;
+	clip: rect(44px, 200px, 56px, 0);
+	text-shadow: -1px -1px 0 #ff00de;
+	z-index: -1;
+}
+.glitch-heading::after {
+	animation: glitch-animation-3 .4s linear infinite;
+	clip: rect(66px, 200px, 78px, 0);
+	text-shadow: 1px 1px 0 #00ff2f;
+	z-index: -2;
+}
+
+@keyframes glitch-text {
+	0% {
+			transform: translate3d(calc(-1 * 
+var(10px)), 0, 0) scale3d(-1, -1, 
+1);
+			clip-path: polygon(0 20%, 100% 20%, 
+100% 21%, 0 21%);
+	} 2% {
+			clip-path: polygon(0 33%, 100% 33%, 
+100% 33%, 0 33%);
+	} 4% {
+			clip-path: polygon(0 44%, 100% 44%, 
+100% 44%, 0 44%);
+	} 5% {
+		clip-path: polygon(0 50%, 100% 50%, 
+100% 20%, 0 20%);
+} 6% {
+		clip-path: polygon(0 70%, 100% 70%, 
+100% 70%, 0 70%);
+} 7% {
+		clip-path: polygon(0 80%, 100% 80%, 
+100% 80%, 0 80%);
+}  8% {
+		clip-path: polygon(0 50%, 100% 50%, 
+100% 55%, 0 55%);
+} 9% {
+	clip-path: polygon(0 70%, 100% 70%, 
+100% 80%, 0 80%);
+} 9.9% {
+	transform: translate3d(calc(-1 * 
+var(10px)), 0, 0) scale3d(-1, -1, 
+1);
+} 10%, 100% {
+	transform: translate3d(0, 0, 0) 
+scale3d(1, 1, 1);
+	clip-path: polygon(0 0, 100% 0, 100% 
+100%, 0% 100%);
+}
+} 
+
+@keyframes glitch-animation {
+  0%, 79%, 80%, 100% {
+    transform: none;
+    filter: none;
+  }
+  79.5% {
+    transform: translate(-2px, 2px) skew(2deg);
+  }
+  79.7% {
+    transform: translate(2px, -1px) skew(-2deg);
+  }
+  79.9% {
+    transform: translate(-1px, 1px);
+  }
+}
+
+@keyframes glitch-animation-2 {
+	0%, 79%, 80%, 100% {
+    clip-path: inset(0 0 0 0);
+    transform: none;
+  }
+  79.5% {
+    clip-path: inset(0 0 60% 0); /* slice top */
+    transform: translate(-2px, -1px);
+  }
+  79.7% {
+    clip-path: inset(40% 0 0 0); /* slice bottom */
+    transform: translate(2px, 1px);
+  }
+}
+
+@keyframes glitch-animation-3 {
+	0%, 79%, 80%, 100% {
+    clip-path: inset(0 0 0 0);
+    transform: none;
+  }
+  79.5% {
+    clip-path: inset(10% 0 50% 0);
+    transform: translate(2px, -1px);
+  }
+  79.7% {
+    clip-path: inset(50% 0 10% 0);
+    transform: translate(-2px, 1px);
+  }
+}
+
+/* Developer's Note: I need to put this somewhere, so I'm putting it here.
+
+HOW I MADE THE "CODE" PLAYING CARDS -
+
+1. Take the image (PNG with transparent background) and put it into a photo editor (I used Photopea online)
+2. Add a new text layer and paste in your 'Lorem Ipsum' type code.
+  I used 17pt font - Deja Vu Sans. I played around with it until the top and bottom card borders both lined up with a single line of code.
+3. Drag the image layer above the text layer, and turn it into a Clipping Mask.
+4. Cmd-Click the thumbnail of the image layer to select all text that wasn't overlaying the image.
+5. Go back to the text layer and click 'Add Raster Mask' - I found this as an icon at the bottom of the Layers panel.
+
+You should be left with text in the shape of your image. After step 5, the text that overlayed the transparent parts of the PNG should have disappeared.
+*/

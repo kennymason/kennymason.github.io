@@ -20,7 +20,7 @@ function App() {
 
         <ProjectRow
           id="project-row-1"
-          title="Projects"
+          title="All Projects"
           projects={projects}
           onSelect={setSelected}
         />
@@ -29,16 +29,37 @@ function App() {
         )}
 
         <ProjectRow
-          id="tinkering-row-1"
-          title="Tinkering"
-          projects={tinkering}
+          id="project-row-2"
+          title="AI / Machine Learning"
+          projects={projects}
+          onSelect={setSelected}
         />
 
         <ProjectRow
+          id="project-row-3"
+          title="Desktop & Mobile Apps"
+          projects={projects}
+          onSelect={setSelected}
+        />
+
+        <ProjectRow
+          id="project-row-4"
+          title="Plugins & Themes"
+          projects={projects}
+          onSelect={setSelected}
+        />
+
+        {/* <ProjectRow
+          id="tinkering-row-1"
+          title="Tinkering"
+          projects={tinkering}
+        /> */}
+
+        {/* <ProjectRow
           id="art-row-1"
           title="Art"
           projects={art}
-        />
+        /> */}
 
       </div>
 

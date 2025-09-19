@@ -4,6 +4,8 @@
   // flex-direction: column;
   // justify-content: left;
   overflow-x: hidden;
+
+  margin-bottom: 40px;
 }
 
 .row-title {
@@ -14,7 +16,6 @@
 
 .row-wrapper {
   position: relative;
-  margin-left: 100px;
 }
 
 .scroll-window {
@@ -24,6 +25,7 @@
 
 .scroll-track {
   display: flex;
+  margin-left: 100px;
 }
 .scroll-track > * {
   flex: 0 0 auto;  /* do not shrink or grow */

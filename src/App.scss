@@ -1,2 +1,11 @@
+$projects-bg: #202020;
+$bg-color-top: #202020; //#1A1A1A;
+$bg-color-bottom: #103d27;
+
 #root {
+}
+
+.projects-container {
+  background: linear-gradient(to bottom, $bg-color-top, $bg-color-bottom);
+  margin-bottom: 40px;
 }
