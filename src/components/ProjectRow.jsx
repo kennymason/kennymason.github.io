@@ -5,7 +5,7 @@ import { useRef, useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import './ProjectRow.scss';
 
-export default function ProjectRow({ title, projects, cardWidth=350, gap=16, onSelect }){
+export default function ProjectRow({ projects, type = "", cardWidth=350, gap=16, onSelect }){
   const trackRef = useRef(null);
   const [cardsPerPage, setCardsPerPage] = useState(1);
   const [translateX, setTranslateX] = useState(0);
@@ -47,7 +47,7 @@ export default function ProjectRow({ title, projects, cardWidth=350, gap=16, onS
 
   return (
     <div className="row-container">
-      <h2 className="row-title">{title}</h2>
+      {/* <h2 className="row-title">{title}</h2> */}
       <div className="row-wrapper">
         { translateX !== 0 &&
           <button className="scroll-btn left" onClick={() => shift("left")}>
@@ -65,13 +65,14 @@ export default function ProjectRow({ title, projects, cardWidth=350, gap=16, onS
             }}
           >
             {projects.map((p, index) => (
-              <ProjectCard
-                id={p.id}
-                key={index}
-                project={p}
-                onClick={onSelect}
-                style={{ minWidth: `${cardWidth}px`, maxWidth: `${cardWidth}px` }}
-              />
+              (type === "All" || type === p.type) &&
+                <ProjectCard
+                  id={p.id}
+                  key={index}
+                  project={p}
+                  onClick={onSelect}
+                  style={{ minWidth: `${cardWidth}px`, maxWidth: `${cardWidth}px` }}
+                />
             ))}
           </div>
         </div>
