@@ -1,7 +1,7 @@
 
 @use '../variables';
 
-.header-container {
+.cards-container {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -9,12 +9,12 @@
   align-items: center;
   height: 55vh;
   margin: 0;
-  // background-color: variables.$bg-color;
+  background-color: variables.$bg-color;
   // background-image: url("../../files/images/sine-lines-grad.png");
-  background: 
-    linear-gradient(to bottom, rgba(0,0,0,0) 80%, variables.$bg-color 100%), /* gradient overlay */
-    url("../../files/images/sine-lines-grad.png") no-repeat center center; /* background image */
-  background-size: cover; /* makes the image cover the element */
+  // background: 
+  //   linear-gradient(to bottom, rgba(0,0,0,0), variables.$bg-color-top), /* gradient overlay */
+  //   url("../../files/images/sine-lines-grad.png") no-repeat center center; /* background image */
+  // background-size: cover; /* makes the image cover the element */
 }
 
 .bg-images-container {

@@ -7,6 +7,7 @@ import ProjectRow from './components/ProjectRow';
 import Modal from './components/Modal';
 import Footer from './components/Footer';
 import './App.scss';
+import ChessCards from './components/ChessCards';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,8 @@ function App() {
         {selected && (
           <Modal project={selected} onClose={() => setSelected(null)}/>
         )}
+
+        <ChessCards/>
 
         <ProjectRow
           id="project-row-2"

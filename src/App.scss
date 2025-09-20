@@ -1,11 +1,12 @@
-$projects-bg: #202020;
-$bg-color-top: #202020; //#1A1A1A;
-$bg-color-bottom: #103d27;
+@use 'variables';
 
 #root {
 }
 
 .projects-container {
-  background: linear-gradient(to bottom, $bg-color-top, $bg-color-bottom);
-  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  // background: linear-gradient(to bottom, variables.$bg-color-top, variables.$bg-color-bottom);
+  background-color: variables.$bg-color;
 }
