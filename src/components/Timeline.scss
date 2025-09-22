@@ -1,0 +1,81 @@
+@use '../variables';
+$timeline-item-width: 40%;
+$timeline-item-distance: 100px;
+
+
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+// Main Timeline - vertical center line
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: variables.$fg-color;
+}
+
+/* Degrees */
+
+.timeline-item {
+  padding: 1rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  color: #fff;
+  line-height: 1.8rem;
+  position: relative;
+}
+.timeline-item.left {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: right;
+  border-right: 2px solid variables.$fg-color;
+  margin-right: $timeline-item-distance;
+}
+.timeline-item.right {
+  grid-column: 3;
+  grid-row: 2;
+  text-align: left;
+  border-left: 2px solid variables.$fg-color;
+  margin-left: $timeline-item-distance;
+}
+
+/* Date & Connector lines */
+
+.timeline-item .date {
+  position: absolute;
+  text-align: center;
+  font-size: 1.2rem;
+  width: $timeline-item-distance;
+  border-bottom: 2px solid variables.$fg-color;
+}
+.timeline-item.left .date {
+  right: calc(-2px - $timeline-item-distance);
+  top: 55%;
+}
+.timeline-item.right .date {
+  left: calc(-2px - $timeline-item-distance);
+  top: 20%;
+}
+
+/* Text Styles */
+
+.degree-type {
+  font-size: 1.45rem;
+  color: variables.$fg-color;
+  margin-bottom: 10px;
+}
+.major {
+  font-size: 1.55rem;
+  margin-bottom: 10px;
+}
+.honors {
+  margin: 0;
+}

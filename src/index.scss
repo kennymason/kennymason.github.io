@@ -1,6 +1,4 @@
-
-$bg-color-top: #202020; //1A1A1A;
-$bg-color-bottom: #103d27;
+@use 'variables';
 
 :root {
   font-family: 'Poppins', sans-serif;
@@ -10,8 +8,10 @@ $bg-color-bottom: #103d27;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   // background-color: #242424;
-  background-color: #000;
+  background-color: variables.$bg-color;
   padding: 0;
+
+  scroll-behavior: smooth;
 
 //   font-synthesis: none;
 //   text-rendering: optimizeLegibility;

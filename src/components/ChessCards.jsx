@@ -1,5 +1,5 @@
 // ChessCards.jsx
-// Site Header and info
+// Custom Chess-styled cards with easter egg
 
 import { useState, useEffect } from 'react';
 import './ChessCards.scss'
@@ -48,8 +48,9 @@ export default function ChessCards(){
             newImages[currentReplaced] = defaultImages[currentReplaced];
           }
 
-          // Randomize card selection
-          const index = Math.floor(Math.random() * 5);
+          // Randomize card selection, making jokers less frequent
+          const indexPool = [0, 1, 2, 3, 4, 4, 4, 4];
+          const index = indexPool[Math.floor(Math.random() * indexPool.length)];
 
           // Replace selected card (if not the joker)
           if (index == 4) {

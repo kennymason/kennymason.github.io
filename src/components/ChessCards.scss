@@ -7,8 +7,8 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  height: 55vh;
-  margin: 0;
+  height: 65vh;
+  margin: 50px 0;
   background-color: variables.$bg-color;
   // background-image: url("../../files/images/sine-lines-grad.png");
   // background: 
@@ -24,10 +24,13 @@
   right: 0;
   bottom: 0;
   display: flex; /* put images side by side */
-  gap: 100px;
-  padding: 75px 100px 50px 100px;
+  gap: 50px;
+  padding: 50px 100px;
   justify-content: center;
   z-index: 1;
+
+  background: linear-gradient(to bottom, variables.$bg-color 0%, rgba(variables.$fg-color, 0.04) 10%, rgba(variables.$fg-color, 0.04) 90%, variables.$bg-color 100%);
+  // box-shadow: 0 0 20px 20px rgba(variables.$fg-color, 0.04);
 }
 .bg-images-container.glitching {
   animation: container-glitch 1s steps(1);
@@ -35,6 +38,10 @@
 .bg-images-container .bg-img {
   // flex: 1;
   object-fit: cover;
+  filter: opacity(0.75); //hue-rotate(-10deg)
+  // box-shadow: 0 0 20px 20px rgba(variables.$fg-color, 0.02);
+  // background-color: rgba(variables.$fg-color, 0.02);
+  border-radius: 10px;
 }
 .bg-images-container .joker {
   cursor: pointer;

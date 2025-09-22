@@ -1,0 +1,29 @@
+
+.skill-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 25px 0;
+  justify-content: center;
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border-radius: 30px;
+  box-shadow: 0 0 8px rgb(28, 235, 207);;
+}
+.skill-name {
+  font-size: 1.2em;
+  margin: 0;
+}
+.skill-icon {
+  position: relative;
+  top: 4px;
+  font-size: 1.6em;
+}
