@@ -20,10 +20,60 @@
 }
 
 .section-container {
-  // display: flex;
-  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
   margin: 50px 0;
 }
+
+/* About Me Section */
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 25px 0;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.about-img {
+  height: 20em;
+  border-radius: 50%;
+  // border: 1px solid variables.$fg-color;
+  // box-shadow: 0 0 10px rgba(variables.$fg-color, 1);
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.about-right p {
+  margin-right: 100px;
+}
+
+/* Education & Skills */
+
+#education {
+  display: flex;
+  flex-direction: column;
+  margin-left: variables.$section-side-margin;
+  margin-right: variables.$section-side-margin;
+}
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  margin-left: variables.$section-side-margin;
+  margin-right: variables.$section-side-margin;
+}
+
+/* Projects Section */
 
 #projects {
   display: flex;
@@ -34,8 +84,9 @@
 .project-tabs {
   display: flex;
   flex-direction: row;
+  justify-content: left;
   gap: 60px;
-  margin: 25px 0 40px variables.$section-side-margin;
+  margin: 25px variables.$section-side-margin 40px variables.$section-side-margin;
 }
 .p-tab {
   cursor: pointer;
@@ -44,16 +95,4 @@
 }
 .p-tab.active {
   color: variables.$fg-color;
-}
-
-#skills {
-  display: flex;
-  flex-direction: column;
-  margin-left: variables.$section-side-margin;
-  margin-right: variables.$section-side-margin;
-}
-
-#education {
-  margin-left: variables.$section-side-margin;
-  margin-right: variables.$section-side-margin;
 }

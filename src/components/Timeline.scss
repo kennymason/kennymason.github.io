@@ -7,8 +7,8 @@ $timeline-item-distance: 100px;
   display: grid;
   grid-template-columns: 1fr 2px 1fr;
   position: relative;
-  width: 100%;
-  margin: auto;
+  width: 70%;
+  margin: 25px auto;
 }
 
 // Main Timeline - vertical center line
@@ -17,8 +17,30 @@ $timeline-item-distance: 100px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 2px;
+  width: 4px;
   height: 100%;
+  background-color: variables.$fg-color;
+}
+.timeline-line::after {
+  content: '';
+  position: absolute;
+  right: -5px;          /* position at the end of the line */
+  top: 6px;
+  transform: translateY(-50%) rotate(-45deg); /* rotate to make arrowhead */
+  width: 10px;      /* size of arrowhead */
+  height: 10px;
+  border-right: 4px solid variables.$fg-color;
+  border-top: 4px solid variables.$fg-color;
+  border-radius: 0 2px;
+}
+.timeline-dot {
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
   background-color: variables.$fg-color;
 }
 
@@ -38,6 +60,7 @@ $timeline-item-distance: 100px;
   text-align: right;
   border-right: 2px solid variables.$fg-color;
   margin-right: $timeline-item-distance;
+  background: linear-gradient(to left, rgba(variables.$fg-color, 0.3), variables.$bg-color);
 }
 .timeline-item.right {
   grid-column: 3;
@@ -45,6 +68,7 @@ $timeline-item-distance: 100px;
   text-align: left;
   border-left: 2px solid variables.$fg-color;
   margin-left: $timeline-item-distance;
+  background: linear-gradient(to right, rgba(variables.$fg-color, 0.3), variables.$bg-color);
 }
 
 /* Date & Connector lines */
@@ -57,13 +81,34 @@ $timeline-item-distance: 100px;
   border-bottom: 2px solid variables.$fg-color;
 }
 .timeline-item.left .date {
-  right: calc(-2px - $timeline-item-distance);
+  right: calc(-2px - $timeline-item-distance); // account for 2px offset from border
   top: 55%;
 }
 .timeline-item.right .date {
-  left: calc(-2px - $timeline-item-distance);
+  left: calc(-2px - $timeline-item-distance); // account for 2px offset from border
   top: 20%;
 }
+
+// .timeline-item .school-icon { // Stevens Icon
+//   position: absolute;
+//   max-width: 0.8 * $timeline-item-distance;
+// }
+// .timeline-item.left .school-icon {
+//   right: calc(50% + (0.8 * $timeline-item-distance));
+//   top: calc(55% - .4 * $timeline-item-distance);
+// }
+// .timeline-item.right .school-icon {
+//   left: calc(-1px - (0.9 * $timeline-item-distance));
+//   top: calc(20% + .4 * $timeline-item-distance);
+// }
+// .timeline-item.left .school-icon {
+//   right: calc(-1px - (0.9 * $timeline-item-distance)); // shift 1px to account for 2px offset from border
+//   top: calc(55% + .4 * $timeline-item-distance);
+// }
+// .timeline-item.right .school-icon {
+//   left: calc(-1px - (0.9 * $timeline-item-distance)); // shift 1px to account for 2px offset from border
+//   top: calc(20% + .4 * $timeline-item-distance);
+// }
 
 /* Text Styles */
 
@@ -78,4 +123,8 @@ $timeline-item-distance: 100px;
 }
 .honors {
   margin: 0;
+  padding-left: 0;
+}
+.honors li {
+  margin-left: 1em;
 }

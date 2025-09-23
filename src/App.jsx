@@ -9,8 +9,8 @@ import ProjectRow from './components/ProjectRow';
 import Modal from './components/Modal';
 import Footer from './components/Footer';
 import ChessCards from './components/ChessCards';
-import Skills from './components/Skills'
-import Timeline from './components/Timeline'
+import Skills from './components/Skills';
+import Timeline from './components/Timeline';
 
 const tabs = [
   { id: "all-tab", label: "All Projects" },
@@ -33,7 +33,23 @@ function App() {
         {/* About Me */}
         <div id='about' className='section-container'>
           <h2 className="section-heading">About Me</h2>
-          
+          <div className='about-content'>
+            <div className='about-left'>
+              <img src="../../files/images/butterfly.jpeg" className='about-img'/>
+              <div></div>
+            </div>
+            <div className='about-right'>
+              <p>
+                I'm not very good at talking about myself. Usually when I try I end up leaving out any genuinely impressive details, out of fear of bragging. Sometimes I swing the other way entirely, and self-describe with terms like 'Code Artifex' and 'Arbiter of Code Quality.' So instead, I decided to <b>show</b> you who I am the best way I know how — with code. So enjoy my site, and if you must read something, enjoy the <i>Lorem Ipsum</i> I have prepared for you below.
+              </p>
+              <p>
+                Oh, before I forget: if you see something strange, why not give it a click? Something interesting might just happen...
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Education */}

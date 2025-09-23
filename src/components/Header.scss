@@ -80,15 +80,7 @@
   color: #fff;
 }
 
-/* Contact Me */
-.contact {
-  // position: sticky;
-  // align-self: flex-end;
-  // top: 20px;
-  // right: 20px;
-  // margin-left: auto;
-}
-
+/* Contact Me & External Links */
 .fa{
   color: variables.$fg-color;
 	vertical-align: bottom;
@@ -104,13 +96,12 @@
 
 /* Cursor Glow Effect */
 .cursor-glow {
-  position: fixed; /* stays above everything */
-  pointer-events: none; /* so it doesn’t block the cursor */
+  position: fixed; 
+  pointer-events: none;
   width: 0px;
   height: 0px;
   border-radius: 50%;
-  background: rgba(0, 155, 155, 0.5);
   box-shadow: 0 0 100px 100px rgba(50, 255, 255, 0.1);
   transform: translate(-50%, -50%);
-  transition: opacity 0.2s;
+  transition: opacity 0.6s ease;
 }
