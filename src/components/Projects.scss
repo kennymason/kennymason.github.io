@@ -1,0 +1,96 @@
+
+.row-container {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.scroll-window {
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+}
+
+.scroll-track {
+  display: flex;
+  padding: 0 100px 10px 100px;
+}
+.scroll-track > * {
+  flex: 0 0 auto;  /* do not shrink or grow */
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 4px;
+}
+
+.scroll-btn.left {
+  left: 0;  /* left side */
+}
+
+.scroll-btn.right {
+  right: 0; /* right side */
+}
+
+.card-container {
+  --card-border-radius: 8px;
+  --card-border: 2px solid rgba(var(--fg-color-val), 0.5);
+  --card-title-border: 1px solid var(--fg-color);
+  --card-size: 350px;
+
+  position: relative;
+  max-width: var(--card-size);
+  aspect-ratio: 1 / 1;
+  border-radius: var(--card-border-radius);
+  // box-shadow: 0 0 8px var(--fg-color);
+}
+
+.card-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+  padding: 10px;
+  color: var(--fg-color);
+  background-color: rgba(var(--bg-color-val), 0.9);
+  border-left: var(--card-border);
+  border-top: var(--card-border);
+  border-right: var(--card-title-border);
+  border-bottom: var(--card-title-border);
+  border-radius: var(--card-border-radius) 0 var(--card-border-radius) 0;
+}
+
+.card-title {
+  position: absolute;
+  bottom: -2px; // -2px to offset the displacement from the .card-image top border
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--fg-color);
+  background-color: rgba(var(--bg-color-val), 0.9);
+  border: var(--card-border);
+  border-top: var(--card-title-border);
+  border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--card-border-radius);
+  border-left: var(--card-border);
+  border-right: var(--card-border);
+  border-top: var(--card-border);
+}

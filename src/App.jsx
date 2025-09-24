@@ -5,7 +5,7 @@ import { tinkering } from './data/tinkering';
 import { art } from './data/art';
 import './App.scss';
 import Header from './components/Header';
-import ProjectRow from './components/ProjectRow';
+import Projects from './components/Projects';
 import Modal from './components/Modal';
 import Footer from './components/Footer';
 import ChessCards from './components/ChessCards';
@@ -35,18 +35,22 @@ function App() {
           <h2 className="section-heading">About Me</h2>
           <div className='about-content'>
             <div className='about-left'>
+              <div className="about-contact">
+                <a className="about-icon fa fa-square-envelope" href="mailto:kennymmase@gmail.com"></a>
+                <a className="about-icon-middle about-icon fa fa-github-square" href="https://github.com/kennymason"></a>
+                <a className="about-icon fa fa-linkedin-square" href="https://www.linkedin.com/in/masonkenneth/"></a>
+              </div>
               <img src="../../files/images/butterfly.jpeg" className='about-img'/>
-              <div></div>
             </div>
             <div className='about-right'>
               <p>
-                I'm not very good at talking about myself. Usually when I try I end up leaving out any genuinely impressive details, out of fear of bragging. Sometimes I swing the other way entirely, and self-describe with terms like 'Code Artifex' and 'Arbiter of Code Quality.' So instead, I decided to <b>show</b> you who I am the best way I know how — with code. So enjoy my site, and if you must read something, enjoy the <i>Lorem Ipsum</i> I have prepared for you below.
+                I'm not very good at talking about myself. I try not to brag, but then I self-describe with terms like 'Code Artifex' and 'Arbiter of Code Quality.' So instead, I decided to <b>show</b> you who I am the best way I know how — with code. So enjoy my site, and if you must read something, enjoy the <i>Lorem Ipsum</i> I have prepared for you below.
               </p>
               <p>
-                Oh, before I forget: if you see something strange, why not give it a click? Something interesting might just happen...
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Oh, before I forget: if you see something out of place, why not give it a click? Something interesting might just happen...
               </p>
             </div>
           </div>
@@ -82,41 +86,41 @@ function App() {
           </div>
 
           { selectedTab === "all-tab" &&
-            <ProjectRow
+            <Projects
               id="project-row-1"
               title="All Projects"
               projects={projects}
-              type={"All"}
+              category={"all"}
               onSelect={setSelectedProject}
             />
           }
 
           { selectedTab === "ai-tab" &&
-            <ProjectRow
+            <Projects
               id="project-row-2"
               title="AI / Machine Learning"
               projects={projects}
-              type={"AI"}
+              category={"ai"}
               onSelect={setSelectedProject}
             />
           }
 
           { selectedTab === "apps-tab" &&
-            <ProjectRow
+            <Projects
               id="project-row-3"
               title="Desktop & Mobile Apps"
               projects={projects}
-              type={"App"}
+              category={"app"}
               onSelect={setSelectedProject}
             />
           }
 
           { selectedTab === "plugins-tab" &&
-            <ProjectRow
+            <Projects
               id="project-row-4"
               title="Plugins & Themes"
               projects={projects}
-              type={"Plugin"}
+              category={"plugin"}
               onSelect={setSelectedProject}
             />
           }

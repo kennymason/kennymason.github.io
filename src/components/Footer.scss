@@ -1,5 +1,4 @@
-@use '../variables';
 
 .footer-container {
-  background-color: variables.$bg-color;
+  background-color: var(--bg-color);
 }

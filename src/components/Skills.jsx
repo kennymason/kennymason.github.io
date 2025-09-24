@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import './Skills.scss';
 import { FaHtml5, FaJava, FaReact, FaCss3Alt, FaSass, FaPython, FaNodeJs, FaGitAlt, FaGoogle, FaSwift, FaDatabase, FaCode, FaCuttlefish, FaCloud } from "react-icons/fa";
-import { SiJavascript, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiCplusplus, SiErlang, SiOcaml, SiWebflow, SiApachegroovy, SiP5Dotjs, SiNumpy, SiScikitlearn, SiPandas, SiPytorch, SiTensorflow } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiCplusplus, SiErlang, SiOcaml, SiWebflow, SiApachegroovy, SiP5Dotjs, SiNumpy, SiScikitlearn, SiPandas, SiPytorch, SiTensorflow, SiDocker, SiGnubash } from "react-icons/si";
 
 function LangChainIcon() {
   return(
@@ -48,6 +48,8 @@ const skills = [
   { name: "Express.js", icon: <SiExpress/>, skillType: ["web"] },
   { name: "p5.js", icon: <SiP5Dotjs/>, skillType: ["web"] },
   { name: "Git", icon: <FaGitAlt/>, skillType: ["tool"] },
+  { name: "Docker", icon: <SiDocker/>, skillType: ["tool"] },
+  { name: "Bash", icon: <SiGnubash/>, skillType: ["tool"] },
   { name: "SQL", icon: <FaDatabase/>, skillType: ["tool"] },
   { name: "MongoDB", icon: <SiMongodb/>, skillType: ["tool"] },
   { name: "Google Cloud Platform", icon: <FaCloud/>, skillType: ["tool"] },
@@ -58,7 +60,7 @@ const tabs = [
   { id: "programming", label: "Programming" },
   { id: "ai", label: "AI & Machine Learning" },
   { id: "web", label: "Web Development" },
-  { id: "tool", label: "Tools & Platforms" }
+  { id: "tool", label: "Tools & Environments" }
 ];
 
 export default function Skills(){

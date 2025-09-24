@@ -6,19 +6,22 @@ import './Header.scss';
 
 const titles = [
   "Software Engineer",
+  // "Machine Teacher",
   "Tinkerer",
   "Pencil Artist",
   "Chess Player",
   "Puzzle Solver",
   // "boardgamer",
-  "Card Enthusiast",
-  // "eagle scout",
+  // "Card Enthusiast",
+  // "Amateur Thinker",
+  "Eagle Scout",
   // "arbiter of code quality",
   "Code Artifex"
 ];
 
 export default function Header(){
   const [titleIndex, setTitleIndex] = useState(0);
+  const [currentTitle, setCurrentTitle] = useState("");
   const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
 
   const handleMouseMove = (e) => {
@@ -29,12 +32,64 @@ export default function Header(){
     setCursor((prev) => ({ ...prev, visible: false }));
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTitleIndex(prevIndex => (prevIndex + 1) % titles.length);
-    }, 3000);
+  
+  let timer,
+  charDelay = 100,
+  wordDelay = 1000,
+  part,
+  i = 0,
+  offset = 0,
+  forwards = true,
+  skipCount = 0;
+  const skipDelay = 20;
 
-    return () => clearInterval(interval);
+  useEffect(() => {
+    const typerwriterCycle = () => {
+      let delay = charDelay;
+
+      if (forwards) {
+        if (offset >= titles[i].length) {
+          ++skipCount;
+          if (skipCount == skipDelay) {
+            forwards = false;
+            skipCount = 0;
+          }
+        }
+      }
+      else {
+        if (offset == 0) {
+          forwards = true;
+          i++;
+          offset = 0;
+          if (i >= titles.length) {
+            i = 0;
+          }
+          delay = wordDelay;
+        }
+      }
+      part = titles[i].substring(0, offset);
+      if (skipCount == 0) {
+        if (forwards) {
+          offset++;
+        }
+        else {
+          offset--;
+        }
+      }
+
+      setCurrentTitle(part);
+
+      timer = setTimeout(typerwriterCycle, delay);
+    }
+
+    // const interval = setInterval(() => {
+    //   setTitleIndex(prevIndex => (prevIndex + 1) % titles.length);
+    // }, 4000);
+
+    // return () => clearInterval(interval);
+    typerwriterCycle();
+
+    return () => clearTimeout(timer);
   }, [titles]);
 
   return(
@@ -52,15 +107,15 @@ export default function Header(){
 
         {/* External links & contact buttons */}
         <div className="contact">
-          <a className="fa fa-square-envelope" href="mailto:kennymmase@gmail.com"></a>
-          <a className="fa fa-github-square" href="https://github.com/kennymason"></a>
-          <a className="fa fa-linkedin-square" href="https://www.linkedin.com/in/masonkenneth/"></a>
+          <a className="fa fa-square-envelope contact-icon" href="mailto:kennymmase@gmail.com"></a>
+          <a className="fa fa-github-square contact-icon" href="https://github.com/kennymason"></a>
+          <a className="fa fa-linkedin-square contact-icon" href="https://www.linkedin.com/in/masonkenneth/"></a>
         </div>
       </div>
 
       {/* Heading */}
       <h1 className="header-title">Kenny Mason</h1>
-      <h2 className="header-title-2">{titles[titleIndex]}</h2>
+      <h2 className="header-title-2">{currentTitle}</h2>
 
       <div
         className="cursor-glow"

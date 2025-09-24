@@ -1,6 +1,4 @@
 
-@use '../variables';
-
 .header-container {
   display: flex;
   flex-direction: column;
@@ -10,54 +8,54 @@
   height: 100vh;
   margin: 0;
   background: 
-    linear-gradient(to bottom, rgba(0,0,0,0) 75%, variables.$bg-color 100%), /* gradient overlay */
+    linear-gradient(to bottom, rgba(0,0,0,0) 75%, var(--bg-color) 100%), /* gradient overlay */
     url("../../files/images/header-banner.png") no-repeat center center; /* background image */
   background-size: cover; /* makes the image cover the element */
 }
 
 .header-title{
   position: relative;
-  bottom: 85px;
+  bottom: 85px;//8%;
   text-align: center;
   margin: auto 0 0 0;
   padding: 30px;
-  color: #fff;
-  // text-shadow: -1px -1px 0 #00ff2f, 1px 1px 0 #ff00de;
+  color: var(--fg-color-secondary);
   font-size: clamp(5rem, 7vw, 10rem);
   font-family: 'Poppins', sans-serif;
-  // text-shadow: 2px 2px 4px #000;
   z-index: 9;
 }
 .header-title-2 {
   position: relative;
-  bottom: 85px;
+  bottom: 85px;//8%;
   margin: 0 0 auto 0;
-  padding: 20px;
+  padding: 0;
+  height: 7vh;
+  line-height: 7vh;
   font-size: clamp(2.5rem, 3vw, 5rem);
-  color: variables.$fg-color;
+  color: var(--fg-color);
+
+  border-right: 1rem solid var(--fg-color); /* blinking cursor */
+  animation: blink 1s step-end infinite;
+}
+/* typing cursor blink */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: var(--fg-color); }
 }
 
 /* Nav Bar */
 .nav-bar {
   position: sticky;
-  // align-self: flex-end;
   top: 0px;
   padding: 20px 0;
-  // left: 20px;
   width: 100%;
   z-index: 10;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
-  z-index: 10;
-
-  // margin: 25px 0 40px 100px;
-  // background-color: rgba(0,0,0,.1);
-  // box-shadow: 0 0 5px rgba(0,0,0,.1);
   background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent 80%);
+  z-index: 10;
 }
 .nav-links {
   display: flex;
@@ -72,17 +70,17 @@
 .nav-link {
   font-size: 1.7em;
   font-weight: bold;
-  color: variables.$fg-color;
+  color: var(--fg-color);
   text-shadow: 0 0 10px #000;
   text-decoration: none;
 }
 .nav-link:hover{
-  color: #fff;
+  color: var(--fg-color-secondary);
 }
 
 /* Contact Me & External Links */
-.fa{
-  color: variables.$fg-color;
+.contact-icon{
+  color: var(--fg-color);
 	vertical-align: bottom;
 	text-decoration: none;
 	text-shadow: 0 0 10px black;
@@ -90,8 +88,8 @@
   font-size:52px;
   padding-right: 30px;
 }
-.fa:hover{
-  color: #fff;
+.contact-icon:hover{
+  color: var(--fg-color-secondary);
 }
 
 /* Cursor Glow Effect */

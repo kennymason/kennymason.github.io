@@ -1,20 +1,18 @@
-@use 'variables';
 
 #root {
-  background-color: variables.$bg-color;
+  background-color: var(--bg-color);
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  // gap: 75px;
   margin: 30px 0;
-  background-color: variables.$bg-color;
+  background-color: var(--bg-color);
 }
 
 .section-heading {
   text-align: center;
-  color: variables.$fg-color;
+  color: var(--fg-color);
   font-size: 2em;
   margin: 1em;
 }
@@ -36,7 +34,7 @@
 
 .about-left {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 50%;
@@ -44,14 +42,39 @@
 .about-img {
   height: 20em;
   border-radius: 50%;
-  // border: 1px solid variables.$fg-color;
-  // box-shadow: 0 0 10px rgba(variables.$fg-color, 1);
+  border: 1px solid var(--fg-color);
+  box-shadow: 0 0 16px var(--fg-color);
 }
+.about-contact {
+  display: flex;
+  flex-direction: column;
+  // gap: 30px;
+  justify-content: space-between;
+  height: 100%;
+}
+.about-icon {
+  font-size: 72px;
+  color: var(--fg-color);
+	vertical-align: bottom;
+	text-decoration: none;
+	text-shadow: 0 0 10px black;
+  margin-left: 30px;
+}
+.about-icon:hover{
+  color: var(--fg-color-secondary);
+}
+.about-icon-middle {
+  margin-right: 72px;
+  margin-left: 0;
+}
+
 
 .about-right {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 50%;
+  color: var(--fg-color-secondary);
 }
 .about-right p {
   margin-right: 100px;
@@ -62,15 +85,15 @@
 #education {
   display: flex;
   flex-direction: column;
-  margin-left: variables.$section-side-margin;
-  margin-right: variables.$section-side-margin;
+  margin-left: var(--section-side-margin);
+  margin-right: var(--section-side-margin);
 }
 
 #skills {
   display: flex;
   flex-direction: column;
-  margin-left: variables.$section-side-margin;
-  margin-right: variables.$section-side-margin;
+  margin-left: var(--section-side-margin);
+  margin-right: var(--section-side-margin);
 }
 
 /* Projects Section */
@@ -86,13 +109,13 @@
   flex-direction: row;
   justify-content: left;
   gap: 60px;
-  margin: 25px variables.$section-side-margin 40px variables.$section-side-margin;
+  margin: 25px var(--section-side-margin) 40px var(--section-side-margin);
 }
 .p-tab {
   cursor: pointer;
   font-size: 1.4em;
-  color: rgba(variables.$fg-color, .5);
+  color: rgba(var(--fg-color-val), .5);
 }
 .p-tab.active {
-  color: variables.$fg-color;
+  color: var(--fg-color);
 }

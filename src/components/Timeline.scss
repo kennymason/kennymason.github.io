@@ -1,5 +1,5 @@
-@use '../variables';
-$timeline-item-width: 40%;
+
+$timeline-item-width: 23vw;
 $timeline-item-distance: 100px;
 
 
@@ -7,8 +7,8 @@ $timeline-item-distance: 100px;
   display: grid;
   grid-template-columns: 1fr 2px 1fr;
   position: relative;
-  width: 70%;
-  margin: 25px auto;
+  width: 100%;
+  margin: 25px 0;
 }
 
 // Main Timeline - vertical center line
@@ -19,7 +19,7 @@ $timeline-item-distance: 100px;
   transform: translateX(-50%);
   width: 4px;
   height: 100%;
-  background-color: variables.$fg-color;
+  background-color: var(--fg-color);
 }
 .timeline-line::after {
   content: '';
@@ -29,8 +29,8 @@ $timeline-item-distance: 100px;
   transform: translateY(-50%) rotate(-45deg); /* rotate to make arrowhead */
   width: 10px;      /* size of arrowhead */
   height: 10px;
-  border-right: 4px solid variables.$fg-color;
-  border-top: 4px solid variables.$fg-color;
+  border-right: 4px solid var(--fg-color);
+  border-top: 4px solid var(--fg-color);
   border-radius: 0 2px;
 }
 .timeline-dot {
@@ -41,7 +41,7 @@ $timeline-item-distance: 100px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: variables.$fg-color;
+  background-color: var(--fg-color);
 }
 
 /* Degrees */
@@ -49,8 +49,9 @@ $timeline-item-distance: 100px;
 .timeline-item {
   padding: 1rem;
   margin: 2rem 0;
+  width: $timeline-item-width;
   border-radius: 8px;
-  color: #fff;
+  color: var(--fg-color-secondary);
   line-height: 1.8rem;
   position: relative;
 }
@@ -58,17 +59,19 @@ $timeline-item-distance: 100px;
   grid-column: 1;
   grid-row: 1;
   text-align: right;
-  border-right: 2px solid variables.$fg-color;
+  border-right: 2px solid var(--fg-color);
   margin-right: $timeline-item-distance;
-  background: linear-gradient(to left, rgba(variables.$fg-color, 0.3), variables.$bg-color);
+  margin-left: auto;
+  background: linear-gradient(to left, rgba(var(--fg-color-val), 0.3), var(--bg-color));
 }
 .timeline-item.right {
   grid-column: 3;
   grid-row: 2;
   text-align: left;
-  border-left: 2px solid variables.$fg-color;
+  border-left: 2px solid var(--fg-color);
+  margin-right: auto;
   margin-left: $timeline-item-distance;
-  background: linear-gradient(to right, rgba(variables.$fg-color, 0.3), variables.$bg-color);
+  background: linear-gradient(to right, rgba(var(--fg-color-val), 0.3), var(--bg-color));
 }
 
 /* Date & Connector lines */
@@ -78,7 +81,7 @@ $timeline-item-distance: 100px;
   text-align: center;
   font-size: 1.2rem;
   width: $timeline-item-distance;
-  border-bottom: 2px solid variables.$fg-color;
+  border-bottom: 2px solid var(--fg-color);
 }
 .timeline-item.left .date {
   right: calc(-2px - $timeline-item-distance); // account for 2px offset from border
@@ -114,7 +117,7 @@ $timeline-item-distance: 100px;
 
 .degree-type {
   font-size: 1.45rem;
-  color: variables.$fg-color;
+  color: var(--fg-color);
   margin-bottom: 10px;
 }
 .major {
