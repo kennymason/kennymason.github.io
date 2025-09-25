@@ -15,7 +15,7 @@
   padding: 0 100px 10px 100px;
 }
 .scroll-track > * {
-  flex: 0 0 auto;  /* do not shrink or grow */
+  flex: 0 0 auto;  /* dont shrink or grow */
 }
 
 .scroll-btn {
@@ -50,7 +50,7 @@
   max-width: var(--card-size);
   aspect-ratio: 1 / 1;
   border-radius: var(--card-border-radius);
-  // box-shadow: 0 0 8px var(--fg-color);
+  /* box-shadow: 0 0 8px var(--fg-color); */
 }
 
 .card-type {
@@ -72,7 +72,7 @@
 
 .card-title {
   position: absolute;
-  bottom: -2px; // -2px to offset the displacement from the .card-image top border
+  bottom: -2px; /* -2px to offset the displacement from the .card-image top border */
   width: 100%;
   padding: 10px 0;
   margin: 0;

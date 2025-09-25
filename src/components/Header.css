@@ -15,7 +15,7 @@
 
 .header-title{
   position: relative;
-  bottom: 85px;//8%;
+  bottom: 85px;
   text-align: center;
   margin: auto 0 0 0;
   padding: 30px;
@@ -26,7 +26,7 @@
 }
 .header-title-2 {
   position: relative;
-  bottom: 85px;//8%;
+  bottom: 85px;
   margin: 0 0 auto 0;
   padding: 0;
   height: 7vh;

@@ -1,8 +1,4 @@
 
-$timeline-item-width: 23vw;
-$timeline-item-distance: 100px;
-
-
 .timeline {
   display: grid;
   grid-template-columns: 1fr 2px 1fr;
@@ -11,7 +7,7 @@ $timeline-item-distance: 100px;
   margin: 25px 0;
 }
 
-// Main Timeline - vertical center line
+/* Main Timeline - vertical center line */
 .timeline-line {
   position: absolute;
   top: 0;
@@ -24,10 +20,10 @@ $timeline-item-distance: 100px;
 .timeline-line::after {
   content: '';
   position: absolute;
-  right: -5px;          /* position at the end of the line */
+  right: -5px; /* position at the end of the line */
   top: 6px;
   transform: translateY(-50%) rotate(-45deg); /* rotate to make arrowhead */
-  width: 10px;      /* size of arrowhead */
+  width: 10px; /* size of arrowhead */
   height: 10px;
   border-right: 4px solid var(--fg-color);
   border-top: 4px solid var(--fg-color);
@@ -47,9 +43,12 @@ $timeline-item-distance: 100px;
 /* Degrees */
 
 .timeline-item {
+  --timeline-item-width: 23vw;
+  --timeline-item-distance: 100px;
+
   padding: 1rem;
   margin: 2rem 0;
-  width: $timeline-item-width;
+  width: var(--timeline-item-width);
   border-radius: 8px;
   color: var(--fg-color-secondary);
   line-height: 1.8rem;
@@ -60,7 +59,7 @@ $timeline-item-distance: 100px;
   grid-row: 1;
   text-align: right;
   border-right: 2px solid var(--fg-color);
-  margin-right: $timeline-item-distance;
+  margin-right: var(--timeline-item-distance);
   margin-left: auto;
   background: linear-gradient(to left, rgba(var(--fg-color-val), 0.3), var(--bg-color));
 }
@@ -70,7 +69,7 @@ $timeline-item-distance: 100px;
   text-align: left;
   border-left: 2px solid var(--fg-color);
   margin-right: auto;
-  margin-left: $timeline-item-distance;
+  margin-left: var(--timeline-item-distance);
   background: linear-gradient(to right, rgba(var(--fg-color-val), 0.3), var(--bg-color));
 }
 
@@ -80,38 +79,40 @@ $timeline-item-distance: 100px;
   position: absolute;
   text-align: center;
   font-size: 1.2rem;
-  width: $timeline-item-distance;
+  width: var(--timeline-item-distance);
   border-bottom: 2px solid var(--fg-color);
 }
 .timeline-item.left .date {
-  right: calc(-2px - $timeline-item-distance); // account for 2px offset from border
+  right: calc(-2px - var(--timeline-item-distance)); /* account for 2px offset from border */
   top: 55%;
 }
 .timeline-item.right .date {
-  left: calc(-2px - $timeline-item-distance); // account for 2px offset from border
+  left: calc(-2px - var(--timeline-item-distance)); /* account for 2px offset from border */
   top: 20%;
 }
 
-// .timeline-item .school-icon { // Stevens Icon
-//   position: absolute;
-//   max-width: 0.8 * $timeline-item-distance;
-// }
-// .timeline-item.left .school-icon {
-//   right: calc(50% + (0.8 * $timeline-item-distance));
-//   top: calc(55% - .4 * $timeline-item-distance);
-// }
-// .timeline-item.right .school-icon {
-//   left: calc(-1px - (0.9 * $timeline-item-distance));
-//   top: calc(20% + .4 * $timeline-item-distance);
-// }
-// .timeline-item.left .school-icon {
-//   right: calc(-1px - (0.9 * $timeline-item-distance)); // shift 1px to account for 2px offset from border
-//   top: calc(55% + .4 * $timeline-item-distance);
-// }
-// .timeline-item.right .school-icon {
-//   left: calc(-1px - (0.9 * $timeline-item-distance)); // shift 1px to account for 2px offset from border
-//   top: calc(20% + .4 * $timeline-item-distance);
-// }
+/* Stevens Icon
+.timeline-item .school-icon {
+  position: absolute;
+  max-width: 0.8 * var(--timeline-item-distance);
+}
+.timeline-item.left .school-icon {
+  right: calc(50% + (0.8 * var(--timeline-item-distance)));
+  top: calc(55% - .4 * var(--timeline-item-distance));
+}
+.timeline-item.right .school-icon {
+  left: calc(-1px - (0.9 * var(--timeline-item-distance)));
+  top: calc(20% + .4 * var(--timeline-item-distance));
+}
+.timeline-item.left .school-icon {
+  right: calc(-1px - (0.9 * var(--timeline-item-distance)));
+  top: calc(55% + .4 * var(--timeline-item-distance));
+}
+.timeline-item.right .school-icon {
+  left: calc(-1px - (0.9 * var(--timeline-item-distance)));
+  top: calc(20% + .4 * var(--timeline-item-distance));
+}
+*/
 
 /* Text Styles */
 

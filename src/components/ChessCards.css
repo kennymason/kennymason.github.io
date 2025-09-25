@@ -23,17 +23,17 @@
   z-index: 1;
 
   background: linear-gradient(to bottom, var(--bg-color) 0%, rgba(var(--fg-color-val), 0.04) 10%, rgba(var(--fg-color-val), 0.04) 90%, var(--bg-color) 100%);
-  // box-shadow: 0 0 20px 20px rgba(var(--fg-color-val), 0.04);
+  /* box-shadow: 0 0 20px 20px rgba(var(--fg-color-val), 0.04); */
 }
 .bg-images-container.glitching {
   animation: container-glitch 1s steps(1);
 }
 .bg-images-container .bg-img {
-  // flex: 1;
+  /* flex: 1; */
   object-fit: cover;
-  filter: opacity(0.75); //hue-rotate(-10deg)
-  // box-shadow: 0 0 20px 20px rgba(var(--fg-color-val), 0.02);
-  // background-color: rgba(var(--fg-color-val), 0.02);
+  filter: opacity(0.75); /* hue-rotate(-10deg) */
+  /* box-shadow: 0 0 20px 20px rgba(var(--fg-color-val), 0.02); */
+  /* background-color: rgba(var(--fg-color-val), 0.02); */
   border-radius: 10px;
 }
 .bg-images-container .joker {
