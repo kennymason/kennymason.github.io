@@ -66,6 +66,28 @@ const tabs = [
 export default function Skills(){
   const [selectedTab, setSelectedTab] = useState(tabs[0].id);
   const changeTab = (id) => setSelectedTab(id);
+  const [cursor, setCursor] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    setCursor({ x: e.clientX, y: e.clientY, visible: true });
+  };
+
+  const handleMouseLeave = () => {
+    setCursor((prev) => ({ ...prev, visible: false }));
+  };
+
+  function isCursorNear(el, cursor, threshold = 150) {
+    if (!el) return false;
+    const rect = el.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    const dx = cursor.x - centerX;
+    const dy = cursor.y - centerY;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    return distance <= threshold;
+  }
 
   return(
     <>
@@ -82,11 +104,16 @@ export default function Skills(){
         ))}
       </div>
 
-      <div className="skill-list">
+      <div className="skill-list" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
         {skills.map((skill, index) => (
           <div
             key={index}
-            className={`skill ${(selectedTab === 'all') || skill.skillType.includes(selectedTab) ? 'active' : ''}`}
+            ref={(skillRef) => (skill.ref = skillRef)}
+            className={`
+              skill 
+              ${(selectedTab === 'all') || skill.skillType.includes(selectedTab) ? 'active' : ''} 
+              ${isCursorNear(skill.ref, cursor) && cursor.visible ? "cursor-near" : ""}
+            `}
           >
             <div className="skill-icon">{skill.icon}</div>
             <p className="skill-name">{skill.name}</p>

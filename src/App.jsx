@@ -37,7 +37,7 @@ function App() {
             <div className='about-left'>
               <div className="about-contact">
                 <a className="about-icon fa fa-square-envelope" href="mailto:kennymmase@gmail.com"></a>
-                <a className="about-icon-middle about-icon fa fa-github-square" href="https://github.com/kennymason"></a>
+                <a className="about-icon fa fa-github-square" href="https://github.com/kennymason"></a>
                 <a className="about-icon fa fa-linkedin-square" href="https://www.linkedin.com/in/masonkenneth/"></a>
               </div>
               <img src="../../files/images/butterfly.jpeg" className='about-img'/>

@@ -17,7 +17,7 @@ export const projects = [
     type: "macOS App",
     description: "Clipboard Manager",
     summary: "",
-    image: "../../public/projects/klipq-icon.png",
+    image: "../../public/projects/klipq.png",
     tags: ["Desktop App", "Swift", "macOS App"],
     link: "https://github.com/kennymason/KlipQ"
   },
@@ -28,7 +28,7 @@ export const projects = [
     type: "ML Model",
     description: "Convert 2D images of chessboards to Forsyth-Edwards Notation (FEN)",
     summary: "",
-    image: "../../public/projects/FENSight.png",
+    image: "../../public/projects/fensight.png",
     tags: ["Machine Learning", "AI", "Deep Learning", "Convolutional Neural Networks", "Python", "Classification", "Chess"],
     link: ""
   },

@@ -28,8 +28,8 @@
 .about-content {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  margin: 25px 0;
+  width: 80%;
+  margin: 25px auto;
 }
 
 .about-left {
@@ -37,6 +37,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 50px;
   width: 50%;
 }
 .about-img {
@@ -48,8 +49,9 @@
 .about-contact {
   display: flex;
   flex-direction: column;
-  // gap: 30px;
-  justify-content: space-between;
+  gap: 30px;
+  justify-content: center;
+  // justify-content: space-between;
   height: 100%;
 }
 .about-icon {
@@ -58,14 +60,11 @@
 	vertical-align: bottom;
 	text-decoration: none;
 	text-shadow: 0 0 10px black;
-  margin-left: 30px;
+  transition: all 0.2s ease-in-out;
 }
 .about-icon:hover{
   color: var(--fg-color-secondary);
-}
-.about-icon-middle {
-  margin-right: 72px;
-  margin-left: 0;
+  transform: scale(1.1);
 }
 
 
