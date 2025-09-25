@@ -2,7 +2,7 @@
 // Site Header and info
 
 import { useState, useEffect } from 'react';
-import './Header.scss';
+import './Header.css';
 
 const titles = [
   "Software Engineer",
@@ -20,7 +20,6 @@ const titles = [
 ];
 
 export default function Header(){
-  const [titleIndex, setTitleIndex] = useState(0);
   const [currentTitle, setCurrentTitle] = useState("");
   const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
 
@@ -32,7 +31,6 @@ export default function Header(){
     setCursor((prev) => ({ ...prev, visible: false }));
   };
 
-  
   let timer,
   charDelay = 100,
   wordDelay = 1000,
@@ -82,11 +80,6 @@ export default function Header(){
       timer = setTimeout(typerwriterCycle, delay);
     }
 
-    // const interval = setInterval(() => {
-    //   setTitleIndex(prevIndex => (prevIndex + 1) % titles.length);
-    // }, 4000);
-
-    // return () => clearInterval(interval);
     typerwriterCycle();
 
     return () => clearTimeout(timer);
@@ -98,7 +91,7 @@ export default function Header(){
       {/* Nav Bar */}
       <div className='nav-bar'>
         <div className='nav-links'>
-          <img src="../../files/images/chess-cards/king-piece.png" className='nav-icon'/>
+          <img src="/chess-cards/king-piece.png" className='nav-icon'/>
           <a href="#about" className='nav-link'>About</a>
           <a href="#skills" className='nav-link'>Skills</a>
           <a href="#education" className='nav-link'>Education</a>

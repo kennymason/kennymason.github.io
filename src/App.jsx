@@ -3,7 +3,7 @@ import { projects } from './data/projects';
 import { degrees } from './data/degrees';
 import { tinkering } from './data/tinkering';
 import { art } from './data/art';
-import './App.scss';
+import './App.css';
 import Header from './components/Header';
 import Projects from './components/Projects';
 import Modal from './components/Modal';
@@ -40,7 +40,7 @@ function App() {
                 <a className="about-icon fa fa-github-square" href="https://github.com/kennymason"></a>
                 <a className="about-icon fa fa-linkedin-square" href="https://www.linkedin.com/in/masonkenneth/"></a>
               </div>
-              <img src="../../files/images/butterfly.jpeg" className='about-img'/>
+              <img src="about/butterfly.jpeg" className='about-img'/>
             </div>
             <div className='about-right'>
               <p>

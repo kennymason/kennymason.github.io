@@ -2,10 +2,10 @@
 // Custom Chess-styled cards with easter egg
 
 import { useState, useEffect } from 'react';
-import './ChessCards.scss'
+import './ChessCards.css'
 
 export default function ChessCards(){
-  const imagesPath = "../../files/images/chess-cards/";
+  const imagesPath = "/chess-cards/";
   const defaultImages = [
     "jack",
     "queen",

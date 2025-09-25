@@ -1,7 +1,7 @@
 // Timeline.jsx
 // Timeline view for education or experience
 
-import './Timeline.scss';
+import './Timeline.css';
 
 export default function Timeline({ data }){
   

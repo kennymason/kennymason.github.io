@@ -2,7 +2,7 @@
 // Rotating row display for project cards
 
 import { useRef, useEffect, useState } from 'react';
-import './Projects.scss';
+import './Projects.css';
 
 export default function Projects({ projects, category = "", cardWidth=350, gap=16, onSelect }){
   const trackRef = useRef(null);

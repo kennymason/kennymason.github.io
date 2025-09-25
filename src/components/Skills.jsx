@@ -2,7 +2,7 @@
 // List of skills, languages and technologies
 
 import { useState } from 'react';
-import './Skills.scss';
+import './Skills.css';
 import { FaHtml5, FaJava, FaReact, FaCss3Alt, FaSass, FaPython, FaNodeJs, FaGitAlt, FaGoogle, FaSwift, FaDatabase, FaCode, FaCuttlefish, FaCloud } from "react-icons/fa";
 import { SiJavascript, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiCplusplus, SiErlang, SiOcaml, SiWebflow, SiApachegroovy, SiP5Dotjs, SiNumpy, SiScikitlearn, SiPandas, SiPytorch, SiTensorflow, SiDocker, SiGnubash } from "react-icons/si";
 
