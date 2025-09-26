@@ -10,7 +10,7 @@ export const degrees = [
     gpa: 3.5,
     withHonors: true,
     honors: ["Dean's List", 'Presidential Scholarship'],
-    image: "../../files/images/stevens-institute-of-technology.jpg"
+    image: "icons/stevens-institute-of-technology.jpg"
   },
   {
     id: 2,
@@ -23,6 +23,6 @@ export const degrees = [
     gpa: 0,
     withHonors: false,
     honors: [],
-    image: "../../files/images/stevens-institute-of-technology.jpg"
+    image: "icons/stevens-institute-of-technology.jpg"
   },
 ];

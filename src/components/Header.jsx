@@ -93,8 +93,9 @@ export default function Header(){
         <div className='nav-links'>
           <img src="/chess-cards/king-piece.png" className='nav-icon'/>
           <a href="#about" className='nav-link'>About</a>
-          <a href="#skills" className='nav-link'>Skills</a>
           <a href="#education" className='nav-link'>Education</a>
+          <a href="#experience" className='nav-link'>Experience</a>
+          <a href="#skills" className='nav-link'>Skills</a>
           <a href="#projects" className='nav-link'>Projects</a>
         </div>
 

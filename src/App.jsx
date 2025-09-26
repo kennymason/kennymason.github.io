@@ -1,27 +1,29 @@
 import { useState } from 'react';
 import { projects } from './data/projects';
 import { degrees } from './data/degrees';
+import { roles } from './data/roles';
 import { tinkering } from './data/tinkering';
 import { art } from './data/art';
-import './App.css';
 import Header from './components/Header';
+import Timeline from './components/Timeline';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Modal from './components/Modal';
-import Footer from './components/Footer';
 import ChessCards from './components/ChessCards';
-import Skills from './components/Skills';
-import Timeline from './components/Timeline';
+import Footer from './components/Footer';
+import './App.css';
 
-const tabs = [
+const projectTabs = [
   { id: "all-tab", label: "All Projects" },
   { id: "ai-tab", label: "AI & Machine Learning" },
-  { id: "apps-tab", label: "Desktop & Mobile Apps" },
+  { id: "apps-tab", label: "Applications" },
   { id: "plugins-tab", label: "Plugins & Themes" },
 ];
 
 function App() {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [selectedTab, setSelectedTab] = useState(tabs[0].id);
+  const [selectedTab, setSelectedTab] = useState(projectTabs[0].id);
   const changeTab = (id) => setSelectedTab(id);
 
   return (
@@ -62,6 +64,12 @@ function App() {
           <Timeline data={degrees}/>
         </div>
 
+        {/* Experience */}
+        <div id='experience' className='section-container'>
+          <h2 className="section-heading">Experience</h2>
+          <Experience data={roles}/>
+        </div>
+
         {/* Skills */}
         <div id='skills' className='section-container'>
           <h2 className="section-heading">Skills</h2>
@@ -73,7 +81,7 @@ function App() {
           <h2 className="section-heading">Projects</h2>
 
           <div className='project-tabs'>
-            {tabs.map((tab, i) => (
+            {projectTabs.map((tab, i) => (
               <div
                 key={i}
                 id={tab.id}

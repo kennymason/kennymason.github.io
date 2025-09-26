@@ -46,13 +46,14 @@
   --timeline-item-width: 23vw;
   --timeline-item-distance: 100px;
 
+  position: relative;
   padding: 1rem;
   margin: 2rem 0;
   width: var(--timeline-item-width);
   border-radius: 8px;
   color: var(--fg-color-secondary);
   line-height: 1.8rem;
-  position: relative;
+  background-repeat: no-repeat;
 }
 .timeline-item.left {
   grid-column: 1;

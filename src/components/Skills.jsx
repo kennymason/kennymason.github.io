@@ -17,7 +17,7 @@ function LangChainIcon() {
   );
 }
 function ApacheVelocityIcon() {
-  return (<img src="../../files/icons/velocity.png"/>);
+  return (<img src="/icons/velocity.png"/>);
 }
 
 //   // { name: "Pinecone", icon: <FaCode className="text-teal-400" /> }, // placeholder

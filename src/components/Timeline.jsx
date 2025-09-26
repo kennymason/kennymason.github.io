@@ -4,7 +4,6 @@
 import './Timeline.css';
 
 export default function Timeline({ data }){
-  
   // Sort in reverse chronological order
   const sortedData = (() => {
     data.sort((a, b) => b.id - a.id);

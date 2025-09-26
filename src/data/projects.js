@@ -1,14 +1,25 @@
 export const projects = [
+  // {
+  //   id: 3,
+  //   title: "Forkist",
+  //   category: "app",
+  //   type: "Mobile App",
+  //   description: "\"Social Food Network\"",
+  //   summary: "",
+  //   image: "/experience/forkist/logo.png",
+  //   tags: ["Mobile App", "Social Network", "Backend Dev", "API Development", "Database Management", "Cloud Management", "Node.js", "Express", "MongoDB", "Google Cloud Platform"],
+  //   link: "https://forkist.com/"
+  // },
   {
     id: 1,
-    title: "Forkist",
-    category: "app",
-    type: "Mobile App",
-    description: "\"Social Food Network\"",
+    title: "FENSight",
+    category: "ai",
+    type: "ML Model",
+    description: "Convert 2D images of chessboards to Forsyth-Edwards Notation (FEN)",
     summary: "",
-    image: "/experience/forkist/logo.png",
-    tags: ["Mobile App", "Social Network", "Backend Dev", "API Development", "Database Management", "Cloud Management", "Node.js", "Express", "MongoDB", "Google Cloud Platform"],
-    link: "https://forkist.com/"
+    image: "/projects/fensight/logo.png",
+    tags: ["Machine Learning", "AI", "Deep Learning", "Convolutional Neural Networks", "Python", "Classification", "Chess"],
+    link: ""
   },
   {
     id: 2,
@@ -20,17 +31,6 @@ export const projects = [
     image: "/projects/klipq/logo.png",
     tags: ["Desktop App", "Swift", "macOS App"],
     link: "https://github.com/kennymason/KlipQ"
-  },
-  {
-    id: 3,
-    title: "FENSight",
-    category: "ai",
-    type: "ML Model",
-    description: "Convert 2D images of chessboards to Forsyth-Edwards Notation (FEN)",
-    summary: "",
-    image: "/projects/fensight/logo.png",
-    tags: ["Machine Learning", "AI", "Deep Learning", "Convolutional Neural Networks", "Python", "Classification", "Chess"],
-    link: ""
   },
   {
     id: 4,

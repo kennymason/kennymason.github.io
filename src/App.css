@@ -106,7 +106,7 @@
 .project-tabs {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
   gap: 60px;
   margin: 25px var(--section-side-margin) 40px var(--section-side-margin);
 }
