@@ -1,7 +1,6 @@
 // Projects.jsx
 // Rotating row display for project cards
 
-import { useRef, useEffect, useState } from 'react';
 import './Projects.css';
 
 export default function Projects({ projects, category = "", cardWidth=350, gap=16, onSelect }){
@@ -11,6 +10,7 @@ export default function Projects({ projects, category = "", cardWidth=350, gap=1
       <div className='projects-wrapper'>
         {projects.map((project, index) => (
           (category === "all" || category === project.category) &&
+            
             <div
               id={project.id}
               key={index}
@@ -18,8 +18,10 @@ export default function Projects({ projects, category = "", cardWidth=350, gap=1
               onClick={onSelect}
               style={{ minWidth: `${cardWidth}px`, maxWidth: `${cardWidth}px` }}
             >
-              <div className='card-type'>{ project.type }</div>
-              <img className="card-image" src={ project.image }/>
+              <div className="card-content">
+                <div className='card-type'>{ project.type }</div>
+                <img className="card-image" src={ project.image }/>
+              </div>
               <h3 className="card-title">{ project.title }</h3>
             </div>
         ))}

@@ -5,6 +5,7 @@ import { roles } from './data/roles';
 import { tinkering } from './data/tinkering';
 import { art } from './data/art';
 import Header from './components/Header';
+import About from './components/About'
 import Timeline from './components/Timeline';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
@@ -35,27 +36,7 @@ function App() {
         {/* About Me */}
         <div id='about' className='section-container'>
           <h2 className="section-heading">About Me</h2>
-          <div className='about-content'>
-            <div className='about-left'>
-              <div className="about-contact">
-                <a className="about-icon fa fa-square-envelope" href="mailto:kennymmase@gmail.com"></a>
-                <a className="about-icon fa fa-github-square" href="https://github.com/kennymason"></a>
-                <a className="about-icon fa fa-linkedin-square" href="https://www.linkedin.com/in/masonkenneth/"></a>
-              </div>
-              <img src="about/butterfly.jpeg" className='about-img'/>
-            </div>
-            <div className='about-right'>
-              <p>
-                I'm not very good at talking about myself. I try not to brag, but then I self-describe with terms like 'Code Artifex' and 'Arbiter of Code Quality.' So instead, I decided to <b>show</b> you who I am the best way I know how — with code. So enjoy my site, and if you must read something, enjoy the <i>Lorem Ipsum</i> I have prepared for you below.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p>
-                Oh, before I forget: if you see something out of place, why not give it a click? Something interesting might just happen...
-              </p>
-            </div>
-          </div>
+          <About/>
         </div>
 
         {/* Education */}
