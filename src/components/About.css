@@ -34,7 +34,6 @@
   color: var(--fg-color);
 	vertical-align: bottom;
 	text-decoration: none;
-	text-shadow: 0 0 10px black;
   transition: all 0.2s ease-in-out, opacity 0.3s ease 0.5s; /* Opacity delay to allow pop-on-scroll animation to run */
   opacity: 0; /* until pop-on-scroll class is set via JS */
 }

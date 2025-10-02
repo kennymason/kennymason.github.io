@@ -11,7 +11,7 @@ export const roles = [
       "Implemented pagination and improved efficiency across the platform, reducing feed and profile loading times from 30+ seconds down to < 1 second.",
       "Managed the backend development process by identifying and prioritizing tasks and conducting thorough code reviews to ensure quality and consistency throughout the API.",
     ],
-    skills: ["Backend Dev", "Node.js", "REST API", "GCP", "MongoDB", "Expo SDK"],
+    tags: ["Backend Dev", "Node.js", "REST API Dev", "GCP", "MongoDB", "Expo SDK"],
     image: "/experience/forkist/logo.png"
   },
   {
@@ -27,7 +27,7 @@ export const roles = [
       "Developed custom widgets, automations, themes, and web apps to enhance the functionality and user experience of websites and web applications.",
       "Created Jira workflows and automations to streamline project management processes and increase efficiency.",
     ],
-    skills: ["Java", "Groovy", "Web Dev", "JavaScript"],
+    tags: ["Java", "Groovy", "Web Dev", "JavaScript"],
     image: "experience/social-edge-consulting/logo.png"
   },
   {
@@ -42,7 +42,7 @@ export const roles = [
       "Enhanced platform scalability by implementing customizable automation workflows tailored to diverse client needs.",
       "Built user-focused features for CRM, analytics, and task management, improving platform usability and engagement.",
     ],
-    skills: ["Python", "LLM App Dev", "GPT / OpenAI API", "JavaScript"],
+    tags: ["Python", "LLM App Dev", "GPT / OpenAI API", "JavaScript"],
     image: "experience/letsbe-solutions/logo.png"
   },
 ];

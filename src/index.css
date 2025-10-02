@@ -6,6 +6,8 @@
   --bg-color: rgb(0, 12, 12);
   /* background color values */
   --bg-color-val: 0, 12, 12; 
+  /* Lighter background color */
+  --bg-color-lite: #051414;
   /* foreground color */
   --fg-color: rgb(28, 235, 207);
   /* foreground color values */

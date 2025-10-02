@@ -11,12 +11,11 @@
 
 .projects-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 350px);
+  grid-template-columns: repeat(3, 350px);
   gap: 2rem;
   justify-items: start; /* left-align items in each row */
-  width: max-content;
-  max-width: 100%;
-  height: max-content;
+  justify-content: center;
+  width: 100%;
 }
 
 .card-container {
@@ -90,4 +89,12 @@
   background-color: rgba(var(--bg-color-val), 0.75);
   border-top: var(--card-title-border);
   border-radius: 0 0 8px 8px;
+}
+
+/* Modal */
+
+.modal-wrapper {
+  grid-column: 1 / -1; /* span full row in project grid */
+  width: 100%;
+  animation: expandDown 0.4s ease;
 }

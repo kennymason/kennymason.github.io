@@ -82,7 +82,7 @@ export default function ChessCards(){
             src={ codeToggle ? `${imagesPath}${card}-code.png` : `${imagesPath}${card}.png` }
             alt={card}
             className={`${card} bg-img`}
-            onClick={() => { if (card === "joker") alert(`Clicked ${card}`) } }
+            onClick={() => { if (card === "joker") alert(`Haha, this is embarrassing... seems I forgot to do something with this.`) } }
           />
         )) }
       </div>

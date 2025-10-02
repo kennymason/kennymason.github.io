@@ -36,7 +36,7 @@ export default function Experience({ data }){
                 </div>
               </div>
               <ul className='bullets'>{role.bullets.map((bullet, j) => <li key={j}>{bullet}</li>)}</ul>
-              <div className='role-skills'>{role.skills.map((skill, j) => <div key={j} className='role-skill'>{skill}</div>)}</div>
+              <div className='role-tags'>{role.tags.map((tag, j) => <div key={j} className='role-tag'>{tag}</div>)}</div>
             </div>
           </div>
         </div>

@@ -25,7 +25,6 @@
   text-align: right;
   line-height: 1.2rem;
   font-size: 1.2rem;
-  /* color: rgba(var(--fg-color-val), 0.5); */
   white-space: nowrap;
 }
 
@@ -35,8 +34,7 @@
   padding: 2rem;
   border-radius: 8px;
   /* border-left: 3px solid var(--fg-color); */
-  background: linear-gradient(to left, rgba(56, 122, 111, 1), var(--bg-color));
-  background: linear-gradient(to right, var(--bg-color) 0, #051414 40%, #051414 50%, var(--bg-color) 100%);
+  background: linear-gradient(to right, var(--bg-color) 0, var(--bg-color-lite) 40%, var(--bg-color-lite) 50%, var(--bg-color) 100%);
   background-repeat: no-repeat;
 }
 .role-card-border-wrap {
@@ -94,7 +92,7 @@
   margin-left: 1em;
 }
 
-.role-skills {
+.role-tags {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -103,11 +101,25 @@
   line-height: 1em;
   /* color: var(--fg-color); */
 }
-.role-skill {
+.role-tag {
   padding: 10px;
   white-space: nowrap;
   background-color: var(--bg-color);
   border-radius: 30px;
   /* border: 1px solid var(--fg-color); */
-  box-shadow: 0 0 8px 1px rgba(var(--fg-color-val), 1);
+  box-shadow: 0 0 8px 1px var(--fg-color);
+}
+.role-tag:hover {
+  box-shadow: 0 0 8px 2px var(--fg-color);
+}
+/* alt design */
+.role-tag {
+  /* border-radius: 12px; */
+  box-shadow: none;
+  border: 1px solid rgba(var(--fg-color-val), 1);
+}
+.role-tag:hover {
+  border: 1px solid rgba(var(--fg-color-val), 1);
+  opacity: 1;
+  box-shadow: 0 0 6px var(--fg-color);
 }

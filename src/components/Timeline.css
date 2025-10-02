@@ -63,6 +63,7 @@
   margin-right: var(--timeline-item-distance);
   margin-left: auto;
   background: linear-gradient(to left, rgba(var(--fg-color-val), 0.3), var(--bg-color));
+  background-repeat: no-repeat;
 }
 .timeline-item.right {
   grid-column: 3;
@@ -72,6 +73,7 @@
   margin-right: auto;
   margin-left: var(--timeline-item-distance);
   background: linear-gradient(to right, rgba(var(--fg-color-val), 0.3), var(--bg-color));
+  background-repeat: no-repeat;
 }
 
 /* Date & Connector lines */

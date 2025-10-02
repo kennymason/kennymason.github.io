@@ -42,13 +42,27 @@
 }
 .skill.active {
   /* background-color: rgba(var(--fg-color-val), 0.4); */
-  box-shadow: 0 0 10px var(--fg-color);
-  border: 1px solid rgba(var(--fg-color-val), 0.5);
+  box-shadow: 0 0 10px 1px var(--fg-color);
+  /* border: 1px solid rgba(var(--fg-color-val), 0.5); */
   opacity: 1;
 }
 .skill.active.cursor-near {
-  box-shadow: 0 0 15px var(--fg-color);
+  box-shadow: 0 0 10px 3px var(--fg-color);
+  border: 1px solid var(--fg-color);
 }
+
+/* Alt skill design */
+/* .skill {
+  border-radius: 8px;
+  border: 1px solid rgba(var(--fg-color-val), 1);
+}
+.skill.active {
+  border: 1px solid rgba(var(--fg-color-val), 1);
+  opacity: 1;
+}
+.skill.active.cursor-near {
+  box-shadow: 0 0 10px 3px var(--fg-color);
+} */
 
 .skill-name {
   font-size: 1.2em;

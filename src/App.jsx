@@ -2,15 +2,14 @@ import { useState } from 'react';
 import { projects } from './data/projects';
 import { degrees } from './data/degrees';
 import { roles } from './data/roles';
-import { tinkering } from './data/tinkering';
-import { art } from './data/art';
+// import { tinkering } from './data/tinkering';
+// import { art } from './data/art';
 import Header from './components/Header';
 import About from './components/About'
 import Timeline from './components/Timeline';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Modal from './components/Modal';
 import ChessCards from './components/ChessCards';
 import Footer from './components/Footer';
 import './App.css';
@@ -23,7 +22,6 @@ const projectTabs = [
 ];
 
 function App() {
-  const [selectedProject, setSelectedProject] = useState(null);
   const [selectedTab, setSelectedTab] = useState(projectTabs[0].id);
   const changeTab = (id) => setSelectedTab(id);
 
@@ -80,7 +78,6 @@ function App() {
               title="All Projects"
               projects={projects}
               category={"all"}
-              onSelect={setSelectedProject}
             />
           }
 
@@ -90,7 +87,6 @@ function App() {
               title="AI / Machine Learning"
               projects={projects}
               category={"ai"}
-              onSelect={setSelectedProject}
             />
           }
 
@@ -100,7 +96,6 @@ function App() {
               title="Desktop & Mobile Apps"
               projects={projects}
               category={"app"}
-              onSelect={setSelectedProject}
             />
           }
 
@@ -110,13 +105,8 @@ function App() {
               title="Plugins & Themes"
               projects={projects}
               category={"plugin"}
-              onSelect={setSelectedProject}
             />
           }
-
-          {selectedProject && (
-            <Modal project={selectedProject} onClose={() => setSelectedProject(null)}/>
-          )}
 
           {/* <ProjectRow
             id="tinkering-row-1"
