@@ -8,7 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-# dist # We need to push this if we want github pages to deploy the files from /dist
+dist
 dist-ssr
 *.local
 
