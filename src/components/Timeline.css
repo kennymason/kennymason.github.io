@@ -1,0 +1,137 @@
+
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  position: relative;
+  width: 100%;
+  margin: 25px 0;
+}
+
+/* Main Timeline - vertical center line */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: var(--fg-color);
+}
+.timeline-line::after {
+  content: '';
+  position: absolute;
+  right: -5px; /* position at the end of the line */
+  top: 6px;
+  transform: translateY(-50%) rotate(-45deg); /* rotate to make arrowhead */
+  width: 10px; /* size of arrowhead */
+  height: 10px;
+  border-right: 4px solid var(--fg-color);
+  border-top: 4px solid var(--fg-color);
+  border-radius: 0 2px;
+}
+.timeline-dot {
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--fg-color);
+}
+
+/* Degrees */
+
+.timeline-item {
+  --timeline-item-width: 23vw;
+  --timeline-item-distance: 100px;
+
+  position: relative;
+  padding: 1rem;
+  margin: 2rem 0;
+  width: var(--timeline-item-width);
+  border-radius: 8px;
+  color: var(--fg-color-secondary);
+  line-height: 1.8rem;
+  background-repeat: no-repeat;
+}
+.timeline-item.left {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: right;
+  border-right: 2px solid var(--fg-color);
+  margin-right: var(--timeline-item-distance);
+  margin-left: auto;
+  background: linear-gradient(to left, rgba(var(--fg-color-val), 0.3), var(--bg-color));
+  background-repeat: no-repeat;
+}
+.timeline-item.right {
+  grid-column: 3;
+  grid-row: 2;
+  text-align: left;
+  border-left: 2px solid var(--fg-color);
+  margin-right: auto;
+  margin-left: var(--timeline-item-distance);
+  background: linear-gradient(to right, rgba(var(--fg-color-val), 0.3), var(--bg-color));
+  background-repeat: no-repeat;
+}
+
+/* Date & Connector lines */
+
+.timeline-item .date {
+  position: absolute;
+  text-align: center;
+  font-size: 1.2rem;
+  width: var(--timeline-item-distance);
+  border-bottom: 2px solid var(--fg-color);
+}
+.timeline-item.left .date {
+  right: calc(-2px - var(--timeline-item-distance)); /* account for 2px offset from border */
+  top: 55%;
+}
+.timeline-item.right .date {
+  left: calc(-2px - var(--timeline-item-distance)); /* account for 2px offset from border */
+  top: 20%;
+}
+
+/* Stevens Icon
+.timeline-item .school-icon {
+  position: absolute;
+  max-width: 0.8 * var(--timeline-item-distance);
+}
+.timeline-item.left .school-icon {
+  right: calc(50% + (0.8 * var(--timeline-item-distance)));
+  top: calc(55% - .4 * var(--timeline-item-distance));
+}
+.timeline-item.right .school-icon {
+  left: calc(-1px - (0.9 * var(--timeline-item-distance)));
+  top: calc(20% + .4 * var(--timeline-item-distance));
+}
+.timeline-item.left .school-icon {
+  right: calc(-1px - (0.9 * var(--timeline-item-distance)));
+  top: calc(55% + .4 * var(--timeline-item-distance));
+}
+.timeline-item.right .school-icon {
+  left: calc(-1px - (0.9 * var(--timeline-item-distance)));
+  top: calc(20% + .4 * var(--timeline-item-distance));
+}
+*/
+
+/* Text Styles */
+
+.degree-type {
+  font-size: 1.45rem;
+  color: var(--fg-color);
+  margin-bottom: 10px;
+}
+.major {
+  font-size: 1.55rem;
+  margin-bottom: 10px;
+}
+.honors {
+  margin: 0;
+  padding-left: 0;
+}
+.honors li {
+  margin-left: 1em;
+}
