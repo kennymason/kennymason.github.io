@@ -30,7 +30,7 @@
 
 .role-card {
   position: relative;
-  width: calc(100% -4rem);
+  width: calc(100% - 4rem);
   padding: 2rem;
   border-radius: 8px;
   /* border-left: 3px solid var(--fg-color); */
