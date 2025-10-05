@@ -2,6 +2,7 @@
 .skill-tabs {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 60px;
   margin: 25px 0 40px 0;
   justify-content: center;
@@ -76,4 +77,58 @@
 .skill-icon img {
   height: 1em;
   width: 1em;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .skill-tabs {
+    width: 90%;
+    margin: 25px auto 40px auto;
+    gap: 20px;
+  }
+  .s-tab {
+    font-size: 1em;
+  }
+
+  .skill-list {
+    width: 90%;
+    margin: 0 auto 25px auto;
+    gap: 12px;
+  }
+
+  .skill {
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+  .skill.active {
+    border: 1px solid var(--fg-color);
+    box-shadow: none;
+    opacity: 1;
+  }
+  .skill.active.cursor-near {
+    box-shadow: none;
+  }
+
+  .skill-name {
+    font-size: 0.8em;
+    margin: 0;
+  }
+  .skill-icon {
+    position: relative;
+    top: 2px;
+    font-size: 1.2em;
+  }
+  .skill-icon img {
+    height: 0.8em;
+    width: 0.8em;
+  }
+
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+
+
 }

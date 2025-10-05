@@ -76,6 +76,10 @@
   background-repeat: no-repeat;
 }
 
+.notice-text {
+  color: var(--notice-color);
+}
+
 /* Date & Connector lines */
 
 .timeline-item .date {
@@ -134,4 +138,78 @@
 }
 .honors li {
   margin-left: 1em;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    width: 80%;
+    justify-content: center;
+    margin: 25px auto;
+  }
+
+  /* Main Timeline - vertical center line */
+  .timeline-line {
+    display: none;
+  }
+  .timeline-line::after {
+    display: none;
+  }
+  .timeline-dot {
+    display: none;
+  }
+
+  /* Degrees */
+
+  .timeline-item {
+    --timeline-item-width: 100%;
+    box-sizing: border-box;
+  }
+  .timeline-item.left {
+    text-align: left;
+    border-right: none;
+    margin: 0;
+    border-left: 2px solid var(--fg-color);
+    background: linear-gradient(to right, rgba(var(--fg-color-val), 0.3), var(--bg-color));
+  }
+  .timeline-item.right {
+    margin: 0;
+  }
+
+  /* Date & Connector lines */
+
+  .timeline-item .date {
+    width: 100%;
+    text-align: left;
+    border-bottom: none;
+  }
+  .timeline-item.left .date {
+    top: -30px;
+    left: 25px;
+    right: 0;
+  }
+  .timeline-item.right .date {
+    top: -30px;
+    left: 25px;
+  }
+
+  /* Text Styles */
+
+  .degree-type {
+    font-size: 1.25rem;
+  }
+  .major {
+    font-size: 1.35rem;
+  }
+
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+
+
 }

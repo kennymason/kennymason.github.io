@@ -2,3 +2,15 @@
 .footer-container {
   background-color: var(--bg-color);
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+
+
+}

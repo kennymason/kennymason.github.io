@@ -6,8 +6,10 @@
   justify-content: center;
   align-items: center;
   height: 65vh;
+  width: 100%;
   margin: 50px 0;
   background-color: var(--bg-color);
+  overflow: hidden; /* Contains "scroll jump" that happens on animation trigger */
 }
 
 .bg-images-container {
@@ -16,10 +18,12 @@
   left: 0; 
   right: 0;
   bottom: 0;
-  display: flex; /* put images side by side */
+  display: flex;
   gap: 50px;
   padding: 50px 100px;
   justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
   z-index: 1;
 
   background: linear-gradient(to bottom, var(--bg-color) 0%, rgba(var(--fg-color-val), 0.04) 10%, rgba(var(--fg-color-val), 0.04) 90%, var(--bg-color) 100%);
@@ -78,6 +82,40 @@
     transform: none;
     filter: none;
   }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .cards-container {
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0 0 0;
+    background-color: var(--bg-color);
+  }
+
+  .bg-images-container {
+    height: auto;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    padding: 25px 0;
+    justify-content: center;
+    z-index: 1;
+    background: linear-gradient(to bottom, var(--bg-color) 0%, rgba(var(--fg-color-val), 0.04) 10%);
+  }
+
+  .bg-images-container .bg-img {
+    object-fit: contain;
+    width: 20vw;
+  }
+
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+
+
 }
 
 /* Developer's Note: I need to put this somewhere, so I'm putting it here.
