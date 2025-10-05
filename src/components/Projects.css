@@ -98,3 +98,28 @@
   width: 100%;
   animation: expandDown 0.4s ease;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+  .projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .card-title {
+    font-size: clamp(0.8em, 1em, 1.2em);
+    padding: 8px 2px;
+    box-sizing: border-box;
+  }
+
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+
+
+}

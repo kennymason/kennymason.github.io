@@ -2,6 +2,7 @@
 // Site Header and info
 
 import { useState, useEffect } from 'react';
+import { LuMenu } from 'react-icons/lu';
 import './Header.css';
 
 const titles = [
@@ -20,6 +21,7 @@ const titles = [
 ];
 
 export default function Header(){
+  const [menuOpen, setMenuOpen] = useState(false);
   const [currentTitle, setCurrentTitle] = useState("");
   const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
 
@@ -90,8 +92,15 @@ export default function Header(){
 
       {/* Nav Bar */}
       <div className='nav-bar'>
-        <div className='nav-links'>
-          <img src="/chess-cards/king-piece.png" className='nav-icon'/>
+
+        <img src="/chess-cards/king-piece.png" className='nav-icon'/>
+
+        {/* Hamburger Menu for mobile */}
+        <div className="burger-menu" onClick={() => setMenuOpen(!menuOpen)}>
+          <LuMenu/>
+        </div>
+
+        <div className={`nav-links ${menuOpen ? "menu-open" : ""}`}>
           <a href="#about" className='nav-link'>About</a>
           <a href="#education" className='nav-link'>Education</a>
           <a href="#experience" className='nav-link'>Experience</a>
@@ -106,6 +115,9 @@ export default function Header(){
           <a className="fa fa-linkedin-square contact-icon" href="https://www.linkedin.com/in/masonkenneth/"></a>
         </div>
       </div>
+
+      {/* Mobile View Disclaimer */}
+      <div className='mobile-disclaimer'>View this site on desktop for a better experience.</div>
 
       {/* Heading */}
       <h1 className="header-title">Kenny Mason</h1>

@@ -30,7 +30,9 @@
 
 .role-card {
   position: relative;
-  width: calc(100% - 4rem);
+  /* width: calc(100% - 4rem); */
+  width: 100%;
+  box-sizing: border-box;
   padding: 2rem;
   border-radius: 8px;
   /* border-left: 3px solid var(--fg-color); */
@@ -122,4 +124,64 @@
   border: 1px solid rgba(var(--fg-color-val), 1);
   opacity: 1;
   box-shadow: 0 0 6px var(--fg-color);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+  .roles-container {
+    width: 90%;
+    margin: 25px auto;
+  }
+
+  .role-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .role-dates {
+    top: -30px;
+    left: 25px;
+    text-align: left;
+    border-bottom: none;
+  }
+
+  .role-card {
+    padding: 1rem;
+  }
+
+  .role-header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 10px;
+    
+    .company-image {
+      display: none;
+    }
+
+    .role-header-titles {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .role-title {
+    font-size: 1.55rem;
+    color: var(--fg-color-secondary);
+
+    .text-highlight {
+      font-size: 1.75rem;
+      color: var(--fg-color);
+    }
+  }
+
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+
+
 }
