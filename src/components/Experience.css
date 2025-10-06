@@ -178,6 +178,23 @@
     }
   }
 
+  .bullets {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+
+  .role-tags {
+    gap: 12px;
+  }
+  .role-tag {
+    gap: 4px;
+    font-size: 0.8em;
+    padding: 4px 10px;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
 }
 
 /* Desktop Styles */

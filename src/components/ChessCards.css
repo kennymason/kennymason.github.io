@@ -5,22 +5,20 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  height: 65vh;
+  height: auto;
   width: 100%;
   margin: 50px 0;
   background-color: var(--bg-color);
+  box-sizing: border-box;
   overflow: hidden; /* Contains "scroll jump" that happens on animation trigger */
 }
 
 .bg-images-container {
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  right: 0;
-  bottom: 0;
+  height: auto;
+  position: relative;
   display: flex;
-  gap: 50px;
-  padding: 50px 100px;
+  gap: 4vw;
+  padding: 50px 4vw;
   justify-content: center;
   width: 100%;
   box-sizing: border-box;
@@ -34,7 +32,8 @@
 }
 .bg-images-container .bg-img {
   /* flex: 1; */
-  object-fit: cover;
+  object-fit: contain;
+  width: 20vw;
   filter: opacity(0.75); /* hue-rotate(-10deg) */
   /* box-shadow: 0 0 20px 20px rgba(var(--fg-color-val), 0.02); */
   /* background-color: rgba(var(--fg-color-val), 0.02); */
@@ -91,23 +90,12 @@
     width: 100%;
     box-sizing: border-box;
     margin: 10px 0 0 0;
-    background-color: var(--bg-color);
   }
 
   .bg-images-container {
     height: auto;
     position: relative;
-    display: flex;
-    gap: 10px;
-    padding: 25px 0;
-    justify-content: center;
-    z-index: 1;
     background: linear-gradient(to bottom, var(--bg-color) 0%, rgba(var(--fg-color-val), 0.04) 10%);
-  }
-
-  .bg-images-container .bg-img {
-    object-fit: contain;
-    width: 20vw;
   }
 
 }

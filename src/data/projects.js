@@ -40,7 +40,7 @@ export const projects = [
     category: "plugin",
     type: "Obsidian Plugin",
     description: "Obsidian Plugin - Enhance and customize your Daily Notes",
-    summary: "Daily Notes Manager is a lightweight Obsidian plugin designed to streamline daily note-taking with targeted automation. It allows users to insert links to previous notes, archive older notes, rollover unfinished tasks, and much more. The plugin also supports dynamic embeddable text, all while keeping setup simple and flexible. Daily Notes Manager provides focused functionality for users seeking precise, automated daily note workflows.",
+    summary: "Daily Notes Manager is a lightweight plugin for Obsidian designed to streamline daily note-taking with targeted automation. It allows users to insert links to previous notes, archive older notes, rollover unfinished tasks, and much more. The plugin also supports dynamic embeddable text, all while keeping setup simple and flexible. Daily Notes Manager provides focused functionality for users seeking precise, automated daily note workflows.",
     logo: "/projects/daily-notes-manager/logo.png",
     images: [
       "/projects/daily-notes-manager/app-view.png",

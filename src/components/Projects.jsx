@@ -24,7 +24,11 @@ export default function Projects({ projects, category = "all" }){
   );
 
   // number of grid columns to display (also set in css)
-  const columns = 3;
+  // 2 if on mobile, 3 otherwise
+  let columns = 3;
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    columns = 2;
+  }
 
   return (
     <div className="projects-container">

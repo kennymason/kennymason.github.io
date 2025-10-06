@@ -8,7 +8,10 @@ export default function Modal({ project }){
     <div className="modal-container">
       <div className='modal-header'>
         <div className='modal-titles'>
-          <div className="modal-title">{project.title}</div>
+          <div className='modal-title-wrapper'>
+            <div className="modal-title">{project.title}</div>
+            <a className="modal-button mobile-btn fa fa-github-square" href={project.links.github}></a>
+          </div>
           <div className="modal-subtitle">{project.description}</div>
         </div>
         <div className="modal-links">
@@ -18,6 +21,9 @@ export default function Modal({ project }){
       <div className="modal-content">
         <div className='modal-content-left'>
           <div className="modal-summary">{project.summary}</div>
+          <div className="modal-images-mobile">
+            <img src={project.images[0]} className='modal-image'/>
+          </div>
           <div className="modal-tags">
             {project.tags.map((tag, i) => (
               <div key={i} className='modal-tag'>{tag}</div>
