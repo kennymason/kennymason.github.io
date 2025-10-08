@@ -70,7 +70,7 @@ export const projects = [
     id: 5,
     title: "Door Aura",
     category: "tinkering",
-    type: "Do-Not-Disturb Display",
+    type: "Gizmo",
     description: "A Fully Customizable Do-Not-Disturb Display",
     summary: "Working remotely comes with a few challenges, especially when you don't live alone. I wanted a way to indicate my availability without anyone ever having to knock on my door. The concept is simple; a small LCD outside the door displays a status that I control via IR remote from my desk. I also included an RGB backlight, so color can change depending on the status. Green for \"enter,\" red for \"don't.\" Yellow means I'm on a call. Door Aura allows for any number of custom presets, each customizable with a variety of settings.",
     logo: "/projects/door-aura/logo.png",

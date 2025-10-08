@@ -22,7 +22,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: var(--card-size);
+  width: 100%;
   border-radius: 8px;
   background: var(--fg-color);
   padding: 1px;
@@ -46,7 +46,7 @@
 
 .card-content {
   position: relative;
-  max-width: var(--card-size);
+  max-width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 8px 8px 0 0;
 }
