@@ -19,6 +19,7 @@ const projectTabs = [
   { id: "ai-tab", label: "AI & Machine Learning" },
   { id: "apps-tab", label: "Applications" },
   { id: "plugins-tab", label: "Plugins & Themes" },
+  { id: "tinker-tab", label: "Tinkering" },
 ];
 
 function App() {
@@ -105,6 +106,15 @@ function App() {
               title="Plugins & Themes"
               projects={projects}
               category={"plugin"}
+            />
+          }
+
+          { selectedTab === "tinker-tab" &&
+            <Projects
+              id="project-row-5"
+              title="Tinkering"
+              projects={projects}
+              category={"tinkering"}
             />
           }
 

@@ -39,7 +39,7 @@ export const projects = [
     title: "Daily Notes Manager",
     category: "plugin",
     type: "Obsidian Plugin",
-    description: "Obsidian Plugin - Enhance and customize your Daily Notes",
+    description: "Enhance and customize your Daily Notes",
     summary: "Daily Notes Manager is a lightweight plugin for Obsidian designed to streamline daily note-taking with targeted automation. It allows users to insert links to previous notes, archive older notes, rollover unfinished tasks, and much more. The plugin also supports dynamic embeddable text, all while keeping setup simple and flexible. Daily Notes Manager provides focused functionality for users seeking precise, automated daily note workflows.",
     logo: "/projects/daily-notes-manager/logo.png",
     images: [
@@ -64,6 +64,22 @@ export const projects = [
     tags: ["Firefox", "Browser Theme", "CSS"],
     links: {
       github: "https://github.com/kennymason/discrete-gruvfox",
+    }
+  },
+  {
+    id: 5,
+    title: "Door Aura",
+    category: "tinkering",
+    type: "Do-Not-Disturb Display",
+    description: "A Fully Customizable Do-Not-Disturb Display",
+    summary: "Working remotely comes with a few challenges, especially when you don't live alone. I wanted a way to indicate my availability without anyone ever having to knock on my door. The concept is simple; a small LCD outside the door displays a status that I control via IR remote from my desk. I also included an RGB backlight, so color can change depending on the status. Green for \"enter,\" red for \"don't.\" Yellow means I'm on a call. Door Aura allows for any number of custom presets, each customizable with a variety of settings.",
+    logo: "/projects/door-aura/logo.png",
+    images: [
+      "/projects/door-aura/photo.jpg",
+    ],
+    tags: ["Arduino", "Python", "Hardware"],
+    links: {
+      github: "https://github.com/kennymason/project-aura",
     }
   }
 ];
