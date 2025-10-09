@@ -27,12 +27,6 @@
   gap: 30px;
   line-height: 1.6em;
 }
-.modal-title-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
 .modal-title{
   color: var(--fg-color);
   font-size: 2em;
@@ -140,10 +134,29 @@
   box-shadow: 0 0 6px var(--fg-color);
 }
 
+.modal-footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .modal-container{
     padding: 1.5rem;
+    gap: 20px;
+  }
+
+  .modal-titles {
+    gap: 15px;
+  }
+  .modal-title {
+    font-size: 1.5em;
+  }
+  .modal-subtitle {
+    font-size: 1.2em;
   }
 
   .modal-button {
@@ -151,7 +164,8 @@
   }
   .mobile-btn {
     display: flex;
-    font-size: 3em;
+    font-size: 4em;
+    width: 40%;
   }
 
   .modal-content-left{
@@ -162,6 +176,10 @@
   }
   .modal-content-right {
     display: none;
+  }
+
+  .modal-summary {
+    line-height: 1.5em;
   }
 
   .modal-tags {
