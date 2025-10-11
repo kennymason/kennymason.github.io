@@ -15,7 +15,7 @@
   /* secondary foreground color */
   --fg-color-secondary: #fff; 
   /* side margins for section divs  */
-  --section-side-margin: 100px;
+  --section-side-margin: 10vw;
   /* Notice / Warning text color */
   --notice-color: #ffdd44ff;
 
@@ -41,16 +41,8 @@ html, body {
 
 }
 
-/* Mid-Sized Screens */
-@media (min-width: 769px) {
-  :root {
-    --section-side-margin: 10vw;
-  }
-
-}
-
 /* Desktop Styles */
-@media (min-width: 860px) {
+@media (min-width: 769px) {
 
 
 }
