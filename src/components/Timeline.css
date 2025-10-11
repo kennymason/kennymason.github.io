@@ -43,7 +43,7 @@
 /* Degrees */
 
 .timeline-item {
-  --timeline-item-width: 23vw;
+  --timeline-item-width: 24vw;
   --timeline-item-distance: 100px;
 
   position: relative;
@@ -53,7 +53,6 @@
   border-radius: 8px;
   color: var(--fg-color-secondary);
   line-height: 1.8rem;
-  background-repeat: no-repeat;
 }
 .timeline-item.left {
   grid-column: 1;
@@ -175,6 +174,7 @@
     margin: 0;
     border-left: 2px solid var(--fg-color);
     background: linear-gradient(to right, rgba(var(--fg-color-val), 0.3), var(--bg-color));
+    background-repeat: no-repeat;
   }
   .timeline-item.right {
     margin: 0;

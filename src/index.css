@@ -41,8 +41,16 @@ html, body {
 
 }
 
-/* Desktop Styles */
+/* Mid-Sized Screens */
 @media (min-width: 769px) {
+  :root {
+    --section-side-margin: 10vw;
+  }
+
+}
+
+/* Desktop Styles */
+@media (min-width: 860px) {
 
 
 }
