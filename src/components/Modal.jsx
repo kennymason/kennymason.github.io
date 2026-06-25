@@ -78,8 +78,15 @@ function Carousel({ images, onImageClick }) {
   );
 }
 
-export default function Modal({ project }){
+export default function Modal({ project, jokerStage, onCatchJoker = () => {} }){
   const [lightboxIndex, setLightboxIndex] = useState(null);
+
+  // Stage 3: the joker takes the place of FENSight's GitHub button
+  const jokerHere = jokerStage === 3 && project.title === "FENSight";
+  const catchModalJoker = () => {
+    alert("Argh! Not bad... but I know one place you'll never find me! *Not without a flashlight, anyway*");
+    onCatchJoker();
+  };
 
   return(
     <div className="modal-container">
@@ -96,7 +103,10 @@ export default function Modal({ project }){
           <div className="modal-subtitle">{project.description}</div>
         </div>
         <div className="modal-links">
-          <a className="modal-button fa fa-github-square" href={project.links.github}></a>
+          {jokerHere
+            ? <img src="/chess-cards/joker-piece.png" className="modal-joker" alt="" onClick={catchModalJoker}/>
+            : <a className="modal-button fa fa-github-square" href={project.links.github}></a>
+          }
         </div>
       </div>
       <div className="modal-content">

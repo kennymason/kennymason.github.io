@@ -1,7 +1,7 @@
 // Header.jsx
 // Site Header and info
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { LuMenu } from 'react-icons/lu';
 import './Header.css';
 
@@ -20,10 +20,18 @@ const titles = [
   "Code Artifex"
 ];
 
-export default function Header(){
+export default function Header({ jokerStage, onCatchJoker = () => {} }){
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentTitle, setCurrentTitle] = useState("");
   const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
+
+  // Random hiding spot for the flashlight joker (stage 4), picked once.
+  // Kept away from the edges and the very top nav so it stays reachable.
+  const jokerRef = useRef(null);
+  const [jokerPos] = useState(() => ({
+    top: 28 + Math.random() * 44,   // 28%–72% down the header
+    left: 12 + Math.random() * 76,  // 12%–88% across the header
+  }));
 
   const handleMouseMove = (e) => {
     setCursor({ x: e.clientX, y: e.clientY, visible: true });
@@ -32,6 +40,30 @@ export default function Header(){
   const handleMouseLeave = () => {
     setCursor((prev) => ({ ...prev, visible: false }));
   };
+
+  // Stage 1: joker hides in plain sight as the nav icon
+  const catchNavJoker = () => {
+    alert("Ha! You're good, but I know a better hiding spot. Time to test your skills...");
+    onCatchJoker();
+  };
+
+  // Stage 4: joker is invisible; the cursor "flashlight" reveals it on proximity
+  const catchFlashlightJoker = () => {
+    alert("Alright, alright, you got me! Well played. 🃏");
+    onCatchJoker();
+  };
+
+  // How lit-up the hidden joker is: fully revealed under the cursor, fading out
+  // toward the edge of the flashlight's reach.
+  let jokerReveal = 0;
+  if (jokerStage === 4 && cursor.visible && jokerRef.current) {
+    const rect = jokerRef.current.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const dist = Math.hypot(cursor.x - cx, cursor.y - cy);
+    const threshold = 130; // roughly the radius of the cursor glow
+    jokerReveal = Math.max(0, 1 - dist / threshold);
+  }
 
   let timer,
   charDelay = 100,
@@ -93,7 +125,11 @@ export default function Header(){
       {/* Nav Bar */}
       <div className='nav-bar'>
 
-        <img src="/chess-cards/king-piece.png" className='nav-icon'/>
+        <img
+          src={jokerStage === 1 ? "/chess-cards/joker-piece.png" : "/chess-cards/king-piece.png"}
+          className={`nav-icon${jokerStage === 1 ? ' nav-icon-joker' : ''}`}
+          onClick={jokerStage === 1 ? catchNavJoker : undefined}
+        />
 
         {/* Hamburger Menu for mobile */}
         <div className="burger-menu" onClick={() => setMenuOpen(!menuOpen)}>
@@ -122,6 +158,23 @@ export default function Header(){
       {/* Heading */}
       <h1 className="header-title">Kenny Mason</h1>
       <h2 className="header-title-2">{currentTitle}</h2>
+
+      {/* Stage 4: the joker hides invisibly here; the cursor glow is the flashlight */}
+      {jokerStage === 4 &&
+        <img
+          ref={jokerRef}
+          src="/chess-cards/joker-piece.png"
+          className="header-joker"
+          alt=""
+          style={{
+            top: `${jokerPos.top}%`,
+            left: `${jokerPos.left}%`,
+            opacity: jokerReveal,
+            pointerEvents: jokerReveal > 0.35 ? 'auto' : 'none',
+          }}
+          onClick={catchFlashlightJoker}
+        />
+      }
 
       <div
         className="cursor-glow"

@@ -57,6 +57,14 @@
 .mobile-btn {
   display: none;
 }
+.modal-joker {
+  height: 72px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.modal-joker:hover {
+  transform: scale(1.1);
+}
 
 .modal-content{
   display: flex;

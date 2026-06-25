@@ -25,10 +25,16 @@ const projectTabs = [
 function App() {
   const [selectedTab, setSelectedTab] = useState(projectTabs[0].id);
   const changeTab = (id) => setSelectedTab(id);
+  // Joker easter-egg "cat and mouse" game. The joker moves to a new hiding
+  // spot each time it's caught; each stage corresponds to one location:
+  //   0: chess cards  1: header nav icon  2: skills  3: FENSight modal
+  //   4: hidden in the header (revealed by the cursor "flashlight")  5: done
+  const [jokerStage, setJokerStage] = useState(0);
+  const advanceJoker = () => setJokerStage((s) => s + 1);
 
   return (
     <>
-      <Header/>
+      <Header jokerStage={jokerStage} onCatchJoker={advanceJoker}/>
 
       <div className='content'>
 
@@ -53,7 +59,7 @@ function App() {
         {/* Skills */}
         <div id='skills' className='section-container'>
           <h2 className="section-heading">Skills</h2>
-          <Skills/>
+          <Skills jokerStage={jokerStage} onCatchJoker={advanceJoker}/>
         </div>
 
         {/* Projects */}
@@ -79,6 +85,8 @@ function App() {
               title="All Projects"
               projects={projects}
               category={"all"}
+              jokerStage={jokerStage}
+              onCatchJoker={advanceJoker}
             />
           }
 
@@ -88,6 +96,8 @@ function App() {
               title="AI / Machine Learning"
               projects={projects}
               category={"ai"}
+              jokerStage={jokerStage}
+              onCatchJoker={advanceJoker}
             />
           }
 
@@ -97,6 +107,8 @@ function App() {
               title="Desktop & Mobile Apps"
               projects={projects}
               category={"app"}
+              jokerStage={jokerStage}
+              onCatchJoker={advanceJoker}
             />
           }
 
@@ -106,6 +118,8 @@ function App() {
               title="Plugins & Themes"
               projects={projects}
               category={"plugin"}
+              jokerStage={jokerStage}
+              onCatchJoker={advanceJoker}
             />
           }
 
@@ -115,6 +129,8 @@ function App() {
               title="Tinkering"
               projects={projects}
               category={"tinkering"}
+              jokerStage={jokerStage}
+              onCatchJoker={advanceJoker}
             />
           }
 
@@ -133,7 +149,7 @@ function App() {
         </div>
 
         {/* Chess Cards */}
-        <ChessCards/>
+        <ChessCards jokerCaught={jokerStage >= 1} onCatchJoker={advanceJoker}/>
         
       </div>
 

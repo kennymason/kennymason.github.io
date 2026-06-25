@@ -46,7 +46,7 @@ export default function About() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
         <p>
-          Oh, before I forget: if you see something out of place, why not give it a click? Something interesting might just happen...
+          Oh, before I forget: some joker keeps messing with my site. He should be hiding around here somewhere... do you think you can catch him for me? Good luck!
         </p>
       </div>
     </div>

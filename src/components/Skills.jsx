@@ -56,6 +56,14 @@ const skills = [
   { name: "Google Cloud Platform", icon: <FaCloud/>, skillType: ["tool"] },
   // { name: "Webflow", icon: <SiWebflow/>, skillType: ["tool"] },
 ];
+// The joker's stage-2 hiding spot. Defined at module scope (like `skills`) so its
+// `ref` persists across renders — otherwise the cursor-proximity glow can't find it.
+const jokerSkill = {
+  name: "The Clown",
+  icon: <img src="/chess-cards/joker-piece-head.png" alt="joker" />,
+  skillType: [],
+  isJoker: true,
+};
 const tabs = [
   { id: "all", label: "All Skills" },
   { id: "programming", label: "Programming" },
@@ -65,10 +73,18 @@ const tabs = [
   { id: "tool", label: "DevOps, Cloud & Tooling" }
 ];
 
-export default function Skills(){
+export default function Skills({ jokerStage, onCatchJoker = () => {} }){
   const [selectedTab, setSelectedTab] = useState(tabs[0].id);
   const changeTab = (id) => setSelectedTab(id);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
+
+  // Stage 2: the joker hides among the skills
+  const catchSkillJoker = () => {
+    alert("Don't get too cocky, I'm just getting warmed up! Let's see if you really have a sharp eye.");
+    onCatchJoker();
+  };
+  // Append the joker skill while it's hiding here; it shows under every tab
+  const displayedSkills = jokerStage === 2 ? [...skills, jokerSkill] : skills;
 
   const handleMouseMove = (e) => {
     setCursor({ x: e.clientX, y: e.clientY, visible: true });
@@ -107,15 +123,17 @@ export default function Skills(){
       </div>
 
       <div className="skill-list" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
-        {skills.map((skill, index) => (
+        {displayedSkills.map((skill, index) => (
           <div
             key={index}
             ref={(skillRef) => (skill.ref = skillRef)}
             className={`
-              skill 
-              ${(selectedTab === 'all') || skill.skillType.includes(selectedTab) ? 'active' : ''} 
+              skill
+              ${(selectedTab === 'all') || skill.skillType.includes(selectedTab) || skill.isJoker ? 'active' : ''}
               ${isCursorNear(skill.ref, cursor) && cursor.visible ? "cursor-near" : ""}
+              ${skill.isJoker ? 'skill-joker' : ''}
             `}
+            onClick={skill.isJoker ? catchSkillJoker : undefined}
           >
             <div className="skill-icon">{skill.icon}</div>
             <p className="skill-name">{skill.name}</p>

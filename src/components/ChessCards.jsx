@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import './ChessCards.css'
 
-export default function ChessCards(){
+export default function ChessCards({ jokerCaught, onCatchJoker }){
   const imagesPath = "/chess-cards/";
   const defaultImages = [
     "jack",
@@ -48,8 +48,9 @@ export default function ChessCards(){
             newImages[currentReplaced] = defaultImages[currentReplaced];
           }
 
-          // Randomize card selection, making jokers less frequent
-          const indexPool = [0, 1, 2, 3, 4, 4, 4, 4];
+          // Randomize card selection, making jokers less frequent.
+          // Once the joker has been caught, it never appears again (index 4 = no joker).
+          const indexPool = jokerCaught ? [4] : [0, 1, 2, 3, 4, 4, 4, 4];
           const index = indexPool[Math.floor(Math.random() * indexPool.length)];
 
           // Replace selected card (if not the joker)
@@ -69,7 +70,19 @@ export default function ChessCards(){
     }, 8000);
 
     return () => clearInterval(interval);
-  }, [currentReplaced]);
+  }, [currentReplaced, jokerCaught]);
+
+  const catchJoker = (i) => {
+    alert(`Catch me if you can!`);
+    // Immediately restore the caught card to its default so the joker disappears
+    setCurrentImages((prev) => {
+      const newImages = [...prev];
+      newImages[i] = defaultImages[i];
+      return newImages;
+    });
+    setCurrentReplaced(-1);
+    onCatchJoker();
+  };
 
   return(
     <div className="cards-container">
@@ -82,7 +95,7 @@ export default function ChessCards(){
             src={ codeToggle ? `${imagesPath}${card}-code.png` : `${imagesPath}${card}.png` }
             alt={card}
             className={`${card} bg-img`}
-            onClick={() => { if (card === "joker") alert(`Haha, this is embarrassing... seems I forgot to do something with this.`) } }
+            onClick={() => { if (card === "joker") catchJoker(i); } }
           />
         )) }
       </div>

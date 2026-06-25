@@ -115,7 +115,7 @@
 
 /* Cursor Glow Effect */
 .cursor-glow {
-  position: fixed; 
+  position: fixed;
   pointer-events: none;
   width: 0px;
   height: 0px;
@@ -123,6 +123,26 @@
   box-shadow: 0 0 120px 120px rgba(50, 255, 255, 0.1);
   transform: translate(-50%, -50%);
   transition: opacity 0.6s ease;
+}
+
+/* Joker easter egg */
+.nav-icon-joker {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.nav-icon-joker:hover {
+  transform: scale(1.1);
+}
+
+/* Stage 4: invisible joker revealed by the cursor "flashlight" */
+.header-joker {
+  position: absolute;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 11;
+  transition: opacity 0.12s ease;
+  filter: drop-shadow(0 0 8px rgba(50, 255, 255, 0.7));
 }
 
 /* Mobile Styles */

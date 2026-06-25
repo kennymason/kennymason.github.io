@@ -5,7 +5,7 @@ import { useState, Fragment } from 'react';
 import './Projects.css';
 import Modal from './Modal.jsx';
 
-export default function Projects({ projects, category = "all" }){
+export default function Projects({ projects, category = "all", jokerStage, onCatchJoker }){
   const [selectedProject, setSelectedProject] = useState(null);
 
   // Sort projects by priority (higher number = higher priority)
@@ -58,7 +58,11 @@ export default function Projects({ projects, category = "all" }){
 
               { isLastInRow && selectedProjectInRow(filteredProjects, columns, rowIndex) &&
                 <div className='modal-wrapper'>
-                  <Modal project={filteredProjects.find((p) => p.id === selectedProject)}/>
+                  <Modal
+                    project={filteredProjects.find((p) => p.id === selectedProject)}
+                    jokerStage={jokerStage}
+                    onCatchJoker={onCatchJoker}
+                  />
                 </div>
               }
             </Fragment>
