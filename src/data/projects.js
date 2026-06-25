@@ -17,6 +17,7 @@ export const projects = [
     links: {
       github: "https://github.com/kennymason/fen-sight",
     },
+    priority: 5
   },
   {
     id: 2,
@@ -32,7 +33,8 @@ export const projects = [
     tags: ["Desktop App", "Swift", "macOS App"],
     links: {
       github: "https://github.com/kennymason/KlipQ",
-    }
+    },
+    priority: 4
   },
   {
     id: 3,
@@ -48,7 +50,8 @@ export const projects = [
     tags: ["Obsidian", "Plugin", "TypeScript"],
     links: {
       github: "https://github.com/kennymason/daily-notes-manager",
-    }
+    },
+    priority: 3
   },
   {
     id: 4,
@@ -64,7 +67,8 @@ export const projects = [
     tags: ["Firefox", "Browser Theme", "CSS"],
     links: {
       github: "https://github.com/kennymason/discrete-gruvfox",
-    }
+    },
+    priority: 2
   },
   {
     id: 5,
@@ -80,6 +84,26 @@ export const projects = [
     tags: ["Arduino", "Python", "Hardware"],
     links: {
       github: "https://github.com/kennymason/project-aura",
-    }
+    },
+    priority: 1
+  },
+  {
+    id: 6,
+    title: "St Elmo's Fire",
+    category: "ai",
+    type: "AI Game",
+    description: "AI-Powered Text Adventure Game",
+    summary: "St Elmo's Fire is an AI-powered text adventure game that leverages the capabilities of large language models (LLMs) to create a dynamic and immersive gaming experience. Solely through text-based interactions, players can explore a richly detailed world, interact with characters, and make choices that influence the narrative. Local LLMs enable immersive NPC dialogue, adaptive gameplay, and interpreting user input in a natural and engaging way.",
+    logo: "/projects/st-elmos-fire/logo.png",
+    images: [
+      "/projects/st-elmos-fire/image-1.png",
+      "/projects/st-elmos-fire/image-2.png",
+      "/projects/st-elmos-fire/image-3.png",
+    ],
+    tags: ["GenAI", "LLMs", "Agentic AI", "RAG", "React"],
+    links: {
+      github: "https://github.com/kennymason/st-elmos-fire",
+    },
+    priority: 6
   }
 ];

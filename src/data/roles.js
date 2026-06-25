@@ -17,7 +17,7 @@ export const roles = [
   {
     id: 2,
     company: "Social Edge Consulting",
-    title: "Developer",
+    title: "Full Stack Developer",
     dates: [new Date(2021, 6), new Date(2023, 4)],
     location: "Remote",
     bullets: [
@@ -42,7 +42,21 @@ export const roles = [
       "Enhanced platform scalability by implementing customizable automation workflows tailored to diverse client needs.",
       "Built user-focused features for CRM, analytics, and task management, improving platform usability and engagement.",
     ],
-    tags: ["Python", "LLM App Dev", "GPT / OpenAI API", "JavaScript"],
+    tags: ["Python", "Agentic AI", "GPT / OpenAI API", "JavaScript"],
     image: "experience/letsbe-solutions/logo.png"
+  },
+  {
+    id: 4,
+    company: "Stevens Institute of Technology",
+    title: "Teaching Assistant",
+    dates: [new Date(2026, 4), new Date(2026, 7)],
+    location: "Data Science & AI Engineering · College of Professional Education",
+    bullets: [
+      "Design and develop hands-on assignments covering data pipelines (BigQuery, Dataflow/Apache Beam, Pub/Sub) and ML model training & deployment on Vertex AI / Gemini Enterprise Agent Platform.",
+      "Develop instructional content on embeddings, vector search, Retrieval-Augmented Generation (RAG), and generative AI application architectures.",
+      "Mentor industry professionals through office hours and technical guidance on GCP services and MLOps workflows.",
+    ],
+    tags: ["MLOps", "Agentic AI", "Gemini Enterprise Agent Platform", "Date Pipelines"],
+    image: "experience/stevens-institute-of-technology/logo.png"
   },
 ];

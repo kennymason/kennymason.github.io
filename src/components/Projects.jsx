@@ -8,6 +8,12 @@ import Modal from './Modal.jsx';
 export default function Projects({ projects, category = "all" }){
   const [selectedProject, setSelectedProject] = useState(null);
 
+  // Sort projects by priority (higher number = higher priority)
+  const sortedProjects = (() => {
+    projects.sort((a, b) => b.priority - a.priority);
+    return projects;
+  })();
+
   // Toggles modal display on project card click
   const handleProjectSelect = (id) => {
     setSelectedProject((prev) => (prev === id ? null : id));
@@ -19,7 +25,7 @@ export default function Projects({ projects, category = "all" }){
   }
 
   // Filters displayed projects based on selected category
-  const filteredProjects = projects.filter((project) => 
+  const filteredProjects = sortedProjects.filter((project) => 
     category === "all" || category === project.category
   );
 

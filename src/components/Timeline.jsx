@@ -30,11 +30,11 @@ export default function Timeline({ data }){
               </div>
               <div className='major'>{entry.major}</div>
               <div>{entry.school}, {entry.location}</div>
-              { entry.status !== "Complete" && <div className='notice-text'>{entry.status}</div> }
-              { entry.gpa >= 3.5 && <div>{entry.gpa} GPA</div> }
+              { entry.gpa >= 3.5 && <div>GPA: {entry.gpa}</div> }
               { entry.honors.length !== 0 &&
                 <ul className='honors'>{entry.honors.map((honor, j) => <li key={j}>{honor}</li>)}</ul>
               }
+              { entry.status !== "Complete" && <div className='notice-text'>{entry.status}</div> }
             </div>
           </div>
         )

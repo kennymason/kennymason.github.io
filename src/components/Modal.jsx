@@ -30,7 +30,9 @@ export default function Modal({ project }){
         </div>
         <div className='modal-content-right'>
           <div className="modal-images">
-            <img src={project.images[0]} className='modal-image'/>
+            {project.images.slice(1).map((image, index) => (
+              <img key={index} src={image} className='modal-image'/>
+            ))}
           </div>
         </div>
       </div>

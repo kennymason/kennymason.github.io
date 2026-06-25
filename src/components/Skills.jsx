@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import './Skills.css';
 import { FaHtml5, FaJava, FaReact, FaCss3Alt, FaSass, FaPython, FaNodeJs, FaGitAlt, FaGoogle, FaSwift, FaDatabase, FaCode, FaCuttlefish, FaCloud } from "react-icons/fa";
-import { SiJavascript, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiCplusplus, SiErlang, SiOcaml, SiWebflow, SiApachegroovy, SiP5Dotjs, SiNumpy, SiScikitlearn, SiPandas, SiPytorch, SiTensorflow, SiDocker, SiGnubash } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiCplusplus, SiErlang, SiOcaml, SiWebflow, SiApachegroovy, SiP5Dotjs, SiNumpy, SiScikitlearn, SiPandas, SiPytorch, SiTensorflow, SiDocker, SiGnubash, SiSelenium } from "react-icons/si";
 
 function LangChainIcon() {
   return(
@@ -36,31 +36,33 @@ const skills = [
   // { name: "Erlang", icon: <SiErlang/>, skillType: ["programming"] },
   { name: "PyTorch", icon: <SiPytorch/>, skillType: ["ai"] },
   { name: "TensorFlow", icon: <SiTensorflow/>, skillType: ["ai"] },
-  { name: "NumPy", icon: <SiNumpy/>, skillType: ["ai"] },
   { name: "scikit-learn", icon: <SiScikitlearn/>, skillType: ["ai"] },
-  { name: "pandas", icon: <SiPandas/>, skillType: ["ai"] },
   { name: "LangChain", icon: <LangChainIcon/>, skillType: ["ai"] },
+  { name: "pandas", icon: <SiPandas/>, skillType: ["data"] },
+  { name: "NumPy", icon: <SiNumpy/>, skillType: ["data"] },
+  { name: "SQL", icon: <FaDatabase/>, skillType: ["data"] },
+  { name: "MongoDB", icon: <SiMongodb/>, skillType: ["data"] },
+  { name: "Selenium", icon: <SiSelenium/>, skillType: ["data"] },
   { name: "HTML", icon: <FaHtml5/>, skillType: ["web"] },
   { name: "CSS", icon: <FaCss3Alt/>, skillType: ["web"] },
   { name: "Sass", icon: <FaSass/>, skillType: ["web"] },
   { name: "React", icon: <FaReact/>, skillType: ["web"] },
   { name: "Node.js", icon: <FaNodeJs/>, skillType: ["web"] },
   { name: "Express.js", icon: <SiExpress/>, skillType: ["web"] },
-  { name: "p5.js", icon: <SiP5Dotjs/>, skillType: ["web"] },
+  // { name: "p5.js", icon: <SiP5Dotjs/>, skillType: ["web"] },
   { name: "Git", icon: <FaGitAlt/>, skillType: ["tool"] },
   { name: "Docker", icon: <SiDocker/>, skillType: ["tool"] },
   { name: "Bash", icon: <SiGnubash/>, skillType: ["tool"] },
-  { name: "SQL", icon: <FaDatabase/>, skillType: ["tool"] },
-  { name: "MongoDB", icon: <SiMongodb/>, skillType: ["tool"] },
   { name: "Google Cloud Platform", icon: <FaCloud/>, skillType: ["tool"] },
   // { name: "Webflow", icon: <SiWebflow/>, skillType: ["tool"] },
 ];
 const tabs = [
   { id: "all", label: "All Skills" },
   { id: "programming", label: "Programming" },
-  { id: "ai", label: "AI & Machine Learning" },
+  { id: "ai", label: "Machine Learning & AI" },
+  { id: "data", label: "Data" },
   { id: "web", label: "Web Development" },
-  { id: "tool", label: "Tools & Environments" }
+  { id: "tool", label: "DevOps, Cloud & Tooling" }
 ];
 
 export default function Skills(){
