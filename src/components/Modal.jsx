@@ -1,11 +1,95 @@
 // Modal.jsx
 // Pop-up modal for ProjectCards
 
+import { useState, useEffect } from 'react';
 import './Modal.css';
 
+function Lightbox({ images, startIndex, onClose }) {
+  const [index, setIndex] = useState(startIndex);
+
+  const prev = (e) => { e.stopPropagation(); setIndex((index - 1 + images.length) % images.length); };
+  const next = (e) => { e.stopPropagation(); setIndex((index + 1) % images.length); };
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'ArrowLeft') setIndex(i => (i - 1 + images.length) % images.length);
+      if (e.key === 'ArrowRight') setIndex(i => (i + 1) % images.length);
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [images.length, onClose]);
+
+  return (
+    <div className="lightbox-overlay" onClick={onClose}>
+      <button className="lightbox-close" onClick={onClose}>&#x2715;</button>
+      <div className="lightbox-content" onClick={e => e.stopPropagation()}>
+        <img src={images[index]} className="lightbox-image" alt="" />
+        {images.length > 1 && (
+          <>
+            <button className="carousel-btn lightbox-btn-prev" onClick={prev}>&#8249;</button>
+            <button className="carousel-btn lightbox-btn-next" onClick={next}>&#8250;</button>
+            <div className="carousel-dots lightbox-dots">
+              {images.map((_, i) => (
+                <span
+                  key={i}
+                  className={`carousel-dot${i === index ? ' active' : ''}`}
+                  onClick={() => setIndex(i)}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function Carousel({ images, onImageClick }) {
+  const [index, setIndex] = useState(0);
+
+  const prev = (e) => { e.stopPropagation(); setIndex((index - 1 + images.length) % images.length); };
+  const next = (e) => { e.stopPropagation(); setIndex((index + 1) % images.length); };
+
+  return (
+    <div className="carousel">
+      <img
+        src={images[index]}
+        className="modal-image carousel-image carousel-image-clickable"
+        alt=""
+        onClick={() => onImageClick(index)}
+      />
+      {images.length > 1 && (
+        <>
+          <button className="carousel-btn carousel-btn-prev" onClick={prev}>&#8249;</button>
+          <button className="carousel-btn carousel-btn-next" onClick={next}>&#8250;</button>
+          <div className="carousel-dots">
+            {images.map((_, i) => (
+              <span
+                key={i}
+                className={`carousel-dot${i === index ? ' active' : ''}`}
+                onClick={() => setIndex(i)}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
 export default function Modal({ project }){
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+
   return(
     <div className="modal-container">
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={project.images}
+          startIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+        />
+      )}
       <div className='modal-header'>
         <div className='modal-titles'>
           <div className="modal-title">{project.title}</div>
@@ -19,7 +103,7 @@ export default function Modal({ project }){
         <div className='modal-content-left'>
           <div className="modal-summary">{project.summary}</div>
           <div className="modal-images-mobile">
-            <img src={project.images[0]} className='modal-image'/>
+            <Carousel images={project.images} onImageClick={setLightboxIndex} />
           </div>
           <div className="modal-tags">
             {project.tags.map((tag, i) => (
@@ -30,9 +114,7 @@ export default function Modal({ project }){
         </div>
         <div className='modal-content-right'>
           <div className="modal-images">
-            {project.images.slice(1).map((image, index) => (
-              <img key={index} src={image} className='modal-image'/>
-            ))}
+            <Carousel images={project.images} onImageClick={setLightboxIndex} />
           </div>
         </div>
       </div>
