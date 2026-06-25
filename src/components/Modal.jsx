@@ -104,7 +104,7 @@ export default function Modal({ project, jokerStage, onCatchJoker = () => {} }){
         </div>
         <div className="modal-links">
           {jokerHere
-            ? <img src="/chess-cards/joker-piece.png" className="modal-joker" alt="" onClick={catchModalJoker}/>
+            ? <img src="/chess-cards/joker-piece-head.png" className="modal-joker" alt="" onClick={catchModalJoker}/>
             : <a className="modal-button fa fa-github-square" href={project.links.github}></a>
           }
         </div>
