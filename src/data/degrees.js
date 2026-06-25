@@ -7,7 +7,7 @@ export const degrees = [
     status: 'Complete',
     school: "Stevens Institute of Technology",
     location: "Hoboken, NJ",
-    gpa: 3.5,
+    gpa: 3.55,
     withHonors: true,
     honors: ["Dean's List", 'Presidential Scholarship'],
     image: "icons/stevens-institute-of-technology.jpg"
@@ -20,7 +20,7 @@ export const degrees = [
     status: 'Expected 2026',
     school: "Stevens Institute of Technology",
     location: "Hoboken, NJ",
-    gpa: 3.875,
+    gpa: 3.88,
     withHonors: false,
     honors: [],
     image: "icons/stevens-institute-of-technology.jpg"
