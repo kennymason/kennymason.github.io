@@ -1,7 +1,7 @@
 // ChessCards.jsx
 // Custom Chess-styled cards with easter egg
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './ChessCards.css'
 
 export default function ChessCards({ jokerCaught, onCatchJoker }){
@@ -14,7 +14,10 @@ export default function ChessCards({ jokerCaught, onCatchJoker }){
   ];
   const jokerImage = "joker";
   const [currentImages, setCurrentImages] = useState(defaultImages);
-  const [currentReplaced, setCurrentReplaced] = useState(-1);
+  // Use a ref so reads inside the interval always see the latest value without
+  // making it a dependency (which would tear down and restart the interval on
+  // every cycle, causing stale closures and biased randomization).
+  const currentReplacedRef = useRef(-1);
   const [glitchEffect, setGlitchEffect] = useState(false);
   const [codeToggle, setCodeToggle] = useState(false);
 
@@ -38,31 +41,19 @@ export default function ChessCards({ jokerCaught, onCatchJoker }){
         // Swap back to normal card images
         setCodeToggle(false);
 
-        // Set new images
-        setCurrentImages((prev) => {
-          // Create a shallow copy of the default image filenames
-          let newImages = [...defaultImages];
+        // Always start from a clean slate of default images
+        const newImages = [...defaultImages];
 
-          // Restore previously replaced image
-          if (currentReplaced !== -1) {
-            newImages[currentReplaced] = defaultImages[currentReplaced];
-          }
+        // Once caught, joker never appears again; otherwise pick any position
+        if (!jokerCaught) {
+          const index = Math.floor(Math.random() * defaultImages.length);
+          newImages[index] = jokerImage;
+          currentReplacedRef.current = index;
+        } else {
+          currentReplacedRef.current = -1;
+        }
 
-          // Randomize card selection, making jokers less frequent.
-          // Once the joker has been caught, it never appears again (index 4 = no joker).
-          const indexPool = jokerCaught ? [4] : [0, 1, 2, 3, 4, 4, 4, 4];
-          const index = indexPool[Math.floor(Math.random() * indexPool.length)];
-
-          // Replace selected card (if not the joker)
-          if (index == 4) {
-            setCurrentReplaced(-1);
-          } else {
-            newImages[index] = jokerImage;
-            setCurrentReplaced(index);
-          }
-
-          return newImages;
-        });
+        setCurrentImages(newImages);
       }, 3600);
 
       setTimeout(() => setGlitchEffect(false), 4000);
@@ -70,7 +61,7 @@ export default function ChessCards({ jokerCaught, onCatchJoker }){
     }, 8000);
 
     return () => clearInterval(interval);
-  }, [currentReplaced, jokerCaught]);
+  }, [jokerCaught]);
 
   const catchJoker = (i) => {
     alert(`Catch me if you can!`);
@@ -80,7 +71,7 @@ export default function ChessCards({ jokerCaught, onCatchJoker }){
       newImages[i] = defaultImages[i];
       return newImages;
     });
-    setCurrentReplaced(-1);
+    currentReplacedRef.current = -1;
     onCatchJoker();
   };
 
